@@ -2,7 +2,7 @@
 Repository for it-academy listeners
 
 
-- выполнить команду fetch
+- выполнить команду pull
 - создать новую ветку из origin/master
 - сделали домашку
 - commit изменений
