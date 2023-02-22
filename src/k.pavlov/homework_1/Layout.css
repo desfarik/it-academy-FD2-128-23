@@ -1,0 +1,28 @@
+
+
+.header {
+    width: 375px;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-image {
+
+}
+
+.date {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.upgrade-container {
+
+    display: flex;
+    justify-content: space-between;
+}
