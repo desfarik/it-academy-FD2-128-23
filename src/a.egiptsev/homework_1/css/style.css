@@ -44,7 +44,7 @@ body {
 }
 
 [class*="__conteiner"] {
-  /* max-width: 1440px; */
+  max-width: 375px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -62,3 +62,117 @@ body {
   line-height: 11px;
   letter-spacing: 0.2px;
 }
+
+[class*="__circleBackg"] {
+  width: 44px;
+  height: 44px;
+  background: #f2f5fc;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- header ----- */
+.header {
+  width: 100%;
+  margin-top: 50px;
+  position: fixed;
+}
+
+.header__conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dayMonth__heading {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+.circleBurger {
+  display: flex;
+  gap: 5px;
+}
+
+/* --- header button --- */
+.upgradePremium__conteiner {
+  margin-top: 20px;
+  width: 100%;
+}
+.upgradePremium {
+  position: absolute;
+  background: linear-gradient(187.04deg, #9fe860 8.03%, #50ce3b 92.63%);
+  border-radius: 12px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pro {
+  /*  */
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  /*  */
+  background: linear-gradient(219.68deg, #ffa935 22.67%, #fdd00e 74.06%);
+  border-radius: 91.8605px;
+  width: 55px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upgradePremiumText {
+}
+.textFirst {
+  /*  */
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  /*  */
+}
+.textSecond {
+  /*  */
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 162.7%;
+  color: #ffffff;
+  /*  */
+}
+
+/* .rectangleOne {
+  background: linear-gradient(135.57deg, #9fe860 19.39%, #50ce3b 84.8%);
+  border-radius: 12px;
+  transform: matrix(0.72, 0.69, -0.72, 0.69, 0, 0);
+  width: 58.26px;
+  height: 58px;
+}
+.rectangleTwo {
+  background: #79dc4f;
+  border-radius: 12px;
+  transform: matrix(0.72, 0.69, -0.72, 0.69, 0, 0);
+  width: 57.24px;
+  height: 58px;
+}
+.rectangleThree {
+  background: #51cf3c;
+  border-radius: 12px;
+  width: 67.84px;
+  height: 58px;
+} */
+/* --- header button --- */
+/* ----- header ----- */
+
+/* ----- Main ----- */
+
+/* ----- Main ----- */
