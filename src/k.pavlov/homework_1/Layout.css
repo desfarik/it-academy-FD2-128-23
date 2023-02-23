@@ -1,17 +1,33 @@
+html, body {
+    height: 100%;
+}
 
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    background: lightgrey;
+}
+
+.main {
+    flex: 1 1 auto;
+}
 
 .header {
-    width: 375px;
-
+    background-color: floralwhite;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
+    padding: 62px 20px 0 20px;
 }
 
-.calendar-image {
-
+.calendar-image img {
+    background: #F2F5FC;
+    padding: 9px 9px 9px 9px;
+    border-radius: 16px;
 }
 
 .date {
@@ -21,8 +37,114 @@
     color: #333333;
 }
 
-.upgrade-container {
+.three-buttons {
+    display: flex;
+    background: #F2F5FC;
+    padding: 20px 12px 20px 12px;
+    border-radius: 16px;
+}
 
+.button {
+    width: 5px;
+    height: 5px;
+    background: #333333;
+    border-radius: 3px;
+    margin-left: 1px;
+
+
+}
+
+.upgrade-container {
     display: flex;
     justify-content: space-between;
+    margin: 32px 20px 26px 21px;
+    background: linear-gradient(187.04deg, #9FE860 8.03%, #50CE3B 92.63%);
+    border-radius: 12px;
+}
+
+.upgrade-version {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
+    border-radius: 90px;
+    padding: 8px 12px 8px 12px;
+    margin: 15px 0 16px 12px;
+
+}
+
+.upgrade-text {
+    margin: 12px 67px 14px 16px ;
+}
+
+.text_1 {
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.text_2 {
+    font-weight: 400;
+    font-size: 11px;
+    color: white;
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: floralwhite;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 34px 23px 32px;
+}
+
+.diary-container {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.diary-vector {
+    width: 9px;
+    height: 9px;
+    background: #2ED12E;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+.diary-image-right {
+    padding-left: 1px;
+}
+
+.diary-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #62E962;}
+
+
+.explore-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.coach-image {
+    padding-bottom: 2px;
+}
+
+.coach-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.results-image {
+    padding-bottom: 2px;
+}
+
+.results-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
 }
