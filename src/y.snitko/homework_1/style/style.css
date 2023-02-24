@@ -98,6 +98,10 @@ header {
     color: var(--clr-text-primary);
 }
 
+.container {
+    position: relative;
+}
+
 .circle_orange {
     stroke: url(#linear_orange);
     stroke-dasharray: 125,244;
@@ -150,7 +154,7 @@ header {
 
 .scale_row {
     position: absolute;
-    top: -30%;
+    top: -55%;
     bottom: 0%;
     left: 0%;
     background-color: var(--clr-btn);
@@ -159,9 +163,9 @@ header {
 
 .scale_range {
     position: absolute;
-    top: 50%;
+    top: 25%;
     right: 50%;
-    transform:translate(40%, 25%);
+    transform:translate(50%, 20%);
 }
 
 .statistics_block {
@@ -169,7 +173,7 @@ header {
     flex-direction: column;
     gap: 16px;
     padding: 0 20px 30px 20px;
-    margin-top: 50px;
+    margin-top: 70px;
     background-color: var(--clr-btn);
 }
 
