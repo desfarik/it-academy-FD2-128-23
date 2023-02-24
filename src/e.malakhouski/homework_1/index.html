@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cleartype" content="on"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="x-rim-auto-match" content="none" forua="true">
+	<title>Nutrition app</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header_menu">
+			<button type="button" class="btn_calendar"></button>
+			<p>2 May, Monday</p>
+			<button type="button" class="btn_menu"></button>
+		</div>
+		<div class="offer">
+			<button type="button" class="btn_offer">PRO</button>
+			<div class="offer_text">
+				<p class="offer_text_1">Upgrade to premium ARISE </p>
+				<p class="offer_text_2">Spring Offer: Enjoy with more features</p>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="calories">
+			<div class="calories_info_1">
+				<div class="calories_burn">
+					<p class="calories_burn_count">690</p>
+					<p class="calories_burn_text">burn</p>
+				</div>
+				<div class="calories_available">
+					<p class="calories_available_count">1645</p>
+					<p class="calories_available_text">Kcal available</p>
+					<div class="else_info">
+						<input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+						<label for="tab-btn-1"></label>
+						<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+						<label for="tab-btn-2"></label>
+					</div>
+				</div>
+				<div class="calories_eaten">
+					<p class="calories_eaten_count">536</p>
+					<p class="calories_eaten_text">eaten</p>
+				</div>
+			</div>
+			<div class="calories_goal_container">
+				<div class="calories_goal">
+					<p class="calories_goal_count">2181</p>
+					<p class="calories_goal_text">Kcal Goal</p>
+				</div>
+				<button type="button" class="btn_calories"></button>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="content_water">
+				<div class="content_water_info">
+					<h4><span>Water</span> 0.9L (75%)</h4>
+					<p>Recomended until now 1.4L</p>
+				</div>
+				<div class="content_water_counter">
+					<button type="button" class="btn_minus"></button>
+					<div class="content_water_numbers">
+						<p>0.1L</p>
+						<p>0.2L</p>
+						<p>0.3L</p>
+					</div>
+					<button type="button" class="btn_plus"></button>
+				</div>
+			</div>
+			<div class="content_daily_meals">
+				<div class="daily_meals_head">
+					<h4>Daily meals</h4>
+					<button type="button" class="btn_daily_meals_edit"></button>
+				</div>
+				<div class="daily_meals_breakfast">
+					<div class="daily_meals_breakfast_info">
+						<div class="daily_meals_breakfast_head">
+							<div class="daily_meals_breakfast_head_container">
+								<h4><span>Breakfast</span> 306 Kcal</h4>
+								<input type="radio" name="btn-dropdown" id="btn-dropdown" value="">
+								<label for="btn-dropdown"></label>
+							</div>
+							<p>Recomended 447 Kcal</p>
+						</div>
+						<button type="button" class="btn_plus"></button>
+					</div>
+					<div class="daily_meals_breakfast_info_items">
+						<div class="item_1">
+							<p uk-leader>Coffe with milk 100 g</p>
+							<div class="item__dotted"></div>
+							<p>56 Kcal</p>
+						</div>
+						<div class="item_2">
+							<p>Sandwich 100 g</p>
+							<div class="item__dotted"></div>
+							<p>250 Kcal</p>
+						</div>
+						<div class="item_3">
+							<p>Walnuts 20 g</p>
+							<div class="item__dotted"></div>
+							<p>100 Kcal</p>
+						</div>
+						<button type="button" class="btn_save_breakfast_info">Save as a dish</button>
+					</div>	
+				</div>
+				<div class="daily_meals_lunch">
+					<div class="daily_meals_lunch_info">
+						<h4>Lunch</h4>
+						<p>Recomended 547 Kcal</p>
+					</div>
+					<button type="button" class="btn_plus"></button>
+				</div>
+				<div class="daily_meals_dinner">
+					<div class="daily_meals_dinner_info">
+						<h4>Dinner</h4>
+						<p>Recomended 547 Kcal</p>
+					</div>
+					<button type="button" class="btn_plus"></button>
+				</div>
+				<div class="daily_meals_snack">
+					<div class="daily_meals_snack_info">
+						<h4>Snack</h4>
+						<p>Recomended 547 Kcal</p>
+					</div>
+					<button type="button" class="btn_plus"></button>
+				</div>
+			</div>
+			<div class="content_daily_exercise">
+				<h4>Daily exercise</h4>
+				<div class="exercise">
+					<div class="exercise_info">
+						<h4>Exercise</h4>
+						<div class="exercise_steps">
+							<p>Enable Step Counter</p>
+							<div class="toggle">
+								<input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" checked/>
+								<label for="checkbox1" class="checkbox-label"></label>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_plus"></button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<nav class="footer_nav">
+			<ul class="navbar">
+				<li><a class="diary" href="#">Diary</a></li>
+				<li><a class="explore" href="#">Explore</a></li>
+				<li><a class="coach" href="#">Coach</a></li>
+				<li><a class="results" href="#">Results</a></li>
+			</ul>
+		</nav>
+	</footer> 
+</body>
+</html>
+
