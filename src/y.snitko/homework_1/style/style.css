@@ -6,7 +6,7 @@
     --clr-text-primary: #FFF;
     --clr-text-secondary: #9DA8C3;
     --clr-background-stat: #E5E5E5;
-    --clr-option-water: #476FF5;
+    --clr-option-water: #0060F5;
     --clr-option-lunch: #FFA935;
     --clr-option-dinner: #12E5B0;
     --clr-option-snack: #B575E7;
@@ -18,10 +18,6 @@
 
 * {
     font-family: var(--ff-primary);
-}
-
-body {
-    height: 100vh;
 }
 
 header {
@@ -213,6 +209,18 @@ header {
 .drops {
     display: flex;
     gap: 15px;  
+}
+
+.filled {
+   filter: invert(90%) sepia(34%) saturate(3787%) hue-rotate(216deg) brightness(110%) contrast(92%);
+}
+
+.half {
+    content: url(../images/drop_half.svg);
+}
+
+.settings_drops {
+    display: none;
 }
 
 .option_value {
@@ -438,7 +446,7 @@ footer {
     right: 0;
     bottom: 0;
     background-color: var(--clr-btn);
-    transition: 0.4s;
+    transition: 0.3s;
   }
   
 .switcher:before {
@@ -449,7 +457,7 @@ footer {
     left: 0;
     bottom: -20%;
     background-image: linear-gradient(191.24deg, #F2F5FC -12.17%, #E0E6F3 79.2%);
-    transition: 0.4s;
+    transition: 0.3s;
 }
   
 input:checked + .switcher {
