@@ -107,8 +107,7 @@ header {
 .circle_green {
     stroke: url(#linear_limegreen);
     stroke-dasharray: 80,803;
-    stroke-dashoffset: 500;
-    
+    stroke-dashoffset: 500; 
 }
 
 .circle_grey {
@@ -121,7 +120,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .measurements_block {
@@ -134,8 +132,7 @@ header {
 
 .block_value {
     font-size: 24px;
-    font-weight: 700;
-    
+    font-weight: 700; 
 }
 
 .block_category {
@@ -447,7 +444,7 @@ footer {
     bottom: 0;
     background-color: var(--clr-btn);
     transition: 0.3s;
-  }
+}
   
 .switcher:before {
     position: absolute;
