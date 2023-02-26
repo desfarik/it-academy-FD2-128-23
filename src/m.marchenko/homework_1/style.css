@@ -458,3 +458,6 @@ footer {
 	transform:translateX(14px);
 }
  
+.active_text {
+    color: #62E962;
+}
