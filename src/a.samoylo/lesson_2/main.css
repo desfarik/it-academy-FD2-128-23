@@ -1,11 +1,19 @@
 body{
     padding: 0;
+    margin: 0;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 50px 20px 26px 20px;
+    gap: 20px;
 }
 .headerMenu{
     width: 100%;
@@ -22,16 +30,81 @@ body{
     border-radius: 16px;
 }
 .headerMenuButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 44px;
     height: 44px;
     background: #F2F5FC;
     border-radius: 16px;
+    gap: 3px;
 }
 .headerMenuButton > div{
     height: 4.5px;
     width: 4.5px;
     border-radius: 90px;
+    background-color: #333333;
+}
+.premiumbtn{
+    overflow: hidden;
+    background: linear-gradient(187.04deg, #9FE860 8.03%, #50CE3B 92.63%);
+    border-radius: 12px;
+    padding: 15px 13px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.buttonPro{
+    color: white;
+    background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
+    border-radius: 91.8605px;
+    width: 55px;
+    height: 27px;
+}
+.premiumbtnText{
+    display: flex;
+    flex-direction: column;
+}
+.premiumbtnText > div{
+    color: #FFFFFF;
+}
+.premiumbtnText > div:first-child{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+.premiumbtnText > div:last-child{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 162.7%;
+}
+.maskGroup{
+    position: absolute;
+    left: 74.06%;
+    right: 20px;
+    top: 114px;
+    height: 64px;
+    background: #51CF3C;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.maskGroup > div:nth-child(1){
+    position: relative;
+    width: 60px;    
+    height: 60px;
+    background: #79DC4F;
+    border-radius: 12px;
+    transform: matrix(0.72, 0.69, -0.72, 0.69, 0, 0);
+}
+.maskGroup > div:nth-child(2){
+    position: relative;
+    width: 60px;    
+    height: 60px;
+    top: -60px;
+    left: -17px;
+    background: linear-gradient(135.57deg, #9FE860 19.39%, #50CE3B 84.8%);
+    border-radius: 12px;
+    transform: matrix(-0.72, -0.69, 0.72, -0.69, 0, 0);
 }
