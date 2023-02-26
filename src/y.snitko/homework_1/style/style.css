@@ -122,6 +122,10 @@ header {
     align-items: center;
 }
 
+.toggle {
+    fill-opacity: 1;
+}
+
 .measurements_block {
     display: flex; 
     padding: 0 36px;
