@@ -6,11 +6,16 @@
 .Upgrade-to-premium{
     width: 100%;
     background-color: linear-gradient(181.01deg, #FFFFFF 66.92%, rgba(255, 255, 255, 0) 99.13%);
-    /* position: fixed; */
 }
 .Calendar-menu{
     display: flex;
     flex-wrap: nowrap;
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    margin-top: -125px;
+    z-index: 1;
 }
 .btn-calender{
     margin: 50px 0 0 20px;
@@ -35,11 +40,13 @@
     margin: 50px 20px 0 90px;
 }
 .btn-ARISE{
+    position: fixed;
     display: flex;
     background-image: url(images/btn-premium.png);
     border-radius: 12px;
-    margin: 20px 25px;
+    margin: -15px 25px;
     height: 58px;
+    z-index: 1;
 }
 .pro{
     background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
@@ -60,13 +67,16 @@
     color: #FFFFFF;
     padding: 12px;
 }
+
 .calories{
+    margin-top: 119px;
     width: 100%;
     display: flex;
     background-color: linear-gradient(181.01deg, #FFFFFF 66.92%, rgba(255, 255, 255, 0) 99.13%);
+   
 }
 .burn{
-    margin-top: 40px;
+    margin-top: 87px;
     margin-left: 50px;
 }
 .calories h2{
@@ -79,6 +89,429 @@
 .calories p{
     font-family: 'Helvetica Neue';
     font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+.Kcal-available{
+    margin-left: 30px;
+    margin-top: 77px;
+}
+.Ellipse-green{
+    position: absolute;
+    top: 196px;
+    left: 188px;
+}
+.Ellipse-grey{
+    position: absolute;
+    top: 246px;
+    left: 114px;
+}
+.Kcal-available h1{
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 36px;
+    color: #2DB82D;
+    margin-top: -50px;
+    margin-left: 35px;
+}
+.Kcal-available p{
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 44px;
+}
+.inp{
+    margin-left: 65px;
+    margin-top: 20px;
+    color: #2DB82D;
+}
+.eaten{
+    margin-left: 80px;
+    margin-top: 87px;
+}
+.eaten p{
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+.kcal-goal{
+    padding: 40px 0px 0 165px;
+}
+.kcal-goal h2{
+    color: #333;
+}
+.kcal-goal p{
+font-family: 'Helvetica';
+font-weight: 400;
+font-size: 10px;
+color:  #9DA8C3;;
+}
+.scale{
+    margin-top: 30px;
+    margin-left: 7px;
+    background-repeat: no-repeat;
+} 
+.scale button{
+    background-color: #4CAF50;
+    border: none;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -41px 150px;
+    border-radius: 50%;
+}
+.scale button p{
+    color: #fff;
+}
+.fon{
+    background-color:#E0E6F3;
+    width: 100%;
+}
+.water{
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid #4166F5;
+    margin: 35px  20px;
+    background-color: #fff;
+    display: flex;
+}
+.water-recomended{
+    display: inline-block;
+}
+.water-recomended h2 {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px 0 3px 10px;
+}
+.water-recomended h2 span{
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    color: #4166F5;
+}
+.water-recomended p{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+.water-recomended img{
+    padding-left: 11px;
+    padding-bottom: 8px;
+}
+.minus-plus{
+    display: inline;
+    margin-left: 25px;
+}
+.num{
+    display: inline-block;
+    padding-top: 8px;
+}
+.minus{
+    background-color: #4CAF50;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 12px;
+}
+.minus p{
+    color: #fff;
+}
+.plus{
+    background-color: #4CAF50;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 12px;
+}
+.plus p{
+    color: #fff;
+}
+.num p{
+    color: #9DA8C3;
+}
+.num span{
+    color: #9DA8C3;
+    opacity: 0.2;
+}
+.daily{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    flex-wrap: wrap;
+}
+.daily h2{
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 14px;
+    color: #1A1C24;
+}
+.btn-pencil{
+    padding: 10px;
+    background-color: #E5E5E5;
+    border-radius: 20%;
+}
+.breakfast{
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid #2ED12E;
+    background-color: #fff;
+    margin: 10px 20px;
+}
+.breakfast-content{
+    display: flex;
+    justify-content: space-between;
+}
+.breakfast-recomended{
+    padding: 12px 0 3px 10px;;
+}
+.breakfast-recomended h2 {
+    display: inline-block;
+    padding-right: 10px;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    color: #1A1C24;
+}
+.breakfast-recomended h2 span{
+    color: #2ED12E;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+}
+.breakfast-recomended p{
+    padding-right: 10px;
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color:  #9DA8C3;;
+}
+.btn-breakfast-plus{
+    padding: 10px;
+    background-color: #2DB82D;
+    border-radius: 50%;
+    margin: 10px 14px;
+}
+.btn-breakfast-plus button p{
+    color: #fff;
+    width: 10px;
+    height: 0;
+}
+.breakfast-kcal p{
+    margin-left: 10px;
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #9DA8C3;
+    padding-bottom: 15px;
+}
+.btn-save{
+    background: #F2F5FC;
+    border-radius: 100px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-bottom: 13px;
+    padding: 5px 10px;
+}
+.btn-save p{
+    color: #2ED12E;
+}
+.lunch{
+    display: flex;
+    justify-content: space-between;
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid #FFA935;
+    background-color: #fff;
+    margin: 10px 20px;
+}
+.lunch h2{
+    color: #FFA935;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    margin: 18px 0 0 10px;
+}
+.lunch p{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+.lunch button{
+    background-color: #2DB82D;
+    border-radius: 50%;
+    margin: 25px 14px;
+}
+.lunch button p{
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.Dinner{
+    display: flex;
+    justify-content: space-between;
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid  #12E5B0;;
+    background-color: #fff;
+    margin: 10px 20px;
+}
+.Dinner h2{
+    color:  #12E5B0;;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    margin: 18px 0 0 10px;
+}
+.Dinner p{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+.Dinner button{
+    background-color: #2DB82D;
+    border-radius: 50%;
+    margin: 25px 14px;
+}
+.Dinner button p{
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.Snack{
+    display: flex;
+    justify-content: space-between;
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid  #B575E7;
+    background-color: #fff;
+    margin: 10px 20px;
+}
+.Snack h2{
+    color:  #B575E7;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    margin: 18px 0 0 10px;
+}
+.Snack p{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+.Snack button{
+    background-color: #2DB82D;
+    border-radius: 50%;
+    margin: 25px 14px;
+}
+.Snack button p{
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.Daily h2{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1A1C24;
+    margin: 20px 0 10px 31px;
+}
+.Exercise{
+    display: flex;
+    justify-content: space-between;
+    width: 334px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    border-left: 10px solid  #FF655B;
+    background-color: #fff;
+    margin: 10px 20px;
+}
+.Exercise h2{
+    color:  #FF655B;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 18px;
+    margin: 18px 0 0 10px;
+}
+.Exercise p{
+    font-family: 'Helvetica';
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+.Exercise button{
+    background-color: #2DB82D;
+    border-radius: 50%;
+    margin: 25px 14px;
+}
+.Exercise button p{
+    color: #fff;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+.ftr-blocks{
+    position: fixed;
+    bottom: 0;
+    width: 334px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
+.Diary h3{
+    margin-top: 8px;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 10px;
+    color: #62E962;
+}
+.Explore h3{
+    margin-top: 8px;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+.Coach h3{
+    margin-top: 8px;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+.Results h3{
+    margin-top: 8px;
+    font-family: 'Helvetica';
+    font-weight: 700;
     font-size: 10px;
     color: #9DA8C3;
 }
