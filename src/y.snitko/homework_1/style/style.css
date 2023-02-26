@@ -111,7 +111,7 @@ header {
 }
 
 .circle_grey {
-    stroke: #F2F5FC;
+    stroke: var(--clr-btn);
     stroke-dasharray: 345,254;
     stroke-dashoffset: 120;
 }
