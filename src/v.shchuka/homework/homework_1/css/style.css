@@ -403,8 +403,8 @@ body {
 }
 .breakfast-list {
   border-radius: 0px 0px 12px 12px;
-  transition: all 0.1s ease-in;
   height: 115px;
+  transition: all 0.1s ease-in;
   overflow: hidden;
 }
 .breakfast::before {
@@ -545,26 +545,26 @@ body {
 .footer__button-active {
   color: #62e962;
 }
-.hide-list {
-  height: 0px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-.show-radius {
-  border-radius: 12px;
-}
-.show-radius::before {
-  border-radius: 12px 0px 0px 12px;
-  box-shadow: none;
-}
-.arrow-up--rotate {
-  transform: rotate(180deg);
-}
 .arrow-up {
   cursor: pointer;
   transition: transform 0.2s ease-in;
 }
-.hide::before {
+.breakfast--radius {
+  border-radius: 12px;
+}
+.breakfast--radius::before {
+  border-radius: 12px 0px 0px 12px;
+  box-shadow: none;
+}
+.breakfast--radius .arrow-up {
+  transform: rotate(180deg);
+}
+.breakfast--radius ~ .breakfast-list {
+  height: 0px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.breakfast--radius ~ .breakfast-list::before {
   border-radius: 12px 0px 0px 12px;
 }
 @media (max-width: 359px) {
