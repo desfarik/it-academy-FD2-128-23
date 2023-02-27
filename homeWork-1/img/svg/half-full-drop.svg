@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 12" width="10" height="12">
+	<title>Vector</title>
+	<defs>
+		<image  width="10" height="12" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAMAAABstdySAAAAAXNSR0IB2cksfwAAAU1QTFRF//////3///r///v/9vX99fT6//3+///9/v35///7/v7///z//fr/5OTu5eXt+/v9//78/P/4/v//+Pj/6en15en14OTv6ezx+v7//f/+7/L74uX03+X13uTy5Ovz6u/y/P///ff/5eT04eT34eb64OX43+bw4urt+Pz7/v/9/fv/7/D/3eT/09//1+L/2+j/1+X/2eX/7PT/9v3/6///aoC8SmW+TWzWSWfVR2XVTGfYT2fJX3K36/z/1PH/Smq1RGnbQWnvPmXwQWf2RGb5RmPjUGjC2e3/3vT/T2q3RmveP2nzO2TyRGr7QmT3RmLfVGm84vT/8P7/eo3RR2XTRGnuQmn1PmPyRmbvUGrZe47S7fv/+vz/5Oz/WGvHTWfiQWDuR2b0RGDbXHHK2+r/9P//+Pv/3en/iJ3/SGPwUGv4do//0+b/8v//9///D47fcgAAAIdJREFUeJwFwUMCAwEABLApt7Zt27Zt2/7/sQlAIlOoNDrBYAIsNofL44MQQCgSS6QyuUIJMEUqtUar0xuUYBtNZovVZnc44XJ7vD5/IBgKIxKNxRPJVDqTRS5fKJbKlWqtjkaz1e50e/3BEKPxZDqbL5arNTbb3f5wPJ0vV5Bu98fz9f58f38BbRghf0SsKAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
