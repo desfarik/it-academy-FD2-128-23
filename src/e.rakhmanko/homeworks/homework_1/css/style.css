@@ -1,11 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #9da8c3;  
+  color: #9da8c3;
   margin: 0px;
 }
 
 .page {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 .title {
   font-size: 18px;
@@ -44,7 +44,8 @@ body {
 }
 .header,
 .calories-container,
-.circle-button,.daily-actions {
+.circle-button,
+.daily-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,7 +86,6 @@ body {
   left: 12px;
   top: 15px;
 }
-
 .rec-481 {
   right: 10px;
   z-index: 2;
@@ -101,7 +101,6 @@ body {
   margin: 20px 0px;
   padding: 0px 10px;
 }
-
 .calorie-diagram {
   border-radius: 50%;
   width: 140px;
@@ -130,32 +129,32 @@ body {
 .circle-bg {
   width: 100vw;
   left: 0px;
-  bottom: -104px;
+  bottom: -100px;
 }
-
 .circle-button {
   width: 38px;
   height: 38px;
   position: absolute;
   left: calc(50% - 38px / 2 - 0.5px);
-  bottom: -108px;
+  bottom: -104px;
   background: linear-gradient(181.96deg, #6cff6c -24.63%, #14bd14 126.53%);
   border-radius: 50%;
   color: white;
   border: none;
+}
+.padding-bottom{
+padding-bottom: 15px;
 }
 .blank-block {
   height: 14vh;
   width: 100%;
 }
 .item-water {
-  background-color: white;
   display: flex;
   gap: 10px;
   margin-left: 20px;
   margin-right: 20px;
 }
-
 .dark-font-col {
   color: #1a1c24;
 }
@@ -191,11 +190,6 @@ body {
   letter-spacing: 0.5px;
   padding: 20px;
 }
-
-.calorie-num {
-  color: #333333;
-}
-
 .link-container {
   width: 44px;
   height: 44px;
@@ -206,13 +200,11 @@ body {
   color: inherit;
   text-decoration: none;
 }
-
 .align-items {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .meal {
   margin: 20px 20px 20px;
   background-color: white;
@@ -244,14 +236,11 @@ body {
 .color-white {
   background-color: white;
 }
-.bg-color{
-  background-color:#E0E6F3;
-
-
+.bg-color {
+  background-color: #e0e6f3;
 }
-.edit{
-  color: #9DA8C3;
-
+.edit {
+  color: #9da8c3;
 }
 .font-col-blue {
   color: #4166f5;
@@ -273,7 +262,6 @@ body {
 }
 .meal-content {
   padding: 10px 0px;
-  display: flex;
 }
 .plus-button {
   width: 30px;
@@ -295,11 +283,6 @@ body {
   padding: 5px 5px 5px 0px;
   display: flex;
   align-items: self-end;
-  
-}
-.border-bottom {
-  flex-grow: 1;
-  border-bottom: 1px dashed #e0e6f3;
 }
 .ellips-1 {
   top: -4px;
@@ -316,7 +299,6 @@ body {
   background-color: #f2f5fc;
   border: none;
 }
-
 .footer {
   background-color: white;
   border-radius: 30px 30px 0px 0px;
@@ -333,7 +315,6 @@ body {
 input:checked ~ .content {
   display: none;
 }
-
 .toggle-button-label {
   color: #9da8c3;
 }
