@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./fonts/HelveticaNeueCyr-Medium/style.css" rel="stylesheet" />
+    <link href="./fonts/HelveticaNeueCyr-Bold/style.css" rel="stylesheet" />
+    <link href="./fonts/HelveticaNeueCyr-Roman/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <button type="button" class="button header__button">
+          <img
+            src="./images/calendar.svg"
+            width="22"
+            height="24.44"
+            alt="calendar"
+          />
+        </button>
+        <div class="date ellipse">2 May, Monday</div>
+        <button type="button" class="button header__button">
+          <img width="24" height="24" src="./images/dots.svg" alt="point" />
+        </button>
+      </div>
+      <div class="main">
+        <div class="statics-wrapper">
+          <div class="notification-wrapper">
+            <div class="notification flex-grow">
+              <button class="notification__button button" type="button">
+                <span class="ellipse">PRO</span>
+              </button>
+              <div class="notification__content-wrapper">
+                <div class="notification__content-container">
+                  <div class="notification__text-upgrate ellipse">
+                    Upgrate to premium ARISE
+                  </div>
+                  <div class="notification__text-offer ellipse">
+                    Spring Offer: Enjoy with more features
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notification-block"></div>
+          </div>
+          <div class="statics">
+            <div class="statics__inner-container">
+              <span class="statics-icon"
+                ><img src="./images/fire.svg" width="15" height="20" alt="fire"
+              /></span>
+              <span class="statics__counter">690</span>
+              <span class="statics__text">burn</span>
+            </div>
+            <div class="statics__kcal-wrapper">
+              <div class="statics__ellipse-yellow">
+                <img
+                  src="./images/ellipse-yellow.svg"
+                  width="69"
+                  height="89"
+                  alt="ellipse-yellow"
+                />
+              </div>
+              <div class="statics__ellipse-green">
+                <img
+                  src="./images/ellipse-green.svg"
+                  width="72"
+                  height="46"
+                  alt="ellipse-green"
+                />
+              </div>
+              <div class="statics__ellipse-gray">
+                <img
+                  src="./images/ellipse-gray.svg"
+                  width="156"
+                  height="109"
+                  alt="ellipse-gray"
+                />
+              </div>
+              <div class="statics__kcal-container">
+                <span class="statics__big-counter">1645</span>
+                <span class="statics__text">Kcal available</span>
+              </div>
+              <div class="statics__dots">
+                <div class="statics__dot"></div>
+                <div class="statics__dot disable"></div>
+              </div>
+            </div>
+            <div class="statics__inner-container">
+              <span class="statics-icon">
+                <img
+                  src="./images/restaurant.svg"
+                  width="20"
+                  height="20"
+                  alt="restaurant"
+                />
+              </span>
+              <span class="statics__counter">536</span>
+              <span class="statics__text">eaten</span>
+            </div>
+          </div>
+          <div class="scale">
+            <div class="scale__button-container">
+              <div class="scale__buttons">
+                <button type="button" class="button button-arrow">
+                  <img
+                    src="./images/left-arrow.svg"
+                    width="12"
+                    height="12"
+                    alt="left-arrow"
+                  />
+                </button>
+                <button type="button" class="button button-arrow">
+                  <img
+                    src="./images/right-arrow.svg"
+                    width="12"
+                    height="12"
+                    alt="right-arrow"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="statics__inner-container statics__inner-container--position"
+          >
+            <div class="statics__counter margin-bottom">2181</div>
+            <div class="statics__text">Kcal Goal</div>
+          </div>
+        </div>
+        <div class="between-block"></div>
+        <div class="menu">
+          <div class="meal blue">
+            <div class="meal__wrapper water-padding">
+              <div>
+                <div class="meal__title">
+                  <span class="meal__title--blue">Water</span>
+                  0.9L (75%)
+                </div>
+                <div class="meal__content">Recomended until now 1.4L</div>
+                <div class="drops">
+                  <img
+                    src="./images/drop-blue.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-blue"
+                  />
+                  <img
+                    src="./images/drop-blue.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-blue"
+                  />
+                  <img
+                    src="./images/drop-blue.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-blue"
+                  />
+                  <img
+                    src="./images/drop-blue.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-blue"
+                  />
+                  <img
+                    src="./images/drop-half.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-half"
+                  />
+                  <img
+                    src="./images/drop-gray.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-gray"
+                  />
+                  <img
+                    src="./images/drop-gray.svg"
+                    width="12"
+                    height="12"
+                    alt="drop-gray"
+                  />
+                </div>
+              </div>
+              <div class="meal__buttons">
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/minus.svg"
+                    width="16"
+                    height="16"
+                    alt="minus"
+                  />
+                </button>
+                <div class="meal__quantity-container">
+                  <span class="meal__quantity">0.1L</span>
+                  <span>0.2L</span>
+                  <span class="meal__quantity">0.3L</span>
+                </div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="menu__title-container">
+            <div class="menu__title">Daily meals</div>
+            <button class="menu__title-button button">
+              <img
+                src="./images/pencil.svg"
+                width="16"
+                height="16"
+                alt="pencil"
+              />
+            </button>
+          </div>
+          <div class="meal green breakfast">
+            <div class="meal__wrapper breakfast-padding">
+              <div>
+                <div class="meal__title flex-breakfast">
+                  <div>
+                    <span class="meal__title--green">Breakfast</span>
+                    306 Kcal
+                  </div>
+                  <div class="arrow-up">
+                    <img
+                      src="./images/up-arrow.svg"
+                      width="12"
+                      height="12"
+                      alt="up-arrow"
+                    />
+                  </div>
+                </div>
+                <div class="meal__content flex-breakfast">
+                  <span>Recomended 447 Kcal</span>
+                  <img
+                    src="./images/done.svg"
+                    width="12"
+                    height="12"
+                    alt="done"
+                  />
+                </div>
+              </div>
+              <div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="meal green breakfast-list">
+            <div class="breakfast-list__wrapper">
+              <div class="breakfast-item">
+                <span class="breakfast-item__content ellipse"
+                  >Coffe with milk 100 g</span
+                >
+                <span
+                  class="breakfast-item__dash flex-grow breakfast-item__dash--margin"
+                ></span>
+                <span class="breakfast-item__content white-space">56 Kcal</span>
+              </div>
+              <div class="breakfast-item">
+                <span class="breakfast-item__content ellipse"
+                  >Sandwich 100 g</span
+                >
+                <span class="breakfast-item__dash flex-grow"></span>
+                <span class="breakfast-item__content white-space"
+                  >250 Kcal</span
+                >
+              </div>
+              <div class="breakfast-item">
+                <span class="breakfast-item__content ellipse"
+                  >Walnuts 20 g</span
+                >
+                <span class="breakfast-item__dash flex-grow"></span>
+                <span class="breakfast-item__content white-space"
+                  >100 Kcal</span
+                >
+              </div>
+              <button class="button breakfast__button ellipse" type="button">
+                Save as a dish
+              </button>
+            </div>
+          </div>
+          <div class="meal orange meal--margin">
+            <div class="meal__wrapper">
+              <div>
+                <div class="meal__title meal__title--orange">Lunch</div>
+                <div class="meal__content">Recomended 547 Kcal</div>
+              </div>
+              <div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="meal light-blue meal--margin">
+            <div class="meal__wrapper">
+              <div>
+                <div class="meal__title meal__title--light-blue">Dinner</div>
+                <div class="meal__content">Recomended 547 Kcal</div>
+              </div>
+              <div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="meal violet meal--margin">
+            <div class="meal__wrapper">
+              <div>
+                <div class="meal__title meal__title--violet">Snack</div>
+                <div class="meal__content">Recomended 547 Kcal</div>
+              </div>
+              <div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="menu__title menu__title-exercise">Daily exercise</div>
+          <div class="meal red">
+            <div class="meal__wrapper exercise-padding">
+              <div>
+                <div class="meal__title meal__title--red">Exercise</div>
+                <div class="meal__content flex-exercise">
+                  <div>Enable Step Counter</div>
+                  <div class="exercise-toggle">
+                    <div class="toggle-circle"></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button tupe="button" class="meal__button button">
+                  <img
+                    src="./images/plus.svg"
+                    width="16"
+                    height="16"
+                    alt="plus"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer__button-container">
+          <img src="./images/apps.svg" width="24" height="24" alt="apps" />
+          <span class="footer__button-text footer__button-active">Diary</span>
+        </div>
+        <div class="footer__button-container">
+          <img
+            src="./images/compass.svg"
+            width="24"
+            height="24"
+            alt="compass"
+          />
+          <span class="footer__button-text">Explore</span>
+        </div>
+        <div class="footer__button-container">
+          <img
+            src="./images/mortarboard.svg"
+            width="24"
+            height="24"
+            alt="mortarboard"
+          />
+          <span class="footer__button-text">Coach</span>
+        </div>
+        <div class="footer__button-container">
+          <img src="./images/trophy.svg" width="24" height="24" alt="trophy" />
+          <span class="footer__button-text">Results</span>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
