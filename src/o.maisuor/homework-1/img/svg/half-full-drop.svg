@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 11" width="9" height="11">
+	<title>half-drop</title>
+	<defs>
+		<image  width="9" height="11" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAMAAACah1cpAAAAAXNSR0IB2cksfwAAARRQTFRF/P///P3///7//v3/8vH5+Pf9+fr++f/7/f7/+/z/6Obx5eXv9/v+9/39+f/9/Pr//v7/5+jt5OPx5ef06ezx+f//+////fv/+Pb/8/T55unw4eT13+X13uXr8PX5+fz///z/4+ju3OTu3uf23eb14ev03+bs+/7/9/r/5+7/3Of/0+L/1Of/0+b/0eP/2uf/6fD/2+z/XW+dUmm3TmvJR2nLSWvPSGbGT2e9V2qs4PT/U2qgTGjLRWThQGfqSmvqS2fU6Pj/gpTEUWjIR2PhRmfwQGHqS2flTmXNfI3S9///2uj/W3DDTWfYSGboSmjqSmTVXXHI3On/9vn/7fb/1ef/iaL8RGLSTGrYfJTq1ej/8fz/+Y+zgQAAAHZJREFUeJxjYGBkYmZhZWNgZ+Dg5GDi4ubh5WPgF+AUFBIWERVjEJeQlJKWkZWTZ1BgUlRSVlFVU2fQ0NTS1tHV0zdgMDQyNjE1M7ewZLCytrG1s7N3MGZwdHJ2cXVz9/Bk8PL28fXzDwgMYggOCQ0Lj4iMigYAVYUQ4Xbm+3gAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
