@@ -1,0 +1,37 @@
+body{
+    padding: 0;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 26px 20px;
+}
+.headerMenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.headerCalendarButton{
+    width: 44px;
+    height: 44px;
+    background: #F2F5FC;
+    background-image: url('./image/calendar.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 16px;
+}
+.headerMenuButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: #F2F5FC;
+    border-radius: 16px;
+}
+.headerMenuButton > div{
+    height: 4.5px;
+    width: 4.5px;
+    border-radius: 90px;
+}

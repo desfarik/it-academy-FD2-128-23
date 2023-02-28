@@ -1,0 +1,325 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.head-menu {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  align-items: center;
+  background: white;
+}
+.head-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: #f2f5fc;
+}
+.calendar-day {
+  font-size: 24px;
+  font-weight: 600;
+}
+.subscription-link {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.subscription-link-item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(219.68deg, #ffa935 22.67%, #fdd00e 74.06%);
+  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+.subscription-link-text {
+  width: 200px;
+  position: absolute;
+  right: 65px;
+  top: 5px;
+  font-size: 14px;
+  color: white;
+}
+.schedule {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.schedule div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.schedule-circle {
+  position: relative;
+}
+.schedule-icon {
+  width: 36px;
+}
+.kcal-box {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kcal-box span:nth-child(1) {
+  font-size: 24px;
+  color: #2db82d;
+  font-weight: bold;
+}
+.kcal-box span:nth-child(2) {
+  color: #9da8c3;
+}
+.schedule-item span:nth-child(3) {
+  color: #9da8c3;
+}
+.schedule-item span:nth-child(2) {
+  font-size: 24px;
+  font-weight: bold;
+}
+.goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.goal span:nth-child(1) {
+  font-size: 32px;
+  font-weight: bold;
+}
+.goal span:nth-child(2) {
+  color: #9da8c3;
+  font-size: 12px;
+}
+.main {
+  background: #f2f5fc;
+  height: 1000px;
+}
+.scale {
+  position: relative;
+}
+.scale img {
+  width: 100%;
+}
+.scale img:nth-child(2) {
+  width: 50px;
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.water {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.water-card-line {
+  width: 18px;
+  height: 100%;
+  overflow: hidden;
+  padding-right: 5px;
+}
+.water-card-line::after {
+  content: "";
+  margin: 0;
+  display: block;
+  height: 80px;
+  width: 16px;
+  background: linear-gradient(180deg, #3d60f4 0%, #476ff5 100%);
+}
+.water div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: center;
+}
+.water-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.water-card-text span:nth-child(1) {
+  font-weight: bold;
+}
+.water-card-text span:nth-child(2) {
+  color: #9da8c3;
+  font-size: 12px;
+}
+.color-word-water {
+  color: #3d60f4;
+}
+.water-card-scale {
+  display: flex;
+  align-items: center;
+}
+.water-card-scale-values {
+  display: flex;
+  margin: 0px 10px;
+  font-size: 16px;
+  flex-direction: column;
+}
+.water-card-scale img {
+  width: 36px;
+}
+.opacity {
+  opacity: 0.1;
+}
+.edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #e0e6f3;
+  border-radius: 12px;
+}
+.daily-meals {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.daily-meals p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.lunch,
+.dinner,
+.snack,
+.exercise,
+.breakfest {
+  position: relative;
+  padding-right: 20px;
+  align-items: center;
+  display: flex;
+  margin: 20px;
+  background: white;
+  border-radius: 18px;
+}
+.color-word-lunch {
+  color: #ffa935;
+  font-weight: bold;
+  margin: 10px;
+}
+.card-text {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  padding: 10px;
+}
+.card-text.lunch-color span:nth-child(1) {
+  color: #ffa935;
+  font-weight: bold;
+}
+.card-text.card-text.lunch-color span:nth-child(2) {
+  font-size: 12px;
+  color: #9da8c3;
+}
+.card-text.dinner-color span:nth-child(1) {
+  color: #12e5b0;
+  font-weight: bold;
+}
+.card-text.card-text.dinner-color span:nth-child(2) {
+  font-size: 12px;
+  color: #9da8c3;
+}
+.card-text.snack-color span:nth-child(1) {
+  color: #b575e7;
+  font-weight: bold;
+}
+.card-text.card-text.snack-color span:nth-child(2) {
+  font-size: 12px;
+  color: #9da8c3;
+}
+.plus-button {
+  width: 40px;
+  margin-left: auto;
+}
+.card-text.exercise-color span:nth-child(1) {
+  color: #ff655b;
+  font-weight: bold;
+}
+.card-text.card-text.exercise-color span:nth-child(2) {
+  font-size: 12px;
+  color: #9da8c3;
+}
+.daily-exercise {
+  margin: 20px;
+}
+.daily-exercise p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.exercise img:nth-child(4) {
+  position: absolute;
+  left: 40%;
+  bottom: 20px;
+}
+.exercise img:nth-child(5) {
+  position: absolute;
+  left: 40%;
+  bottom: 17px;
+}
+.footer-menu {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.footer-menu button {
+  border: none;
+  background: white;
+}
+.footer-icon {
+  font-size: 32px;
+}
+.footer-menu button:focus {
+  color: #2ed12e;
+}
+.exercise {
+  margin-bottom: 90px;
+}
+.card-text.breakfest-color span:nth-child(1) {
+  color: #2ed12e;
+  font-weight: bold;
+}
+.card-text.card-text.breakfest-color span:nth-child(2),
+span:nth-child(3),
+span:nth-child(4),
+span:nth-child(5) {
+  font-size: 12px;
+  color: #9da8c3;
+}

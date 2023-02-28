@@ -1,0 +1,459 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+    background-color: whitesmoke;
+}
+
+.header {
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 62px 20px 0 20px;
+}
+
+.calendar-image {
+    background: #F2F5FC;
+    padding: 9px 9px 9px 9px;
+    border-radius: 16px;
+}
+
+.date {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.three-buttons {
+    display: flex;
+    background: #F2F5FC;
+    padding: 20px 12px 20px 12px;
+    border-radius: 16px;
+}
+
+.button {
+    width: 5px;
+    height: 5px;
+    background: #333333;
+    border-radius: 3px;
+    margin-left: 1px;
+
+
+}
+
+.upgrade-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 20px 26px 21px;
+    background: linear-gradient(187.04deg, #9FE860 8.03%, #50CE3B 92.63%);
+    border-radius: 12px;
+}
+
+.upgrade-version {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
+    border-radius: 90px;
+    padding: 8px 12px 8px 12px;
+    margin: 15px 0 16px 12px;
+
+}
+
+.upgrade-text {
+    margin: 12px 67px 14px 16px ;
+}
+
+.text_1 {
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.text_2 {
+    font-weight: 400;
+    font-size: 11px;
+    color: white;
+    margin-top: 5px;
+}
+
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 40px 0 40px;
+}
+
+.burn-number, .eaten-number, .kcal-goal-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+}
+
+.burn-text, .kcal-text, .eaten-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+    margin-left: 8px;
+}
+
+.kcal-goal-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.burn-image, .restaurant-image {
+    margin-top: 65px;
+    margin-left: 8px;
+}
+
+.kcal-info {
+    margin: 55px 40px 60px 42px;
+    position: absolute;
+}
+
+.kcal-number {
+    font-weight: 700;
+    font-size: 36px;
+    color: #2DB82D;
+}
+
+.kcal-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.kcal-btn-right {
+    width: 8px;
+    height: 8px;
+    background: #2DB82D;
+    border-radius: 5px;
+    margin-left:px;
+}
+
+.kcal-btn-left {
+    width: 8px;
+    height: 8px;
+    background: #2DB82D;
+    opacity: 0.5;
+    border-radius: 5px;
+    margin-left:5px;
+}
+
+.kcal-goal {
+    margin-top: 18px;
+}
+
+.kcal-goal-number {
+    display: flex;
+    justify-content: center;
+}
+
+.kcal-goal-text {
+    display: flex;
+    justify-content: center;
+}
+
+
+.arrow-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.arrow-container {
+    background: linear-gradient(181.96deg, #6CFF6C -24.63%, #14BD14 126.53%);
+    padding: 12px 8px 12px 8px;
+    border-radius: 100px;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.water-wrapper {
+    margin: 12px 20px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, blue 1%, transparent 0%);
+
+}
+
+.water-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.water-info {
+    margin: 12px 0 0 20px;
+}
+
+.water {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4166F5;
+}
+
+.water-text-bold {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    font-family: "Helvetica Neue";
+
+}
+
+.water-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+
+.water-drop {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 23px 14px 0 0;
+}
+
+.btn {
+    font-size: 30px;
+    background: linear-gradient(187.04deg, #9FE860 8.03%, #50CE3B 92.63%);
+    border-radius: 100px;
+}
+
+.minus {
+    color: white;
+    padding: 0px 14px 5px 14px;
+    margin-right: 12px;
+}
+
+.plus {
+    color: white;
+    padding: 0 10px 5px 10px;
+    margin-left: 12px;
+}
+
+.litres {
+    font-weight: 500;
+    font-size: 12px;
+    color: #9DA8C3;
+    margin-top: 15px;
+}
+
+.dailyMeals-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 29px 33px 18px 31px;
+}
+
+.dailyMeals {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.dailyMealsImage {
+    background: #E0E6F3;
+    border-radius: 11px;
+    padding: 9px 9px 7px 9px;
+}
+
+.breakfast-wrapper {
+    margin: 12px 20px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #2ED12E 1%, transparent 0%);
+
+}
+
+.breakfast {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2ED12E;
+}
+
+.check {
+    margin: 0 0 0 8px;
+}
+
+.breakfast-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 11px 20px 20px;
+}
+
+.gram, .kcal {
+    font-weight: 400;
+    font-size: 12px;
+    color: #9DA8C3;
+}
+
+.save-button{
+    display: flex;
+    margin-left: 20px;
+
+}
+
+.save-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #2ED12E;
+    padding: 4px 10px 5px 9px;
+    background: #F2F5FC;
+    border-radius: 100px;
+}
+
+.lunch-wrapper {
+    margin: 12px 20px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #FFA935 1%, transparent 0%);
+}
+
+.lunch-container, .dinner-container, .exercise-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lunch-info, .dinner-info, .exercise-info {
+    margin: 12px 0 0 20px;
+}
+
+.lunch {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFA935;
+}
+
+.lunch-text, .dinner-text, .exercise-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.dinner {
+    font-size: 18px;
+    font-weight: bold;
+    color: #12E5B0;
+}
+
+.dinner-wrapper {
+    margin: 12px 20px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #12E5B0 1%, transparent 0%);
+}
+
+.exercise {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF655B;
+}
+
+.exercise-wrapper {
+    margin: 12px 20px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #FF655B 1%, transparent 0%);
+}
+
+.footer {
+    background-color: whitesmoke;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 34px 23px 32px;
+}
+
+.diary-container {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.diary-vector {
+    width: 9px;
+    height: 9px;
+    background: #2ED12E;
+    margin-bottom: 1px;
+    border-radius: 3px;
+}
+
+.diary-image-right {
+    padding-left: 1px;
+}
+
+.diary-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #62E962;}
+
+
+.explore-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.coach-image {
+    padding-bottom: 2px;
+}
+
+.coach-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
+
+.results-image {
+    padding-bottom: 2px;
+}
+
+.results-text {
+    font-weight: 400;
+    font-size: 10px;
+    color: #9DA8C3;
+}
