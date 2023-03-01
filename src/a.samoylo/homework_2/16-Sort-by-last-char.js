@@ -1,3 +1,3 @@
 function last(x){
-      return x.split(' ').map(el => el.split('').reverse()).sort().map(el => el.reverse().join(''))
-}
+    return x.split(' ').sort((a,b) => a.slice(-1).localeCompare(b.slice(-1)))
+};
