@@ -1,3 +1,3 @@
 function disemvowel(str) {
-    return str.split('').map(el => 'qeuioaQEUIOA'.split('').includes(el)? '' : el).join('');
+    return str.split('').map(el => 'euioaEUIOA'.split('').includes(el)? '' : el).join('');
 };
