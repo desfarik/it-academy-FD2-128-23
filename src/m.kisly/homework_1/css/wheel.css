@@ -1,0 +1,58 @@
+.scroller::-webkit-scrollbar {
+    /* chrome based */
+    width: 0px;
+    /* ширина scrollbar'a */
+    background: transparent;
+    /* опционально */
+}
+
+.scroller {
+    width: 39px;
+    height: 63px;
+    overflow-y: scroll;
+    display: flex;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    scroll-snap-type: y mandatory;
+    flex-direction: column;
+    position: sticky;
+    z-index: 102;
+    /* background: linear-gradient(0deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 51.61%, rgba(196, 196, 196, 0) 95.97%); */
+}
+
+.scroller>div {
+    flex: 0 0 23px;
+    /* width: 30px; */
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    color: #9DA8C3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    /* margin:  20px 0px; */
+
+}
+
+.scroller>div:nth-child(2n) {
+    background-color: ;
+    color: ;
+}
+
+.scroller div {
+    scroll-snap-align: center;
+}
+
+.scroller div:last-of-type {
+    padding-bottom: 23px;
+}
+
+.scroller div:first-of-type {
+    padding-top: 23px;
+
+}
