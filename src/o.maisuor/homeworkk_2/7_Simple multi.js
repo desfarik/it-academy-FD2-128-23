@@ -8,3 +8,10 @@ function simpleMultiplication(number) {
     return( number * 9)
   }
 }
+console.log(simpleMultiplication(2))
+console.log(simpleMultiplication(1))
+console.log(simpleMultiplication(10))
+console.log(simpleMultiplication(3))
+console.log(simpleMultiplication(20))
+console.log(simpleMultiplication(5))
+console.log(simpleMultiplication(100))

@@ -11,3 +11,6 @@ if (current === 'green'){
     
 
 }
+console.log(updateLight('green'))
+console.log(updateLight('yellow'))
+console.log(updateLight('red'))
