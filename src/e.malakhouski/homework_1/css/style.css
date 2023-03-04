@@ -1,0 +1,596 @@
+body {
+		margin: 0; 
+		font-family: sans-serif;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+
+	.header {
+		padding: 50px 20px 0;
+		margin-bottom: 20px;
+		position: sticky;
+		top: 0;
+		background: linear-gradient(181.01deg, #FFFFFF 66.92%, rgba(255, 255, 255, 0) 99.13%);
+		z-index: 2;
+	}
+
+	.header .header_menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		min-height: 45px;
+	}
+
+	.header .header_menu .btn_calendar {
+		align-self: center;
+		width: 45px;
+		height: 45px;
+		background: url("../images/Calendar.svg") #F2F5FC no-repeat 50% 50%;
+		background-size: 50% 50%;
+		border: none;
+		border-radius: 14px;
+		cursor: pointer;
+	}
+
+	.header .header_menu p {
+		margin: 12px 0;
+	}
+
+	.header .header_menu .btn_menu {
+		align-self: center;
+		width: 45px;
+		height: 45px;
+		background: url("../images/dots.svg") #F2F5FC no-repeat 50% 50%;
+		background-size: 50% 50%;
+		border: none;
+		border-radius: 14px;
+		cursor: pointer; 
+	}
+
+	.header .offer {
+		background: url("../images/offer_bg.png") no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		align-items: center;
+		min-height: 60px;
+		border-radius: 12px;
+	}
+
+	.header .offer .btn_offer {
+		min-width: 55px;
+		min-height: 27px;
+		font-weight: bold;
+		margin: 0 14px;
+		border: none;
+		border-radius: 12px; 
+		background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
+		color: #FFFFFF;
+		cursor: pointer;
+	}
+
+	.header .offer .offer_text_1 {
+		font-size: 14px;
+		color: #FFFFFF;
+		margin: 0;
+	}
+
+	.header .offer .offer_text_2 {
+		font-size: 11px;
+		color: #FFFFFF;
+		margin: 0;
+		line-height: 18px;
+	}
+
+	.main .calories .calories_info_1 {
+		margin: 0 36px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.main .calories .calories_info_1 .calories_burn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: url("../images/Burn.svg") no-repeat center top;
+		margin-top: 30px;
+	}
+
+	.main .calories .calories_info_1 .calories_burn .calories_burn_count {
+		font-size: 24px;
+		font-weight: bold;
+		margin: 0;
+		padding-top: 20px;
+	}
+	
+	.main .calories .calories_info_1 .calories_burn .calories_burn_text {
+		font-size: 10px;
+		margin: 0;
+		color: #9DA8C3;
+	}
+
+	.main .calories .calories_info_1 .calories_available {
+		display: flex;
+		flex-direction: column;
+		min-height: 160px;
+		min-width: 160px;
+		background: url("../images/Сircle_cal.svg") no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.main .calories .calories_info_1 .calories_available .calories_available_count {
+		font-size: 36px;
+		font-weight: bold;
+		align-self: center;
+		color: #2DB82D;
+		margin: 0;
+		padding-top: 40px;
+	}
+	
+	.main .calories .calories_info_1 .calories_available .calories_available_text {
+		align-self: center;
+		font-size: 10px;
+		margin: 0;
+		color: #9DA8C3;
+		margin-bottom: 20px;
+	}
+
+	.main .calories .calories_info_1 .calories_available .else_info {
+		align-self: center;
+	}
+
+	.else_info > input[type="radio"] {
+		display: none;
+    }
+
+    .else_info > label {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		text-align: center;
+		vertical-align: middle;
+		user-select: none;
+		background-color: #2DB82D;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+		cursor: pointer;
+		opacity: 0.5;
+    }
+
+    .else_info > input[type="radio"]:checked+label {
+		opacity: 1;
+    }
+
+	.main .calories .calories_info_1 .calories_eaten {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: url("../images/Restaurant.svg") no-repeat center top;
+		margin-top: 30px;
+	}
+
+	.main .calories .calories_info_1 .calories_eaten .calories_eaten_count {
+		font-size: 24px;
+		font-weight: bold;
+		margin: 0;
+		padding-top: 20px;
+	}
+	
+	.main .calories .calories_info_1 .calories_eaten .calories_eaten_text {
+		font-size: 10px;
+		margin: 0;
+		color: #9DA8C3;
+	}
+
+	.main .calories .calories_goal_container {
+		display: flex;
+		flex-direction: column;
+		background: url("../images/Calories_bg.png") #F2F5FC no-repeat center top;
+		align-items: center;
+		background-size: contain;
+	}
+
+	.main .calories .calories_goal_container .calories_goal .calories_goal_count {
+		font-size: 24px;
+		font-weight: bold;
+		margin: 0;
+		padding-top: 20px;
+		text-align: center;
+	}
+	
+	.main .calories .calories_goal_container .calories_goal .calories_goal_text {
+		font-size: 10px;
+		margin: 0;
+		color: #9DA8C3;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.main .calories .calories_goal_container .btn_calories {
+		min-width: 40px;
+		min-height: 40px;
+		border: none;
+		background: url("../images/Calories_btn.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	.main .main_content {
+		padding: 20px 20px 30px;
+		background-color: #F2F5FC;
+	}
+
+	.main .main_content .content_water {
+		display: flex;
+		justify-content: space-between;
+		min-height: 75px;
+		border-radius: 12px;
+		overflow: hidden;
+		background: url("../images/Blue_line.png") #FFFFFF repeat-y;
+	}
+
+	.main .main_content .content_water .content_water_info {
+		min-width: 170px;
+		margin: 12px 0 5px 20px;
+		align-self: center;
+		background: url("../images/Rain.svg") no-repeat left bottom;
+	}
+
+	.main .main_content .content_water .content_water_info h4 {
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.main .main_content .content_water .content_water_info h4 span {
+		color: #4166F5;
+	}
+	
+	.main .main_content .content_water .content_water_info p {
+		font-size: 10px;
+		margin: 0;
+		color: #9DA8C3;
+		margin-bottom: 20px;
+	}
+
+	.main .main_content .content_water .content_water_counter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: 15px;
+	}
+
+	.main .main_content .content_water .content_water_counter .btn_minus {
+		align-self: center;
+		width: 30px;
+		height: 30px;
+		border: none;
+		background: url("../images/Btn_minus.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	.main .main_content .content_water .content_water_counter .content_water_numbers {
+		margin: 0 15px;
+
+	}
+
+	.main .main_content .content_water .content_water_counter .content_water_numbers p {
+		font-size: 12px;
+		margin: 0;
+		color: #9DA8C3;
+	}
+
+	.main .main_content .content_water .content_water_counter .content_water_numbers p:first-child,
+	.main .main_content .content_water .content_water_counter .content_water_numbers p:last-child {
+		opacity: 0.5;
+	}
+
+	.main .main_content .content_water .content_water_counter .content_water_numbers p:nth-child(2) {
+		margin: 10px 0;
+	}
+
+	.main .main_content .btn_plus {
+		align-self: center;
+		width: 30px;
+		height: 30px;
+		border: none;
+		background: url("../images/Btn_plus.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		margin: 20px 0 10px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_head h4 {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_head .btn_daily_meals_edit {
+		align-self: center;
+		width: 35px;
+		height: 35px;
+		border: none;
+		background: url("../images/Pencil.svg") #E0E6F3 no-repeat 50% 50%;
+		cursor: pointer;
+		border-radius: 11px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_breakfast {
+		border-radius: 12px;
+		background: url("../images/Green_line.png") #FFFFFF repeat-y;
+		padding: 12px 15px 5px 20px;
+		margin-bottom: 15px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_breakfast .daily_meals_breakfast_info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head .daily_meals_breakfast_head_container {
+		display: flex;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head input[type="radio"] {
+		display: none;
+    }
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head label {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		vertical-align: middle;
+		background: url("../images/Dropdown.svg") no-repeat 50% 50%;
+		cursor: pointer;
+    }
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head h4 {
+		margin: 0;
+		font-size: 18px;
+		margin-right: 10px;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head h4 span {
+		color: #2ED12E;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info .daily_meals_breakfast_head p {
+		min-height: 20px;
+		font-size: 10px;
+		margin: 10px 0 0;
+		color: #9DA8C3;
+		background: url("../images/Сheck-mark.svg") no-repeat 65% top;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info_items .item_1,
+	.daily_meals_breakfast .daily_meals_breakfast_info_items .item_2,
+	.daily_meals_breakfast .daily_meals_breakfast_info_items .item_3 {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info_items p {
+		margin: 0;
+		font-size: 12px;
+		color: #9DA8C3;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info_items .item__dotted {
+		border-bottom: 0.5px dashed #E0E6F3;
+		flex-grow: 1;
+	}
+
+	.daily_meals_breakfast .daily_meals_breakfast_info_items .btn_save_breakfast_info {
+		align-self: center;
+		height: 20px;
+		border: none;
+		background-color: #F2F5FC;;
+		cursor: pointer;
+		color: #2ED12E;
+		font-size: 10px;
+		border-radius: 100px;
+		padding: 5px 10px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_lunch,
+	.main .main_content .content_daily_meals .daily_meals_dinner,
+	.main .main_content .content_daily_meals .daily_meals_snack {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 75px;
+		border-radius: 12px;
+		padding: 0 15px 0 20px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_lunch {
+		background: url("../images/Yellow_line.png") #FFFFFF repeat-y;
+		margin-bottom: 15px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_dinner {
+		background: url("../images/Turquoise_line.png") #FFFFFF repeat-y;
+		margin-bottom: 15px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_snack {
+		background: url("../images/Violet_line.png") #FFFFFF repeat-y;
+		margin-bottom: 20px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_lunch .daily_meals_lunch_info h4,
+	.main .main_content .content_daily_meals .daily_meals_dinner .daily_meals_dinner_info h4,
+	.main .main_content .content_daily_meals .daily_meals_snack .daily_meals_snack_info h4 {
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_lunch .daily_meals_lunch_info p,
+	.main .main_content .content_daily_meals .daily_meals_dinner .daily_meals_dinner_info p,
+	.main .main_content .content_daily_meals .daily_meals_snack .daily_meals_snack_info p {
+		font-size: 10px;
+		margin: 5px 0 0;
+		color: #9DA8C3;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_lunch .daily_meals_lunch_info h4 {
+		color: #FFA935;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_dinner .daily_meals_dinner_info h4 {
+		color: #12E5B0;
+	}
+
+	.main .main_content .content_daily_meals .daily_meals_snack .daily_meals_snack_info h4 {
+		color: #B575E7;
+	}
+
+	.main .main_content .content_daily_exercise > h4 {
+		font-size: 14px;
+		margin: 0 0 10px;
+		padding-left: 10px;
+	}
+
+	.main .main_content .content_daily_exercise .exercise {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 75px;
+		border-radius: 12px;
+		padding: 0 15px 0 20px;
+		background: url("../images/Red_line.png") #FFFFFF repeat-y;
+	}
+
+	.main .main_content .content_daily_exercise .exercise .exercise_info .exercise_steps {
+		display: flex;
+		align-items: center;
+	}
+
+	.main .main_content .content_daily_exercise .exercise .exercise_info h4 {
+		margin: 0;
+		font-size: 18px;
+		color: #FF655B;
+	}
+
+	.main .main_content .content_daily_exercise .exercise .exercise_info .exercise_steps p {
+		font-size: 10px;
+		margin: 5px 15px 0 0;
+		color: #9DA8C3;
+	}
+
+	.toggle {
+		width: 32px;
+		height: 20px;
+	}
+
+	.ios-toggle, .ios-toggle:active {
+		height: 0;
+		width: 0;
+		opacity: 0;
+		border: none;
+		outline: none;
+	}
+
+	.checkbox-label {
+		display: block;
+		position: relative;
+		top: -15px;
+		width: 100%;
+		margin-top: 2.5px;
+		height: 15px;
+		border-radius: 7.5px;
+		background: #f8f8f8;
+		cursor: pointer;
+	}
+
+	.checkbox-label:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 1;
+		height: 20px;
+		width: 20px;
+		margin-top: -2.5px;
+		border-radius: 100%;
+		top: 0px;
+		left: 0px;
+		right: auto;
+		background: white;
+		box-shadow: 0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+	}
+
+	.ios-toggle:checked + .checkbox-label {
+		box-shadow: inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+	}
+		
+	.ios-toggle:checked + .checkbox-label:before {
+		left: calc(100% - 20px);
+		box-shadow: 0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
+	}
+
+	#checkbox1 + .checkbox-label {
+		box-shadow: inset 0 0 0 0px #dddddd,0 0 0 2px #dddddd;
+	}
+
+	#checkbox1:checked + .checkbox-label {
+		box-shadow: inset 0 0 0 18px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);} 
+
+	#checkbox1:checked + .checkbox-label:after {
+		color: rgba(19,191,17,1);
+	}
+
+	.footer {
+		background-color: #F2F5FC;
+		position: sticky;
+		bottom: 0;
+		z-index: 2;
+	}
+
+	.footer .footer_nav .navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #FFFFFF;
+		margin: 0;
+		border-radius: 30px 30px 0 0;
+		padding: 0 34px;
+		list-style-type: none;
+		min-height: 85px;
+	}
+
+	.footer .footer_nav .navbar li {
+		height: 43px;
+	}
+	
+	.footer .footer_nav .navbar a {
+		text-decoration: none;
+		color: #9DA8C3;
+		font-size: 10px;
+		display: block;
+		padding-top: 30px;
+		cursor: pointer;	
+	}
+
+	.footer .footer_nav .navbar .diary {
+		background: url("../images/Diary.svg") no-repeat center top;
+		color: #62E962;
+	}
+
+	.footer .footer_nav .navbar .explore {
+		background: url("../images/Explore.svg") no-repeat center top;
+	}
+
+	.footer .footer_nav .navbar .coach {
+		background: url("../images/Coach.svg") no-repeat center top;
+	}
+
+	.footer .footer_nav .navbar .results {
+		background: url("../images/Results.svg") no-repeat center top;
+	}
