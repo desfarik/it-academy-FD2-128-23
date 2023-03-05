@@ -7,3 +7,7 @@ function rentalCarCost(d) {
   }
   return c;
 }
+
+rentalCarCost(1);
+rentalCarCost(4);
+rentalCarCost(7);

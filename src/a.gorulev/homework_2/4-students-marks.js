@@ -9,3 +9,9 @@ function finalGrade (exam, projects) {
     return 0;
   }
 }
+
+finalGrade(91, 5);
+finalGrade(34, 11);
+finalGrade(77, 9);
+finalGrade(55, 3);
+finalGrade(77, 0);

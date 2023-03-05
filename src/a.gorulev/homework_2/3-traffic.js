@@ -14,3 +14,6 @@ function updateLight(current) {
       break;
   }
 }
+
+updateLight('green');
+updateLight('yellow');

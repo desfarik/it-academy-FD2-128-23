@@ -5,3 +5,6 @@ function simpleMultiplication(number) {
     return number * 9;
   }
 }
+
+simpleMultiplication(1);
+simpleMultiplication(4);

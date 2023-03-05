@@ -6,3 +6,5 @@ function consonantCount(str) {
   }
   return consonants;
 }
+
+consonantCount('aeiou AEIOU bcdfghjklmnpqrstvwxyz BCDFGHJKLMNPQRSTVWXYZ 01234567890_ ^&$#');
