@@ -1,0 +1,482 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Styles*/
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Helvetica';
+}
+/*HEADER*/
+header {
+    position: fixed;
+    top: 0;
+    padding: 50px 30px 16px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+}
+.header_calender {
+    width: 44px;
+    height: 44px;
+    background: url('images/calender.svg') center no-repeat, #F2F5FC;
+    border-radius: 16px;
+    border: none;
+}
+.header_date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+.header_settings {
+    width: 44px;
+    height: 44px;
+    background: url('images/dots.svg') center no-repeat, #F2F5FC;
+    border-radius: 16px;
+    border: none;
+}
+/*MAIN*/
+main {
+    margin-top: 114px;
+    width: 100%;
+}
+.premium_btn_wrapper {
+    text-align: center;
+}
+.premium_btn {
+    color: #FFFFFF;
+    background: url('images/pro-btn.svg') center no-repeat;
+    background-size: 100%;
+    border-radius: 12px;
+    border: none;
+    width: 85%;
+    padding: 10px 20px 17px 13px;
+}
+.premium_btn_content {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.premium_btn_content>div:first-child {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    background: linear-gradient(219.68deg, #FFA935 22.67%, #FDD00E 74.06%);
+    border-radius: 91.8605px;
+    width: 55px;
+    height: 27px;
+    padding: 5px;
+}
+.premium_btn h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+.premium_btn_content>div>p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+}
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding-top: 26px;
+}
+.central div:first-child {
+    background: url('images/burn.svg') center top no-repeat;
+    padding-top: 25px;
+}
+.central div:last-child {
+    background: url('images/eaten.svg') center top no-repeat;
+    overflow: visible;
+    padding-top: 25px;
+}
+.central h3,
+.goal h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    color: #333333;
+}
+.central p,
+.goal p,
+.water p,
+.breakfast_heading p,
+.lunch p,
+.dinner p,
+.snack p,
+.exercise p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0.2px;
+    color: #9DA8C3;
+}
+.circle {
+    width: 158px;
+    height: 158px;
+    background: url('images/circle.svg') no-repeat, url('images/else.svg') 50% 82% no-repeat;
+    padding: 50px 41px 64px 35px;
+}
+.circle h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    color: #2DB82D;
+}
+.goal {
+    text-align: center;
+    padding-top: 19px;
+}
+.panel {
+    width: 100%;
+    height: 60px;
+    background: url('images/panel.svg') center bottom no-repeat, #F2F5FC;
+    text-align: center;
+    padding: 30px 0;
+}
+.panel_btn {
+    width: 38px;
+    min-height: 38px;
+    background: url('images/panel_btn.svg') no-repeat;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+.info {
+    width: 100%;
+    background-color: #F2F5FC;
+    padding: 20px;
+}
+.water,
+.breakfast,
+.lunch,
+.dinner,
+.snack,
+.exercise {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 18px 10px 15px 14px;
+    margin-bottom: 20px;
+}
+.info h3 {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+.water,
+.breakfast_heading,
+.lunch,
+.dinner,
+.snack,
+.exercise {
+    display: flex;
+    justify-content: space-between;
+}
+.water {
+    border-left: solid 10px #476FF5;
+}
+.water h3 { 
+    color: #4166F5;
+}
+.water h3>span {
+    color: #1A1C24;
+}
+.water div:first-child>p {
+    padding-bottom: 20px;
+    padding-right: 40px;
+    background: url('images/drops.svg') left bottom no-repeat;
+}
+.water_calc {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.water_calc>div>p:first-child,
+.water_calc>div>p:last-child {
+    opacity: 0.5;
+    margin: 5px 0;
+}
+.minus_btn,
+.plus_btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.minus_btn {
+    background: url('images/minus-btn.svg') no-repeat;
+}
+.plus_btn {
+    background: url('images/plus-btn.svg') no-repeat;
+}
+.daily_meals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 8px;
+}
+.daily_meals p {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+
+    color: #1A1C24;
+}
+.daily_meals_edit {
+    width: 34px;
+    height: 34px;
+    background: url('images/edit.svg') center no-repeat, #E0E6F3;
+    border-radius: 11px;
+    border: none;
+}
+.breakfast {
+    border-left: solid 10px #2ED12E;
+}
+.breakfast_heading h3{
+    color: #2ED12E;
+}
+.breakfast_heading span {
+    color: #1A1C24;
+}
+.breakfast_heading h3:after {
+    content: url('images/arrow-up.svg');
+    margin-left: 10px;
+}
+.breakfast_heading p:after {
+    content: url('images/check-mark.svg');
+    margin-left: 10px;
+}
+.breakfast_content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+    color: #9DA8C3;
+}
+.breakfast_content li {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: baseline;
+}
+.breakfast_content li:before {
+    content: "";
+    flex-grow: 1;
+    order: 2;
+    border-bottom: 1px dashed #E0E6F3;
+}
+.breakfast_content li>span {
+    order: 3;
+}
+.breakfast_save_btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 0.2px;
+    color: #2ED12E;
+    background: #F2F5FC;
+    border-radius: 100px;
+    padding: 5px;
+    width: 90px;
+    text-align: center;
+    border: none;
+}
+.lunch,
+.dinner,
+.snack,
+.exercise {
+    min-height: 75px;
+    align-items: center;
+}
+
+.lunch {
+    border-left: solid 10px #FFA935;
+}
+.lunch h3 {
+    color: #FFA935;
+}
+.dinner {
+    border-left: solid 10px #12E5B0;
+}
+.dinner h3 {
+    color: #12E5B0;
+}
+.snack {
+    border-left: solid 10px #B575E7;
+}
+.snack h3 {
+    color: #B575E7;
+}
+.daily_exercise {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    color: #1A1C24;
+    padding: 0 10px 8px;
+}
+.exercise {
+    border-left: solid 10px #FF655B;
+}
+.exercise h3 {
+    color: #FF655B;
+}
+.excercise_counter {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 14px;
+}
+.switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    background: #F2F5FC;
+    box-shadow: inset 0px 0.381818px 1.90909px rgba(0, 0, 0, 0.05);
+    border-radius: 6.68182px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .5s;
+}
+.slider:before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    bottom: -2px;
+    background: linear-gradient(191.24deg, #F2F5FC -12.17%, #E0E6F3 79.2%);
+    transition: .5s;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(18px);
+}
+.switch input:checked + .slider {
+    background: #FF655B;
+}
+.info>div:last-of-type {
+    min-height: 80px;
+}
+/*FOOTER*/
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 19px 32px 23px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 162.7%;
+    color: #9DA8C3;
+}
+.footer_diary {
+    color: #62E962;
+}
+.footer_diary {
+    background: url('images/diary.svg') center top no-repeat;
+    padding-top: 26px;
+}
+.footer_explore {
+    background: url('images/explore.svg') center top no-repeat;
+    padding-top: 26px;
+}
+.footer_coach {
+    background: url('images/coach.svg') center top no-repeat;
+    padding-top: 26px;
+}
+.footer_results{
+    background: url('images/results.svg') center top no-repeat;
+    padding-top: 26px;
+}
