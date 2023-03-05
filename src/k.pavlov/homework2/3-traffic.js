@@ -12,3 +12,5 @@ function updateLight(current) {
         return currentLight[0];
     }
 }
+
+console.log(updateLight('red'));

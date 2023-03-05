@@ -9,3 +9,5 @@ function rentalCarCost(d) {
 
     return 40*d;
 }
+
+console.log(rentalCarCost(3));

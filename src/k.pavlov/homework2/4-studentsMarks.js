@@ -8,3 +8,5 @@ function finalGrade(exam, projects) {
     }
     return 0;
 }
+
+console.log(finalGrade(78, 5));

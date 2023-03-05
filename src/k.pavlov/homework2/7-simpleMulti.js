@@ -6,3 +6,5 @@ function simpleMultiplication(number) {
         return number *9;
     }
 }
+
+console.log(simpleMultiplication(76));
