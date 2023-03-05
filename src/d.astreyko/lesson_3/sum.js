@@ -3,7 +3,6 @@ const num = +prompt('Введи число'); //5
 const array = [];
 let sum = 0;
 for (let i = 0; i <= array.length; i++) {
-  // суммируем каждый элемент в перемену sum
   sum = sum + array[i]; // sum+=i;
   console.log(sum);
 }
