@@ -1,10 +1,6 @@
 function round(num) {
   const str = `${num}`;
-  if (str.includes(".")) {
-    return roundNum(str, num);
-  } else {
-    return num;
-  }
+  return str.includes(".") ? roundNum(str, num) : num;
   function roundNum(str, num) {
     const indexDot = str.indexOf(".");
     const floatPart = str.substr(indexDot + 1, 1);
