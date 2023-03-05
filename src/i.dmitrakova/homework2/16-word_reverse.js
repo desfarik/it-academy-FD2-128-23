@@ -1,6 +1,6 @@
-function someStr(str){
+function reverseWord(str){
 
     str = str.split("").reverse().join("").split(" ").reverse().join(" ") ;
     return str;
 }
-alert(someStr('weer ter'))
+alert(reverseWord('Sandwich with cheese'))

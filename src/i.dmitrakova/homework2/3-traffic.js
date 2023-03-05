@@ -1,4 +1,4 @@
-function Traffic(current_state){
+function doTraffic(current_state){
     switch(current_state){
         case 'green' :
             return 'yellow';
@@ -8,4 +8,4 @@ function Traffic(current_state){
             return 'green';
     }
 }
-alert(Traffic('red'))
+alert(doTraffic('red'))
