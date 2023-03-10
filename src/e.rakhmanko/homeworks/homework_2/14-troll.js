@@ -1,5 +1,5 @@
 function disemvowel(str) {
-  var newStr = "",
+  let newStr = "",
     i;
 
   for (i = 0; i < str.length; i++) {
