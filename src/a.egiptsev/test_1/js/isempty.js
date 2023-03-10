@@ -6,3 +6,8 @@ function isEmpty(array) {
   }
 }
 console.log(isEmpty(""));
+
+function isEmpty(array) {
+  return array.length === 0;
+}
+console.log(isEmpty([]));
