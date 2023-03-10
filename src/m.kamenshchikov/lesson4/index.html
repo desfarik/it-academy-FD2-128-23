@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nearestSq(n) {
+        let n = prompt("Введите число");
+        let sqrt = Math.sqrt(n);
+        let up = Math.ceil(sqrt);
+        let down = Math.floor(sqrt);
+        let sqrtUp = up ** 2;
+        let sqrtDown = up ** 2;
+        if (sqrtUp - n < n - sqrtDown) {
+          return sqrtUp;
+        } else {
+          return sqrtDown;
+        }
+      }
+      nearestSq();
+    </script>
+  </body>
+</html>
