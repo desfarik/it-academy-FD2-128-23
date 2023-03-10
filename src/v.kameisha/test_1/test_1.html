@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [1,2,3,4,5,6];
+        function take(array, n){
+            if (array === null) return false;
+            if (n === null) return array[0];
+            return array.slice(0, n);
+        }
+        console.log(take(array, 4));
+        console.log(take(array,1));
+
+        function takeLast(array, n){
+            if (array === null) return false;
+            if (n === null) return array[array.length - 1];    
+            return array.slice(Math.max(array.length - n, 0));
+        }
+        console.log(takeLast(array,3));
+        console.log(takeLast(array,2));
+
+        function min(array){
+            for(let i = 0;i < array.length;i++){
+                Math.min(array[i]);
+            }
+            return array;
+        }
+        console.log(min(5,21,34));
+       
+    </script>
+</body>
+</html>
