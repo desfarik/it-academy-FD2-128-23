@@ -8,31 +8,115 @@
 </head>
 <body>
     <script>
-        let array = [1,2,3,4,5,6];
-        function take(array, n){
-            if (array === null) return false;
-            if (n === null) return array[0];
-            return array.slice(0, n);
-        }
-        console.log(take(array, 4));
-        console.log(take(array,1));
+        // let array = [1,2,3,4,5,6];
+        // function take(array, n){
+        //     if (array === null) return false;
+        //     if (n === null) return array[0];
+        //     return array.slice(0, n);
+        // }
+        // console.log(take(array, 4));
+        // console.log(take(array,1));
 
-        function takeLast(array, n){
-            if (array === null) return false;
-            if (n === null) return array[array.length - 1];    
-            return array.slice(Math.max(array.length - n, 0));
-        }
-        console.log(takeLast(array,3));
-        console.log(takeLast(array,2));
+        // function takeLast(array, n){
+        //     if (array === null) return false;
+        //     if (n === null) return array[array.length - 1];    
+        //     return array.slice(Math.max(array.length - n, 0));
+        // }
+        // console.log(takeLast(array,3));
+        // console.log(takeLast(array,2));
 
-        function min(array){
-            for(let i = 0;i < array.length;i++){
-                Math.min(array[i]);
-            }
-            return array;
-        }
-        console.log(min(5,21,34));
+        // function min(array){
+        //     for(let i = 0;i < array.length;i++){
+        //         Math.min(array[i]);
+        //     }
+        //     return array;
+        // }
+        // console.log(min(5,21,34));
        
+
+        // function fill(size,value){
+        //     let array = [];
+        //     for( let i = 0; i < size;i++){
+        //         array.push(value);
+        //     }
+        //     return array;
+        // }
+        // console.log(fill(5,5));
+
+        // function generateRandom(size, from, to){
+        //     let array = [];
+        //     for(let i = 0; i < size; i++)[
+
+        //     ]
+        // }
+        // function randomNumber(from, to){
+        //   return Math.floor(Math.random()*(to-from)+ from)
+        // }
+        // console.log(randomNumber(6,12));
+
+        // function clone(array){
+        //     let cloned = [];
+        //     for(let i = 0; i < array; i++){
+        //         clone[i] = array[i];
+        //     }
+        //     return cloned;
+        // }
+        
+        // function reverse(array){
+        //     let reversed = [];
+        //     for(let i = array.length -1; i >= 0;i++ ){
+        //         reversed.push(array[i]);
+        //     }
+        //     return reversed;
+        // }
+        // console.log(reverse([1,2,3,4,5]));
+
+        // function join(array, separator){
+        //     let result = '' + array[0];
+        //     for(let i = 1; i < array.length; i++){
+        //         result += separator + array[i];
+        //     }
+        //     return result;
+        // }
+        // console.log(join([1,3,4] , '-'));
+
+        // function removeItem(array, index){
+        //     let spliced = [];
+        //     for(let i = 0; i < array.lenght; i++){
+        //         if(i !== index){
+        //             spliced.push(array[i])
+        //         }
+        //         return spliced;
+        //     }
+
+            // const left = array.slice(0,index);
+            // const right = array.slice(index +1);
+            // return [...left,...right];
+
+            // array.splice(index,1);
+            // return array;
+        // }
+        // console.log(removeItem([1,2,3,4,5],1));
+
+
+        // function moveItem(array, from, to){
+        //     let temp = array[from];
+        //     array[from] = array[to];
+        //     array[to] = temp;
+        //     return array; 
+        // }
+        // console.log(moveItem([1,2,3,4,5],0,3));
+
+        // function filterEven(array){
+        //     const result = [];
+        //     for(let i = 0; i < array.length; i++){
+        //         if( array[i] % 2 === 0){
+        //             result.push(array[i]);
+        //         }
+        //     }
+        //     return result;
+        // }
+        // console.log(filterEven([1,4,8]));
     </script>
 </body>
 </html>
