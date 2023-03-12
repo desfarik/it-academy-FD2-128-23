@@ -1,7 +1,7 @@
 function nbDig(n, d) {
-    var res=0;
-    for (var g=0;g<=n;g++){
-      var square=(g*g+"").split("");
+    let res=0;
+    for (let g=0;g<=n;g++){
+      let square=(g*g+"").split("");
       square.forEach((s)=>s==d?res++:null)
     }
     return res;
