@@ -1,12 +1,15 @@
 function add(num1, num2) {
-    let temp = 0;
-    if (num2 > num1) {
-        temp = num2;
-        num2 = num1;
-        num1 = temp;
-    }
+    let lengthNum;
     num1 = '' + num1;
     num2 = '' + num2;
+    if (num1.length >= num2.length) {
+        lengthNum = num1.length;
+        num2=num2.padStart(lengthNum,0);
+    } else {
+        lengthNum = num2.length;
+        num1=num1.padStart(lengthNum,0);
+    }
+    // console.log(num1,num2)
     num1 = num1.split('');
     num2 = num2.split('');
     let firstArr = num1;
@@ -28,7 +31,9 @@ function add(num1, num2) {
     }
 
 
-    return result.join(' ');
+    return result.join('');
+
 }
 
-console.log(add(918, 1218));
+
+console.log(add(16, 18));
