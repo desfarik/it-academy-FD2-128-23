@@ -1,0 +1,5 @@
+<svg height="500" width="500" viewBox="0 0 500 500">
+                    <circle cx="125" cy="125" r="250" stroke="#E0E6F3" stroke-width="10" fill="#FFF"/>
+                    <circle cx="125" cy="125" r="240" stroke="#E0E6F3" stroke-width="10" fill="none" stroke-dasharray="2, 30"
+                    stroke-dashoffset="" />
+                </svg>
