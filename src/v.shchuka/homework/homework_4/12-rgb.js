@@ -1,12 +1,13 @@
-function rgb(r, g, b) {
-  return rgb16(r) + rgb16(g) + rgb16(b);
-  function rgb16(color) {
-    if (color < 0) {
-      color = 0;
-    } else if (color > 255) {
-      color = 255;
+function rgb(red, green, blue) {
+  return getNumToHex(red) + getNumToHex(green) + getNumToHex(blue);
+  function getNumToHex(num) {
+    let copyNum = num;
+    if (num < 0) {
+      copyNum = 0;
+    } else if (num > 255) {
+      copyNum = 255;
     }
-    return color.toString(16).padStart(2, 0).toUpperCase();
+    return copyNum.toString(16).padStart(2, 0).toUpperCase();
   }
 }
 console.log(rgb(173, 255, 47));
