@@ -1,0 +1,17 @@
+function aliasGen(name, lastName){
+if (!name[0].match(/[a-z]/i) || !lastName[0].match(/[a-z]/i)) {
+  return 'Your name must start with a letter from A - Z.'
+} else {
+  for (let key in firstName) {
+    if (name[0].toUpperCase() === key) {
+      name = firstName[key];
+    }
+  }
+  for (let key in surname){
+    if (lastName[0].toUpperCase() === key) {
+      lastName = surname[key];
+    }
+  }
+  return name + ' ' + lastName;
+}
+}
