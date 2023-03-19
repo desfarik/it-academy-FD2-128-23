@@ -1,3 +1,0 @@
-function isEmpty(object){
-    return  
-}
