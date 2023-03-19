@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function without(object, keys) {
+        //     let newObject = {};
+        //     for(const key in object){
+        //         if( !keys.includes(key)){
+        //             newObject[key] = object[key]
+        //         }
+        //     }
+        //     return newObject
+        // }
+        // console.log(without({
+        //     name: 'ivan',
+        //     age:20,
+        // }['name']))
+
+        // function intersection(object1, object2){
+        //     let resultObject = {};
+        //     for(const key in resultObject){
+        //         if(object2[key] === object1[key]){
+        //             resultObject[key] = object1[key];
+        //         }
+        //     }
+        //     return resultObject;
+        // }
+        // console.log(intersection({name: 'anna',age:20},{name: 'anna',age:20}));
+
+        // function clone(object){
+        //     // return Object.assign({},object);
+        //     // return{...object}
+        //     let newObject = {};
+        //     for( const key in object){
+        //         newObject[key] = object[key]
+        //     }
+        //     return newObject;
+        // }
+        // let user = {
+        //     name:'anna',
+        //     age:20,
+        // };
+        // let cloned = clone(user);
+        // cloned.age = 25;
+        // console.log(cloned,user);
+
+        // function filterBy(object, filterFn){
+        //     let newObject = {};
+        //     for( key in object){
+        //        const needCopy = filterFn(key, object[key])
+        //        if(needCopy){
+        //         newObject[key] =object[key];
+        //        }
+        //     }
+        //     return newObject;
+        // }
+        // let user = {
+        //     name:'ivan',
+        //     age: 20,
+        // }
+        // console.log(filterBy(user,function(key,value){
+        //     return (typeof(value) === 'string')
+        
+        // }))
+        const FIRST_NAMES = [
+    "Даниил", "Николай", "Дарина", "Анна", "Сергей", "София", "Лев", "Яна", "Егор", "Георгий"]
+    const LAST_NAMES = [
+    "Акимов", "Воронова", "Соколова", "Рудакова", "Кольцов", "Филатов", "Кожевникова", "Макеева", "Седов", "Иванова",]
+    const CITIES = ["Минск", "Брест","Витебск","Гомель","Гродно","Могилев"]
+
+    function generateNumber(from, to) {
+    return Math.floor(Math.random()*(to-from) + from);
+    }
+
+    function getRandomItem(array) {
+    let index = generateNumber(0, array.length-1)
+    return array[index]
+}
+
+function  generateRandomStudent(){
+  return {
+    age: generateNumber(16,40),
+    stage: generateNumber(1,4),
+    name: getRandomItem(FIRST_NAMES),
+    secondName: getRandomItem(LAST_NAMES),
+    town: getRandomItem(CITIES)
+  }
+}
+function getGroup(n) {
+  const group = [];
+  for(let i=0; i<n; i++) {
+    group.push(generateRandomStudent());
+  }
+  return group;
+}
+
+let students = getGroup(50);
+
+function showAllStudents(students) {
+  let sorted = students.slice().sort(function (student1,student2){
+    let fullName1 = student1.secondName+student1.name;
+    let fullName2 = student2.secondName+student2.name;
+    return (fullName1>fullName2) ? 1:-1;
+  })
+  console.table(sorted,['secondName','name','age', 'stage', 'town'])
+}
+
+showAllStudents(students)
+    </script>
+</body>
+</html>
