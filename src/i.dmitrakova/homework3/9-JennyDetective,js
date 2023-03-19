@@ -1,0 +1,6 @@
+function missingWord(nums, str) {
+  str = str.split(' ').join('')
+  if(Math.max(...nums) >= str.length){
+    return 'No mission today'
+  } 
+}
