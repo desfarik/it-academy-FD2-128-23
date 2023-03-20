@@ -19,7 +19,7 @@ function filterEven(array) {
       return item % 2 === 0
     })
   console.log(allEvery);
-   array.some()
+   // array.some()
   /*   array.reduce()*/
   const result = [];
   for (let i = 0; i < array.length; i++) {
@@ -28,6 +28,7 @@ function filterEven(array) {
     }
   }
   return result;
+  console.log(result);
 }
 
 console.log(filterEven([1,4,8,9]));
