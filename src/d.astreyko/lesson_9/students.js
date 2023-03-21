@@ -15,7 +15,6 @@ function getRandomItem(array) {
   return array[index]
 }
 
-
 function  generateRandomStudent(){
   return {
     age: generateNumber(16,40),
@@ -26,7 +25,6 @@ function  generateRandomStudent(){
   }
 }
 
-
 function getGroup(n) {
   const group = [];
   for(let i=0; i<n; i++) {
@@ -34,15 +32,8 @@ function getGroup(n) {
   }
   return group;
 }
-// Your code here
 
 let students = getGroup(50);
-
-
-
-
-
-
 
 function showAllStudents(students) {
   let sorted = students.slice().sort(function (student1,student2){
