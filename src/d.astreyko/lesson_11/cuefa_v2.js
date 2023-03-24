@@ -86,3 +86,15 @@ class Game {
 const game = new Game();
 game.start();
 
+const a = {
+  card: [],
+  get score() {
+    return this.card.reduce((score, card) => score + card.value, 0);
+  },
+  getScore() {
+    return this.card.reduce((score, card) => score + card.value, 0);
+  }
+};
+
+a.score;
+a.getScore();
