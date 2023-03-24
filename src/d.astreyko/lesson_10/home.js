@@ -25,3 +25,16 @@ const CARD_SCORES = {
   valet: 2,
   dama: 3,
 };
+
+const a = {
+  card: [],
+  get score() {
+    return this.card.reduce((score, card) => score + card.value, 0);
+  },
+  getScore() {
+    return this.card.reduce((score, card) => score + card.value, 0);
+  }
+};
+
+a.score;
+a.getScore();
