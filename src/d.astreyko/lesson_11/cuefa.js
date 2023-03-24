@@ -41,10 +41,10 @@ class Game {
       return this.players.filter(player => player.choice === 2);
     }
     if (max === 3) {
-      if(min !== 1) {
+      if (min !== 1) {
         return this.players.filter(player => player.choice === 3);
       }
-      return this.players.filter(player => player.choice === 1)
+      return this.players.filter(player => player.choice === 1);
     }
   }
 
@@ -55,8 +55,9 @@ class Game {
   }
 
   showWinners() {
-    const winnerNames = this.winner.map(player => player.name).join('\n')
-    alert(`Победители: ${winnerNames}`)
+    const winnerNames = this.winner.map(player => player.name)
+      .join('\n');
+    alert(`Победители: ${winnerNames}`);
   }
 }
 
