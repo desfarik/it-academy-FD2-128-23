@@ -131,6 +131,10 @@ class Lesson {
   setVisitedStudents(students) {
     this.visitedStudents = students;
   }
+
+  isStudentVisit(student) {
+    return this.visitedStudents.includes(student);
+  }
 }
 
 const lessons = [
@@ -155,23 +159,18 @@ function filterVisitedStudents(students) {
 }
 
 function showStudentsToAutomat(lessons, allStudents) {
-  let allVisitedStudents = lessons.reduce(function (accum, lesson) {
-    return accum.concat(lesson.visitedStudents);
-  }, []);
   const studentsToAutomat = allStudents
-    .filter(student => count(allVisitedStudents, student) === lessons.length);
+    .filter(student => lessons.every(lesson => lesson.isStudentVisit(student)));
   console.table(studentsToAutomat, ['secondName', 'name', 'stage']);
 }
 
 function showMissedLessonsStudents(lessons, students) {
-  let allVisitedStudents = lessons.reduce(function (accum, lesson) {
-    return accum.concat(lesson.visitedStudents);
-  }, []);
   let data = students
     .map(student => {
+      const visitedLessons = lessons.filter(lesson => lesson.isStudentVisit(student));
       return {
         name: student.getFullName(),
-        missedLessons: lessons.length - count(allVisitedStudents, student)
+        missedLessons: lessons.length - visitedLessons.length,
       };
     })
     .filter(student => student.missedLessons > 0)
