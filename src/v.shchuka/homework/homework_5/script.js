@@ -255,11 +255,7 @@ class Player {
 
 class Croupier extends Player {
   get askForCard() {
-    if (game.quantityPlayers === 1) {
-      game.findMaxScorePassedPlayers();
-    } else {
-      game.findMaxScoreRemainingPlayers();
-    }
+    game.findMaxScorePassedPlayers();
     if (game.quantityPlayers === 1 && this.sumScore > game.maxScorePlayers) {
       return false;
     } else if (this.sumScore > 19) {
