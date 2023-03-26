@@ -44,7 +44,6 @@ class Game {
   data = new Data();
   sortCardDeck = [];
   players = [];
-  remainingPlayers = [];
   winningPlayers = [];
   start() {
     this.data.getCardDeck();
@@ -156,14 +155,17 @@ ${listPlayers.join("\n")}`);
     }
     this.getmaxScorePlayers(passingPlayers);
   }
-
-  findWinners() {
+  findMaxScoreRemainingPlayers() {
+    this.remainingPlayers = [];
     for (const player of this.players) {
       if (player.sumScore <= 21) {
         this.remainingPlayers.push(player);
       }
     }
     this.getmaxScorePlayers(this.remainingPlayers);
+  }
+  findWinners() {
+    this.findMaxScoreRemainingPlayers();
     for (const player of this.remainingPlayers) {
       if (player.sumScore === this.maxScorePlayers) {
         player.name = player.tempName;
@@ -255,13 +257,17 @@ class Croupier extends Player {
   get askForCard() {
     if (game.quantityPlayers === 1) {
       game.findMaxScorePassedPlayers();
+    } else {
+      game.findMaxScoreRemainingPlayers();
     }
     if (game.quantityPlayers === 1 && this.sumScore > game.maxScorePlayers) {
       return false;
-    } else if (this.sumScore < 16) {
+    } else if (this.sumScore > 19) {
+      return false;
+    } else if (this.sumScore < 16 || this.sumScore < game.maxScorePlayers) {
       return true;
     } else {
-      false;
+      return false;
     }
   }
   showFirstCard() {
