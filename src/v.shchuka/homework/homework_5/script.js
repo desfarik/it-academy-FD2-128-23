@@ -95,6 +95,7 @@ class Game {
       }
     }
     if (this.players.length > 0) {
+      this.quantityPlayers = this.players.length;
       this.players.push(new Croupier("Croupier"));
       this.quantityPlayers++;
     } else {
@@ -252,7 +253,16 @@ class Player {
 
 class Croupier extends Player {
   get askForCard() {
-    return this.sumScore < 16;
+    if (game.quantityPlayers === 1) {
+      game.findMaxScorePassedPlayers();
+    }
+    if (game.quantityPlayers === 1 && this.sumScore > game.maxScorePlayers) {
+      return false;
+    } else if (this.sumScore < 16) {
+      return true;
+    } else {
+      false;
+    }
   }
   showFirstCard() {
     alert(`${this.name} получил ${this.cards}.
