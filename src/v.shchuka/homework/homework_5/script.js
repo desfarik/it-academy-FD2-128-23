@@ -116,7 +116,6 @@ class Game {
         player.showInfoPassedPlayer();
         player.tempName = player.name;
         player.name += " пас";
-        player.pass = true;
         this.quantityPlayers--;
       }
       if (player.sumScore > 21) {
@@ -127,7 +126,7 @@ class Game {
     }
     this.showListPlayers();
     if (this.quantityPlayers === 1) {
-      this.findMaxScorePassedPlayers();
+      this.findMaxScorePassedPlayers(false);
     }
   }
   showListPlayers() {
@@ -146,27 +145,22 @@ ${listPlayers.join("\n")}`);
       0
     );
   }
-  findMaxScorePassedPlayers() {
-    let passingPlayers = [];
+  findMaxScorePassedPlayers(isAllPlayersPassed) {
+    this.passingPlayers = [];
     for (const player of this.players) {
-      if (player.pass) {
-        passingPlayers.push(player);
+      const condition = isAllPlayersPassed
+        ? player.sumScore <= 21
+        : player.name.includes("пас");
+      if (condition) {
+        this.passingPlayers.push(player);
       }
     }
-    this.getmaxScorePlayers(passingPlayers);
+    this.getmaxScorePlayers(this.passingPlayers);
   }
-  findMaxScoreRemainingPlayers() {
-    this.remainingPlayers = [];
-    for (const player of this.players) {
-      if (player.sumScore <= 21) {
-        this.remainingPlayers.push(player);
-      }
-    }
-    this.getmaxScorePlayers(this.remainingPlayers);
-  }
+
   findWinners() {
-    this.findMaxScoreRemainingPlayers();
-    for (const player of this.remainingPlayers) {
+    this.findMaxScorePassedPlayers(true);
+    for (const player of this.passingPlayers) {
       if (player.sumScore === this.maxScorePlayers) {
         player.name = player.tempName;
         const infoPlayer = `игрок ${player.name}: ${player.sumScore} очков`;
@@ -178,6 +172,8 @@ ${listPlayers.join("\n")}`);
     this.findWinners();
     if (this.end) {
       alert("Игра окончена");
+    } else if (this.maxScorePlayers === 0) {
+      alert("Нет победителей");
     } else {
       alert(`Победители:
 ${this.winningPlayers.join("\n")}`);
@@ -227,6 +223,9 @@ class Player {
     ) {
       this.tempName = this.name;
       return true;
+    } else if (game.quantityPlayers === 1 && game.maxScorePlayers === 0) {
+      this.tempName = this.name;
+      return true;
     } else {
       return false;
     }
@@ -255,10 +254,18 @@ class Player {
 
 class Croupier extends Player {
   get askForCard() {
-    game.findMaxScorePassedPlayers();
+    if (game.quantityPlayers === 1) {
+      game.findMaxScorePassedPlayers(false);
+    } else {
+      game.findMaxScorePassedPlayers(true);
+    }
     if (game.quantityPlayers === 1 && this.sumScore > game.maxScorePlayers) {
       return false;
+    } else if (game.quantityPlayers === 1 && game.maxScorePlayers === 0) {
+      return false;
     } else if (this.sumScore > 19) {
+      return false;
+    } else if (this.sumScore >= 16 && this.sumScore === game.maxScorePlayers) {
       return false;
     } else if (this.sumScore < 16 || this.sumScore < game.maxScorePlayers) {
       return true;
