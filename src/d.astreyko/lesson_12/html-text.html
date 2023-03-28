@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="test-div">
+    <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto delectus deserunt doloremque et, iure, molestiae molestias numquam officiis omnis perferendis perspiciatis quo reiciendis tempora unde vitae. Autem, voluptatum?
+    </span>
+    <button>text</button>
+</div>
+<hr>
+
+<div class="text"></div>
+
+<script>
+
+  const div = document.querySelector('.test-div');
+  const text = document.querySelector('.text');
+
+  console.log(div.innerHTML);
+  console.log(div.textContent);
+
+  console.log(div.outerHTML);
+
+  const song = {
+    src: 'https://docs.google.com/document/u/0/?authuser=0&usp=docs_web',
+    artist: 'Bi-2'
+  }
+
+  div.innerHTML = `<div class="song">
+                        <img src="${song.src}">
+                        <div>${song.artist}</div>
+                    </div>`
+
+  text.textContent = `<div class="song">
+                        <img src="${song.src}">
+                        <div>${song.artist}</div>
+                    </div>`
+
+</script>
+</body>
+</html>

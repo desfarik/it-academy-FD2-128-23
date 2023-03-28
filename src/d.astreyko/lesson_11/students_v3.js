@@ -217,19 +217,19 @@ function showStudentsVisit(lessons, students) {
 }
 
 function showStageVisit(lessons, students) {
-/*
-  return Object.entries(groupBy(students, 'stage'))
-    .map(([stage, students]) => {
-      let data = {
-        stage: 'stage' + stage,
-      };
-      for (let i = 0; i < lessons.length; i++) {
-        const key = 'lesson' + (i + 1);
-        data[key] = students.filter(student => !lessons[i].isStudentVisit(student)).length;
-      }
-      return data;
-    });
-    */
+  /*
+    return Object.entries(groupBy(students, 'stage'))
+      .map(([stage, students]) => {
+        let data = {
+          stage: 'stage' + stage,
+        };
+        for (let i = 0; i < lessons.length; i++) {
+          const key = 'lesson' + (i + 1);
+          data[key] = students.filter(student => !lessons[i].isStudentVisit(student)).length;
+        }
+        return data;
+      });
+      */
 
   let tableData = [];
   for (let i = 1; i <= 4; i++) {

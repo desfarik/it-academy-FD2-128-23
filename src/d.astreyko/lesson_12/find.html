@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #button {
+            color: coral;
+        }
+
+        .text {
+            color: #2ED12E;
+        }
+    </style>
+</head>
+<body>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span class="text">last</span></p>
+<button id="button">click</button>
+</body>
+<script>
+  // new methods
+    const button = document.querySelector('#button')
+    console.log(button);
+    const spans = document.querySelectorAll('.text')
+    console.log([...spans])
+
+  // old DO NOT USE
+  let button2 = document.getElementById('button')
+  const spans2 = document.getElementsByClassName('text')
+  for(let i=0; i< spans2.length; i++) {
+    const span = spans2.item(i);
+
+  }
+  console.log(spans);
+
+
+</script>
+</html>

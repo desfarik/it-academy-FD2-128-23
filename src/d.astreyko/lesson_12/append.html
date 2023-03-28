@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="addNewItem()">add</button>
+<button onclick="addNewItemToTop()">add to top</button>
+<button onclick="replace4Child()">replace 4 child</button>
+<button onclick="addBefore()">add Before</button>
+<button onclick="addAfter()">add After</button>
+
+<div class="container">
+
+</div>
+
+<script>
+
+  const container = document.querySelector('.container');
+  let counter = 1;
+
+  function addNewItem() {
+    const newItem = document.createElement('div');// <div></div>
+    newItem.textContent = `Item ${counter}`; // <div>Item 1</div>
+    counter++;
+
+    container.append(newItem);
+  }
+
+  function addNewItemToTop() {
+    const newItem = document.createElement('div');// <div></div>
+    newItem.textContent = `Item ${counter} to top`; // <div>Item 1</div>
+    counter++;
+
+    container.prepend(newItem);
+  }
+
+  function replace4Child() {
+    const newItem = document.createElement('div');// <div></div>
+    newItem.textContent = `Item ${counter} replaced`; // <div>Item 1</div>
+    counter++;
+    // const child = container.querySelector(':nth-child(4)');
+    const child = container.children[3];
+    console.log(container.children); // html-child
+    console.log(container.childNodes); // html-child and comments text-nodes spaces
+
+    container.childElementCount;
+    container.childNodes.length;
+
+    container.replaceChild(newItem, child);
+  }
+
+  function addBefore() {
+    const newItem = document.createElement('div');// <div></div>
+    newItem.textContent = `Item ${counter} added before`; // <div>Item 1</div>
+    counter++;
+
+    container.before(newItem);
+  }
+
+  function addAfter() {
+    const newItem = document.createElement('div');// <div></div>
+    newItem.textContent = `Item ${counter} added before`; // <div>Item 1</div>
+    counter++;
+
+    container.children[4].after(newItem);
+  }
+</script>
+</body>
+</html>
