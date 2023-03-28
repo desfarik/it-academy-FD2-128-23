@@ -29,8 +29,10 @@ let players = [];
 //     }
 //
 // }
-
-function play(){
+// class Crouer {
+//
+// }
+function game(){
     let playerSuitIndex   = 0;
     let playerValueIndex  = 0;
     let botSuitIndex      = 0;
@@ -151,4 +153,4 @@ function play(){
         }
     }
 }
-play();
+game();
