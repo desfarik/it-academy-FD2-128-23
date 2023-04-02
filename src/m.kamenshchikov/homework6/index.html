@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img class="player-logo" src="./imgs/pand logo.png" alt="player-logo" />
+        <div class="header-menu">
+          <span class="material-symbols-outlined menu-icon"> more_vert </span>
+        </div>
+      </div>
+      <div class="albums">
+        <p class="section-header">
+          Albums <span class="material-symbols-outlined"> chevron_right </span>
+        </p>
+        <div class="albums-logos"></div>
+      </div>
+      <div class="search">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search..."
+          oninput="searchItems()"
+        />
+      </div>
+      <div class="songs">
+        <p class="section-header">
+          Songs <span class="material-symbols-outlined"> chevron_right </span>
+        </p>
+        <div class="songs-container">
+          <!-- <div class="song-item">
+            <img src="./imgs/audio1.jpg" alt="" />
+            <div class="audio-info">
+              <p class="audio-name">AQUANEON - Девчонка со двора</p>
+              <p class="audio-duration">3:20</p>
+              <button class="play-pause-button">
+                <span class="material-symbols-outlined"> play_circle </span>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="player">
+        <img src="./imgs/audio2.jpg" alt="" />
+        <div class="player-song-info">
+          <p>AQUANEON</p>
+          <p>Девчонка со двора</p>
+        </div>
+        <div class="audio-controls">
+          <button class="control-button">
+            <span class="material-symbols-outlined"> skip_previous </span>
+          </button>
+          <button class="control-button">
+            <span class="material-symbols-outlined"> pause </span>
+          </button>
+          <button class="control-button">
+            <span class="material-symbols-outlined"> skip_next </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/data.js"></script>
+    <script src="./js/songs.js"></script>
+  </body>
+</html>
