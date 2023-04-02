@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    border: 0;
+}
+.user, bu   {
+    background: linear-gradient(to right,#0588E8 -285%, #000000 ) fixed;
+    border-radius: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.logo-img{
+    display: flex;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.logo-name{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-family: 'Rubik Spray Paint', cursive;
+    color: #fff;
+}
+.logo-menu{
+    margin-top: 80px;
+    margin-right: 40px;
+}
+.albom-of-songs{
+    margin-left: 50px;
+}
+.albom-of-songs button{
+    background-color: #000;
+}
+.title{
+    display: flex;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.pointer{
+    padding-left: 10px;
+}
+.title img{
+    padding-left: 10px;
+}
+.alboms-container {
+    display: flex;
+    overflow-x: scroll;
+    
+}
+.albom-item img{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 45px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.albom-item button{
+    background: linear-gradient(to right,#0588E8 -285%, #000000 ) fixed;
+}
+.songs-search input{
+    width: 75%;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: start;
+    margin-bottom: 45px;
+}
+.songs-container{
+    overflow-y: scroll;
+    height: calc(100vh - 665px);
+}
+.song-item{
+    display: flex;
+    justify-content: space-around;
+}
+.song-img{
+    width: 90px;
+    height: 85px;
+    border-radius: 20px;
+}
+.song-title, .minutes{
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+    padding: 25px 0 25px 25px;
+}
+.song-item button{
+    background-color: linear-gradient(to right,#0588E8 -285%, #000000 ) fixed;
+}
+.music-player{
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(to top,#213852 100%,#011A2B 100% ) fixed;
+    position: relative;
+    bottom:-11px;
+    height: 122px;
+    border-radius: 20px;
+}
+.record-player{
+    display: flex;
+    margin-top: 43px;
+    margin-right: 30px;
+}
+.record-player button{
+    background-color: #213852;
+}
+.music-pause{
+    margin-top: -5px;
+}
