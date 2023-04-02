@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cleartype" content="on"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="x-rim-auto-match" content="none" forua="true">
+	<title>AudioPlayer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="player">
+	<header class="header">
+		<div class="logo">
+			<img src="images/pand logo.svg" alt="logo">
+			<p>Panda</p>
+		</div>
+		<button type="button" class="settings"><img src="images/settings.svg" alt=""></button>
+	</header>
+	<main class="main">
+		<p class="title">Albums</p>
+		<div class="albums_container"></div>
+		<div class="songs_search">
+			<input type="text" id="songs_search_input" placeholder="Найти песню" oninput="searchItems()">
+		</div>
+		<p class="title">Songs</p>
+		<div class="songs_container"></div>
+	</main>
+	<footer class="player_current_song">
+		<div class="song_info"></div>
+		<div class="control_buttons">
+			<button type="button" class="previous control_button_decor" ><img src="images/button_pre.svg" alt=""></button>
+			<button type="button" class="play_pause control_button_decor"><img src="images/button_pause.svg" alt=""></button>
+			<button type="button" class="next control_button_decor"><img src="images/button_next.svg" alt=""></button>
+		</div>
+	</footer>
+</div>
+<script src="js/data.js"></script>
+<script src="js/songs.js"></script>
+</body>
+</html>
