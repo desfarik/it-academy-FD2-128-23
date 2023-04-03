@@ -19,8 +19,8 @@ function generateItems(items) {
 }
 
 function generateSongsAlb(id) {
-  const searchInput = document.querySelector("#songs_search_input");
-   let songsAlbum = ALL_ITEMS[id - 1];
+  const searchInput = document.querySelector("#searchInput");
+  let songsAlbum = ALL_ITEMS[id - 1];
   const html = songsAlbum.songs
     .map((song) => {
       return `
@@ -32,7 +32,7 @@ function generateSongsAlb(id) {
             <span class="material-symbols-outlined play">
             play_circle
             </span>
-                <audio src="${song.path}" id="${song.id}" class="current-audio" loop></audio>
+                <audio src="${song.path}" id="${song.id}" class="current-audio"></audio>
                 </button>
             </div>
             <br>
@@ -56,10 +56,10 @@ function addToPlayer(songId) {
         <img class="cover" src=${song.cover} alt="">
 			  <div class="current-song-date">
 			    <p class="song">${song.song}</p>
-			    <pclass="singer">${song.singer}</p>
+			    <p class="singer">${song.singer}</p>
 		    </div>
         <div class="controls">
-			  <button type="button" class="btn" ><span class="material-symbols-outlined skip_previous">
+			  <button type="button" class="btn"><span class="material-symbols-outlined skip_previous">
         skip_previous
         </span></button>
 			  <button type="button" class="btn"><span class="material-symbols-outlined pause">
