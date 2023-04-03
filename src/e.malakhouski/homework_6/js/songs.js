@@ -3,7 +3,6 @@ const albumsContainer = document.querySelector(".albums_container");
 const songInfo = document.querySelector(".player_current_song");
 
 let allSongs = generateAllSongs();
-generateSongsAlb(1);
 generateAlbums(ALL_ITEMS);
 
 function generateAllSongs() {
@@ -35,6 +34,14 @@ function generateSongs(items) {
 }
 
 function generateSongsAlb(id) {
+  const albumsBorder = document.querySelectorAll(".album_decoration");
+  for(let album of albumsBorder) {
+    if(album.classList.contains("current_album")) {
+      album.classList.remove("current_album");
+    }
+    if(album.id === `${id}`)
+    album.classList.add("current_album");
+  }
   const searchInput = document.querySelector("#songs_search_input");
   searchInput.value = "";
   let songsAlbum = ALL_ITEMS[id - 1];
@@ -57,12 +64,14 @@ function generateSongsAlb(id) {
   songContainer.innerHTML = html;
 }
 
+generateSongsAlb(1);
+
 function generateAlbums(album) {
   const html = album
     .map((album) => {
       return `
         <button class="album_item" onclick="generateSongsAlb(${album.id})">
-				<img src="${album.img}" alt="">
+				<img src="${album.img}" alt="" class="album_decoration" id="${album.id}">
 			</button>
         `;
     })
