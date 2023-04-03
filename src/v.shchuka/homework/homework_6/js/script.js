@@ -345,6 +345,8 @@ function showCurrentSong(albumId, songId) {
     );
     audio.setAttribute("src", `${song.src}`);
     currentSongId = songId;
+  } else if (currentSongId === 1) {
+    currentSongId = 1;
   } else {
     currentSongId = 0;
   }
@@ -374,26 +376,27 @@ function playSong(albumId, songId) {
 
 function getNextSong(albumId, songId, index) {
   const album = findAlbum(albumId);
+  let newSongId = songId;
   for (let i = 0; i < album.songs.length; i++) {
     const song = album.songs[i];
-    if (album.songs.at(-1).id === songId && index === "next") {
-      songId = album.songs[0].id;
+    if (album.songs.at(-1).id === newSongId && index === "next") {
+      newSongId = album.songs[0].id;
       break;
-    } else if (album.songs[0].id === songId && index === "back") {
-      songId = album.songs.at(-1).id;
+    } else if (album.songs[0].id === newSongId && index === "back") {
+      newSongId = album.songs.at(-1).id;
       break;
-    } else if (song.id === songId && index === "next") {
+    } else if (song.id === newSongId && index === "next") {
       const songNext = album.songs[i + 1];
-      songId = songNext.id;
+      newSongId = songNext.id;
       break;
-    } else if (song.id === songId && index === "back") {
+    } else if (song.id === newSongId && index === "back") {
       const songNext = album.songs[i - 1];
-      songId = songNext.id;
+      newSongId = songNext.id;
       break;
     }
   }
-  showCurrentSong(albumId, songId);
-  playSong(albumId, songId);
+  showCurrentSong(albumId, newSongId);
+  playSong(albumId, newSongId);
 }
 
 function searchSongs(albumId) {
@@ -435,10 +438,10 @@ function showButtonPause(albumId, songId) {
   } else {
     elementButtonPause.innerHTML = audio.paused ? htmlIconPause : htmlIconPLay;
   }
-  for (const element of allElementsItemButtonPlay) {
+  allElementsItemButtonPlay.forEach((element) => {
     const currentSongId = +element.getAttribute("data-id");
     if (songId !== currentSongId) {
       element.innerHTML = htmlItemPlay;
     }
-  }
+  });
 }
