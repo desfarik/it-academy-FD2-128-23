@@ -150,3 +150,8 @@ body {
 		background: linear-gradient(180deg, #213852 0%, #011A2B 100%);
 		border: none;
 	}
+
+	.current_album {
+		border: solid 4px purple;
+		border-radius: 13px;
+	}
