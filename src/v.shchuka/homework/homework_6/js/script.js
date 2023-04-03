@@ -1,4 +1,4 @@
-const ALBUMS = [
+﻿const ALBUMS = [
   {
     id: 1,
     name: "Dance",
@@ -235,12 +235,13 @@ const ALBUMS = [
     ],
   },
 ];
+
 const elementCovers = document.querySelector(".covers");
 const elementListSongs = document.querySelector(".list-songs");
 const elementPlayerCover = document.querySelector(".player__cover");
 const elementSearch = document.querySelector(".search");
 const elementSearchInput = document.querySelector(".search-input");
-const audio = document.querySelector(".play");
+const audio = document.querySelector(".audio");
 const elementButtonPause = document.querySelector(".button-pause");
 let currentSongId = 0;
 
@@ -318,7 +319,6 @@ function showCurrentSong(albumId, songId) {
   const elementButtonPlayBack = document.querySelector(".button-play-back");
   const elementButtonPlayNext = document.querySelector(".button-play-next");
   const song = findSong(albumId, songId);
-
   const html = `
   <img
   class="img-cover player__img"
@@ -333,7 +333,7 @@ function showCurrentSong(albumId, songId) {
     elementPlayerCover.innerHTML = html;
     elementButtonPlayBack.setAttribute(
       "onclick",
-      `playBack(${albumId}, ${song.id})`
+      `getNextSong(${albumId}, ${song.id}, "back")`
     );
     elementButtonPause.setAttribute(
       "onclick",
@@ -341,7 +341,7 @@ function showCurrentSong(albumId, songId) {
     );
     elementButtonPlayNext.setAttribute(
       "onclick",
-      `playNext(${albumId}, ${song.id})`
+      `getNextSong(${albumId}, ${song.id}, "next")`
     );
     audio.setAttribute("src", `${song.src}`);
     currentSongId = songId;
@@ -372,41 +372,26 @@ function playSong(albumId, songId) {
   }
 }
 
-function playNext(albumId, songId) {
+function getNextSong(albumId, songId, index) {
   const album = findAlbum(albumId);
   for (let i = 0; i < album.songs.length; i++) {
     const song = album.songs[i];
-    if (album.songs.at(-1).id === songId) {
+    if (album.songs.at(-1).id === songId && index === "next") {
       songId = album.songs[0].id;
       break;
-    }
-    if (song.id === songId) {
+    } else if (album.songs[0].id === songId && index === "back") {
+      songId = album.songs.at(-1).id;
+      break;
+    } else if (song.id === songId && index === "next") {
       const songNext = album.songs[i + 1];
       songId = songNext.id;
       break;
-    }
-  }
-  elementButtonPause.classList.remove("button-play");
-  showCurrentSong(albumId, songId);
-  playSong(albumId, songId);
-}
-
-function playBack(albumId, songId) {
-  const album = findAlbum(albumId);
-  for (let i = 0; i < album.songs.length; i++) {
-    const song = album.songs[i];
-    if (album.songs[0].id === songId) {
-      songId = album.songs.at(-1).id;
-      break;
-    }
-    if (song.id === songId) {
+    } else if (song.id === songId && index === "back") {
       const songNext = album.songs[i - 1];
       songId = songNext.id;
       break;
     }
   }
-
-  elementButtonPause.classList.remove("button-play");
   showCurrentSong(albumId, songId);
   playSong(albumId, songId);
 }
@@ -415,7 +400,6 @@ function searchSongs(albumId) {
   const searchSong = document.querySelector(".search-input");
   const phrase = searchSong.value.toLowerCase();
   const album = findAlbum(albumId);
-
   const songs = album.songs.filter((song) => {
     return (
       song.author.toLowerCase().includes(phrase) ||
@@ -437,34 +421,24 @@ function showButtonPause(albumId, songId) {
   );
   const allElementsItemButtonPlay =
     document.querySelectorAll(".item-button-play");
-
+  const htmlIconPause =
+    '<img class="icon-pause" src="./images/pause.svg" alt="icon pause" />';
+  const htmlIconPLay =
+    '<span class="material-symbols-outlined icon-play">play_arrow</span>';
+  const htmlItemPause =
+    '<span class="material-symbols-outlined item-pause-icon">pause_circle</span>';
+  const htmlItemPlay =
+    '<img class="item-play-icon" src="./images/play_button.svg" alt="play icon" />';
   if (currentAlbumId === albumId) {
-    elementButtonPause.classList.toggle("button-play");
-    elementButtonPause.innerHTML = elementButtonPause.classList.contains(
-      "button-play"
-    )
-      ? '<img class="icon-pause" src="./images/pause.svg" alt="icon pause" />'
-      : '<span class="material-symbols-outlined icon-play">play_arrow</span>';
-    elementItemButton.classList.toggle("button-play");
-    elementItemButton.innerHTML = elementItemButton.classList.contains(
-      "button-play"
-    )
-      ? '<span class="material-symbols-outlined item-play">pause_circle</span>'
-      : '<img class="item-play-icon" src="./images/play_button.svg" alt="play icon" />';
+    elementButtonPause.innerHTML = audio.paused ? htmlIconPause : htmlIconPLay;
+    elementItemButton.innerHTML = audio.paused ? htmlItemPause : htmlItemPlay;
   } else {
-    elementButtonPause.classList.toggle("button-play");
-    elementButtonPause.innerHTML = elementButtonPause.classList.contains(
-      "button-play"
-    )
-      ? '<img class="icon-pause" src="./images/pause.svg" alt="icon pause" />'
-      : '<span class="material-symbols-outlined icon-play">play_arrow</span>';
+    elementButtonPause.innerHTML = audio.paused ? htmlIconPause : htmlIconPLay;
   }
   for (const element of allElementsItemButtonPlay) {
     const currentSongId = +element.getAttribute("data-id");
-    console.log(currentSongId);
     if (songId !== currentSongId) {
-      element.innerHTML =
-        '<img class="item-play-icon" src="./images/play_button.svg" alt="play icon" />';
+      element.innerHTML = htmlItemPlay;
     }
   }
 }
