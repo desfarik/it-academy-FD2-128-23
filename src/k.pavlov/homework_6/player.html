@@ -6,36 +6,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="music-player">
-        <div class="header">
-            <div class="header-container">
-                <div class="player-icon">
-                    <img src="images/pandaLogo.svg" alt="">
-                    Panda
-                </div>
-                <div class="three-buttons">
-                    <div class="button"></div>
-                    <div class="button"></div>
-                    <div class="button"></div>
-                </div>
-            </div>
-            <div class="albums title">
-                Albums <img src="images/arrow.svg" alt="">
-                <div class="albums-container">
-                    <div class="album-image"><img src="images/purpleAlbum.svg" alt=""></div>
-                    <div class="album-image"><img src="images/yellowAlbum.svg" alt=""></div>
-                    <div class="album-image"><img src="images/rapAlbum.svg" alt=""></div>
-                    <div class="album-image"><img src="images/pinkAlbum.svg" alt=""></div>
-                </div>
-            </div>
+<div class="music-player">
+    <header class="header">
+        <div class="player-icon">
+            <img src="images/pandaLogo.svg" alt="">
+            Panda
         </div>
-
-        <div class="filter">
-            <input type="text" class="search-song"><img src="images/loupe.svg" alt=""></input>
+        <div class="three-buttons">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
         </div>
+    </header>
+    <div class="albums">
+        <div class="title">Albums <img src="images/arrow.svg" alt=""></div>
+        <div class="albums-container">
 
-        <div class="songs title">
-            Songs <img src="images/arrow.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="filter">
+        <input type="text" id="searchInput" oninput="searchSong()" class="search-song">
+    </div>
+
+    <div class="songs">
+        <div class="title">Songs <img src="images/arrow.svg" alt=""></div>
+        <div class="songs-container">
+            <!--      will be inserted by js-->
+        </div>
+        <footer class="current-song">
+                <div class="current-song-info">
+
+                </div>
+                <div class="current-buttons">
+                    <div class="previous-btn"><img src="images/previousBtn.svg" alt=""></div>
+                    <div class="pause-btn"><img src="images/pause.svg" alt=""></div>
+                    <div class="next-btn"><img src="images/nextBtn.svg" alt=""></div>
+                </div>
+
+        </footer>
+
+    </div>
+
+
+</div>
+</body>
+<script src="data.js"></script>
+<script src="music.js"></script>
+</html>
+
 <!--            <div class="songs-container">-->
 <!--                <div class="song-info">-->
 <!--                    <div class="song-image"><img src="images/katy.png" alt=""></div>-->
@@ -63,42 +83,29 @@
 <!--                </div>-->
 <!--            </div>-->
 
-            <table>
-                <tr>
-                    <td class="song-image"><img src="images/katy.png" alt=""></td>
-                    <td class="song-name">Katy Perry - Roar</td>
-                    <td class="song-duration">3:20</td>
-                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>
-                </tr>
-                <tr>
-                    <td class="song-image"><img src="images/taylorSwift.png" alt=""></td>
-                    <td class="song-name">Taylor Swift - Shake It Off</td>
-                    <td class="song-duration">3:45</td>
-                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>
-                </tr>
-                <tr>
-                    <td class="song-image"><img src="images/marshmello.png" alt=""></td>
-                    <td class="song-name">Marshmello & Anne-Marie - FRIENDS</td>
-                    <td class="song-duration">3:05</td>
-                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>
-                </tr>
-                <tr>
-                    <td class="song-image"><img src="images/justinBieber.png" alt=""></td>
-                    <td class="song-name">Justin Bieber - Baby</td>
-                    <td class="song-duration">3:45</td>
-                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>
-                </tr>
-            </table>
-
-            <div class="current-song">
-                <div class="current-image"></div>
-                <div class="current-name"></div>
-                <div class="previous-btn"></div>
-                <div class="pause-btn"></div>
-                <div class="next-btn"></div>
-            </div>
-        </div>
-
-    </div>
-</body>
-</html>
+<!--            <table>-->
+<!--                <tr>-->
+<!--                    <td class="song-image"><img src="images/katy.png" alt=""></td>-->
+<!--                    <td class="song-name">Katy Perry - Roar</td>-->
+<!--                    <td class="song-duration">3:20</td>-->
+<!--                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="song-image"><img src="images/taylorSwift.png" alt=""></td>-->
+<!--                    <td class="song-name">Taylor Swift - Shake It Off</td>-->
+<!--                    <td class="song-duration">3:45</td>-->
+<!--                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="song-image"><img src="images/marshmello.png" alt=""></td>-->
+<!--                    <td class="song-name">Marshmello & Anne-Marie - FRIENDS</td>-->
+<!--                    <td class="song-duration">3:05</td>-->
+<!--                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="song-image"><img src="images/justinBieber.png" alt=""></td>-->
+<!--                    <td class="song-name">Justin Bieber - Baby</td>-->
+<!--                    <td class="song-duration">3:45</td>-->
+<!--                    <td class="play-btn"><img src="images/playButton.svg" alt=""></td>-->
+<!--                </tr>-->
+<!--            </table>-->
