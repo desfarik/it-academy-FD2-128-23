@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+   
+}
+
+.container {
+    background: #000000;
+    border-radius: 20px;
+
+
+}
+
+.header {
+    margin: 0 30px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo p {
+    padding: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.settings {
+    background: #000000;
+    border: none;
+}
+
+.main {
+    overflow-y: scroll;
+    height: calc(100vh - 240px);
+}
+
+
+.title {
+    margin-left: 40px;
+    width: 85px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: url("../image/Album-arrow.svg") no-repeat 100%;
+}
+
+.albums_container {
+    margin: 0 0 45px 45px;
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+}
+
+.album_item {
+    background: #000000;
+    border: none;
+}
+
+.album_item input {
+    display: none;
+}
+
+.songs_search {
+    margin: 0 45px 45px;
+}
+
+.songs_search input {
+    width: 100%;
+    height: 40px;
+    background: #E7E7E7;
+    border-radius: 20px;
+}
+
+.songs_container {
+    margin: 0 45px;
+}
+
+.song_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.song_item img {
+    border-radius: 20px;
+    width: 100px;
+}
+
+
+.text_decoration {
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+button.play_this_song {
+    background: #000000;
+    border: none;
+}
+
+.player {
+    min-height: 100px;
+    height: content-box;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #213852 0%, #011A2B 100%);
+    border-radius: 20px;
+    padding-right: 30px;
+}
+
+.song_info {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.song_info img {
+    border-radius: 10px;
+    width: 100px;
+}
+
+.song_info .song_name {
+    font-size: 16px;
+}
+
+.control_buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.control_button_decor {
+    background: linear-gradient(180deg, #213852 0%, #011A2B 100%);
+    border: none;
+}
