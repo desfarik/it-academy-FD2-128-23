@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .panel.hidden .content{
+        display: none;
+    }
+    </style>
+    <title>Title</title>
+
+</head>
+<body>
+<div class="container">
+<div class="panel hidden">
+    <div class="title">
+        <span>title1</span>
+        <button class="panel-button">expand</button>
+    </div>
+    <p class="content">Lorem</p>
+</div>
+    <div class="panel hidden">
+        <div class="title">
+            <span>title1</span>
+            <button class="panel-button">expand</button>
+        </div>
+        <p class="content">Lorem</p>
+    </div>
+    <div class="panel hidden">
+        <div class="title">
+            <span>title1</span>
+            <button class="panel-button">expand</button>
+        </div>
+        <p class="content">Lorem</p>
+    </div>
+</div>
+</body>
+<script>
+    const container = document.querySelector('.container');
+    function togglePanels(event) {
+        if (!event.target.classList.contains('.panel-button')) {
+            return;
+        }
+       const panel =  event.target.closest('.panel');
+
+    }
+</script>
+</html>
