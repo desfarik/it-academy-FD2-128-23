@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <p data-id="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate earum libero magnam
+        officia officiis
+        quae quis quod reiciendis repellendus. Aut molestias, totam! Ad dolor harum libero quod voluptates! Ad.</p>
+    <p data-id="2">Deleniti dolore earum exercitationem mollitia necessitatibus saepe voluptatem! Atque, deleniti dolor
+        expedita
+        harum
+        illum itaque iusto libero necessitatibus officia reiciendis rem sint tempora unde vero voluptas. A culpa
+        doloremque
+        fuga.</p>
+    <p data-id="3">Autem blanditiis commodi corporis cupiditate deleniti, eius, facere laboriosam libero nulla officia
+        reiciendis
+        rerum voluptatum! Eos exercitationem numquam perferendis placeat quaerat quidem quod, sint voluptate! Asperiores
+        cumque est similique vero.</p>
+    <p data-id="4">Alias at doloribus ducimus illo nostrum placeat quia reprehenderit unde. Expedita recusandae, ut? Ad
+        architecto,
+        blanditiis doloremque ea eligendi est iste laboriosam magni necessitatibus quam quidem rerum vero voluptas
+        voluptates.</p>
+    <p data-id="5">Consequatur ea excepturi necessitatibus nisi perferendis, recusandae suscipit vero vitae. Architecto
+        beatae et id
+        quos sed, sint. Exercitationem ipsa pariatur quidem. Alias dolor enim expedita incidunt ipsam iste, molestiae
+        sed?</p>
+</div>
+
+<script>
+  const div = document.querySelector('div');
+
+  const paragraphs = div.querySelectorAll('p');
+
+  paragraphs.forEach(p => {
+    p.onclick = (event) => {
+      console.log('p', event.target.dataset.id);
+    };
+  });
+
+  div.addEventListener('click', (event) => {
+    console.log('div > p#', event.target.dataset.id);
+    if(event.target.dataset.id % 2 === 0) {
+      event.stopPropagation();
+    }
+  }, { capture: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="button" onclick="onClick(event, this)">click</button>
+
+<script>
+
+  const button = document.querySelector('#button');
+
+  button.onclick = (event) => {
+    console.log(event);
+  };
+  const handler = (event) => {
+    console.log(event);
+    event.stopPropagation()
+    event.stopImmediatePropagation()
+  };
+
+  button.addEventListener('click', handler);
+  button.addEventListener('click', handler);
+  button.addEventListener('click', handler);
+
+  function onClick(event) {
+    console.log(event.clientX, event.clientY);
+    console.log(event.currentTarget);
+  }
+</script>
+</body>
+</html>

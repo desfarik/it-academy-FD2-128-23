@@ -1,0 +1,46 @@
+<input id="elem" type="button"
+       value="press me"
+       onclick="alert('123')">
+
+<button onclick="change(this)">click 1</button>
+<button onclick="change(this)">click 2</button>
+<script>
+  const input = document.querySelector('#elem');
+  input.onclick = function () {
+    alert('test');
+  };
+
+    input.onclick = alertTest;
+
+
+  const onclickFromVar =  () => {
+    console.log('onclick from var');
+  };
+
+  input.addEventListener('click', onClick1);
+  input.removeEventListener('click', onClick1);
+
+  input.addEventListener('click', onclickFromVar);
+  input.removeEventListener('click', onclickFromVar);
+
+  function alertTest() {
+    alert('test');
+  }
+
+  function change(button) {
+    console.log(button);
+    input.onclick = () => {
+      alert('changed test');
+    };
+  }
+
+  function onClick1() {
+    console.log('onclick');
+  }
+
+  const onclickFromVar = function () {
+    console.log('onclick from var');
+  };
+
+
+</script>

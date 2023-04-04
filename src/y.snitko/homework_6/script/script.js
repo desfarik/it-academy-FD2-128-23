@@ -71,7 +71,7 @@ itemContainer.addEventListener('click', function (event) {
     const songArtist = song.dataset.title;
     const audioImg = song.dataset.img;
     const audioPath = song.dataset.src;
-    musicPlayer.style.display = 'block';
+    musicPlayer.classList.add('shown');
     if (activeSong !== null) {
       activeSong.classList.remove('active');
     }

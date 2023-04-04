@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .panel.hidden .content {
+            display: none;
+        }
+
+        .panel .panel-button:before {
+            content: 'collapse';
+        }
+
+        .panel.hidden .panel-button:before {
+            content: 'expand';
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="panel hidden">
+        <div class="title">
+            <span>title 1</span>
+            <button class="panel-button"></button>
+        </div>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid, amet, aut
+            blanditiis consequuntur dignissimos dolores eius impedit incidunt modi molestiae necessitatibus nemo omnis
+            quasi quia reprehenderit, rerum tempora unde.</p>
+    </div>
+    <div class="panel hidden">
+        <div class="title">
+            <span>title 2</span>
+            <button class="panel-button"></button>
+        </div>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid, amet, aut
+            blanditiis consequuntur dignissimos dolores eius impedit incidunt modi molestiae necessitatibus nemo omnis
+            quasi quia reprehenderit, rerum tempora unde.</p>
+    </div>
+    <div class="panel hidden">
+        <div class="title">
+            <span>title 3</span>
+            <button class="panel-button"></button>
+        </div>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid, amet, aut
+            blanditiis consequuntur dignissimos dolores eius impedit incidunt modi molestiae necessitatibus nemo omnis
+            quasi quia reprehenderit, rerum tempora unde.</p>
+    </div>
+</div>
+
+<script>
+  const container = document.querySelector('.container');
+
+  let currentExpandedPanel;
+
+  function togglePanels(event) {
+    if (!event.target.classList.contains('panel-button')) {
+      return;
+    }
+
+    const panel = event.target.closest('.panel');
+    if (currentExpandedPanel && panel !== currentExpandedPanel) {
+      currentExpandedPanel.classList.add('hidden');
+    }
+    currentExpandedPanel = event.target.closest('.panel');
+    currentExpandedPanel.classList.toggle('hidden');
+  }
+
+  container.addEventListener('click', togglePanels);
+</script>
+
+
+</body>
+</html>
