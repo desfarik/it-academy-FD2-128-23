@@ -3,6 +3,7 @@ const ALBOMS = [
     id: 1,
     img: "images/albom1.jpg",
     name: "albom1",
+
     songs: [
         {
             id: 1,
