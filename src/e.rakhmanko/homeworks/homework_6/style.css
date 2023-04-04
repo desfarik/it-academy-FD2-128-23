@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: linear-gradient(
+    41deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(5, 5, 49) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  --text-color: #ffffff;
+  --player-background: linear-gradient(180deg, #213852 0%, #011a2b 100%);
+  --shadow: 0 15px 40px var(--alpha-color);
+  --input-background: #ffffff;
+}
+body {
+  min-height: 100vh;
+  background: var(--background);
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  overflow: hidden;
+}
+.logo {
+  height: 45px;
+  width: 90px;
+  object-fit: cover;
+}
+.side-menu-btn {
+  height: 22px;
+  width: 5px;
+  object-fit: cover;
+}
+.header {
+  justify-content: space-between;
+  padding: 30px 30px 0px 30px;
+}
+.wrapper {
+  padding-left: 30px;
+  height: calc(100vh - 195px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+.heading {
+  font-size: 18px;
+  gap: 5px;
+  margin-top: 30px;
+}
+.albums-group {
+  min-height: 100px;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.cover {
+  width: 90px;
+  height: 88px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.search-bar {
+  margin-right: 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--input-background);
+  min-height: 44px;
+  border-radius: 20px;
+}
+.search-bar .search-input {
+  border: none;
+  outline: none;
+}
+.queue-item {
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.singer,
+.song,
+.duration {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.music-player-section {
+  min-height: 120px;
+  background: var(--player-background);
+  border-radius: 30px 30px 0px 0px;
+  justify-content: space-around;
+}
+
+.controls {
+  gap: 10px;
+}
+.btn {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+}
+.play,
+.pause,
+.skip_next,
+.skip_previous {
+  color: var(--text-color);
+}
+.controls,
+.music-player-section,
+.queue-item,
+.albums-group,
+.heading,
+.header {
+  display: flex;
+  align-items: center;
+}
