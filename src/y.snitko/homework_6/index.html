@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/2f0ddac195.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+    <header> 
+        <div class="navigation_menu">
+            <div class="logo">
+               <a href=""><img src="./img/pand_logo.svg" alt="logo"></a>
+                <span class="app_name">PANDA</span>
+            </div>
+            <button class="menu_btn" type="button"><img src="./img/hamb_icon.svg" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <div class="main_content">
+            <section class="category">
+                <div class="category_choose">
+                    <h3 class="category_title">Albums</h3>
+                    <button class="category_switch" type="button"><img src="./img/arrow.svg" alt="arrow-right"> </button>
+                </div>
+                <ul class="albums_row">
+                </ul>
+            </section>
+            <form action="" class="search_field">
+                <input type="text" id="searchInput" onchange="searchItems()" placeholder="Search">
+            </form>
+            <section class="category">
+                <div class="category_choose">
+                    <h3 class="category_title">Songs</h3>
+                    <button class="category_switch" type="button"><img src="./img/arrow.svg" alt="arrow-right"> </button>
+                </div>
+                <ul class = "playlist">
+                </ul>
+            </section>
+        </div>
+        <footer> 
+            <div class="active_song">
+                <div class="playing_song_item">
+                    <img class="album_item current_img" src="" alt="artist_1">
+                    <div class="song_information">
+                        <div class="song_fullname">
+                            <span class="song_name current_name"></span>
+                            <span class="artist current_artist"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls_btn">
+                    <audio src=""></audio>
+                    <button class="play_btn" onclick="previousSong()"><i class="fa-solid fa-backward"></i></button>
+                    <button class="play_btn" onclick="play()"><i class="fa-solid fa-play"></i></button>
+                    <button class="play_btn" onclick="pause()"><i class="fa-solid fa-pause"></i></button>
+                    <button class="play_btn" onclick="nextSong()"><i class="fa-solid fa-forward"></i></button>
+                </div>
+            </div>
+        </footer>
+    </main>
+    </div>
+    <script src="./script/data.js"></script> 
+    <script src="./script/script.js"></script>
+</body>
+</html>
