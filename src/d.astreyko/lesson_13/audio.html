@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<audio src="aquaneon_-_devchonka-so-dvora.mp3"></audio>
+
+<button onclick="play()">play</button>
+<button onclick="pause()">pause</button>
+
+
+<script>
+    const audio = document.querySelector('audio')
+
+    function play(){
+      audio.play();
+    }
+    function pause(){
+      audio.pause();
+    }
+
+</script>
+</body>
+</html>

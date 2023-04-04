@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    div:before{
+      content: attr(translate-key);
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="addAttr()">add</button>
+<button onclick="removeAttr()">remove</button>
+<button onclick="toggleAttr()">toggle</button>
+
+<div class="box" data-id="23" data-my-attr="45"></div>
+</body>
+
+<script>
+  const box = document.querySelector('.box');
+
+  function addAttr() {
+    box.setAttribute('translate-key', 'hello')
+    box.dataset.id = 'hello'
+    console.log(box.dataset.myAttr);
+  }
+
+  function removeAttr() {
+    box.removeAttribute('translate-key')
+  }
+
+  function toggleAttr() {
+    if(box.getAttribute('translate-key')) {
+      removeAttr();
+    } else {
+      addAttr();
+    }
+  }
+</script>
+</html>

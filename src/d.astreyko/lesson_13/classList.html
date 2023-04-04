@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      background: #5c53ff;
+    }
+    .box.my-class {
+      background: #2DB82D;
+    }
+  </style>
+</head>
+<body>
+<button onclick="addClass()">add</button>
+<button onclick="removeClass()">remove</button>
+<button onclick="toggleClass()">toggle</button>
+
+<div class="box"></div>
+
+
+<script>
+  const box = document.querySelector('.box')
+
+
+  function addClass() {
+    box.classList.add('my-class');
+    // box.className = 'box my-class'
+  }
+
+  function removeClass() {
+    box.classList.remove('my-class');
+  }
+
+  function toggleClass() {
+    box.classList.toggle('my-class');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .actions-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            height: 30px;
+            width: 30px;
+            border: 1px solid;
+        }
+
+        .active-cell {
+            background: #5c53ff;
+        }
+    </style>
+</head>
+<body>
+<div class="actions-bar">
+    <form action="" onsubmit="onFormSubmit(event)">
+        <input id="columnInput" type="number" value="5" min="3">
+        <button>generate table</button>
+    </form>
+</div>
+<br>
+<div class="table-wrapper">
+
+</div>
+<script>
+
+  // insertTableFromHtml(generateTableHtml(5));
+  insertTable(generateTable(5))
+  insertTable(generateTable(5))
+  insertTable(generateTable(5))
+
+  function onFormSubmit(e) {
+    const input = document.querySelector('#columnInput');
+    insertTable(generateTable(input.valueAsNumber));
+    e.preventDefault();
+    return false;
+  }
+  function insertTableFromHtml(html) {
+    const wrapper = document.querySelector('.table-wrapper');
+    wrapper.innerHTML = html;
+  }
+
+  function insertTable(table) {
+    const wrapper = document.querySelector('.table-wrapper');
+    // wrapper.innerHTML = table.outerHTML; slow
+    if(wrapper.firstElementChild) {
+      wrapper.replaceChild(table,wrapper.firstElementChild );
+    } else {
+      wrapper.append(table);
+    }
+  }
+  function generateTableHtml(n) {
+    let html = '';
+
+    for (let i = 0; i < n; i++) {
+      let cellsHtml = '';
+      for (let j = 0; j < n; j++) {
+        cellsHtml += i === j
+          ? '<td class="active-cell"></td>'
+          : '<td></td>';
+      }
+      html += `<tr>${cellsHtml}</tr>`;
+    }
+    return `<table>${html}</table>`;
+  }
+
+  function generateTable(n) {
+    const table = document.createElement('table');
+
+    for (let i = 0; i < n; i++) {
+      const row = document.createElement('tr');
+      table.append(row)
+      for (let j = 0; j < n; j++) {
+        const cell = document.createElement('td');
+        row.append(cell)
+        if(i === j) {
+          cell.classList.add('active-cell')
+        }
+      }
+    }
+    return table;
+  }
+
+</script>
+</body>
+</html>
