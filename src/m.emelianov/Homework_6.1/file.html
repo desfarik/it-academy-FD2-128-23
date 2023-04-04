@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Audio player</title>
+    <script src="https://kit.fontawesome.com/76db89c1c7.js" crossorigin="anonymous"></script>
+    <link href="//db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+    <div class="main">
+        <div class="top-section__cap cap">
+            <header>
+               <a href="musicplayer.html"><img src="assets/img/pand logo.svg" alt="PANDA Music"></a>
+            </header>
+            <p class="cap__name">Panda</p> 
+            <div class="top-section__humburger">
+                
+            </div>
+        </div>
+        <div class="top-section__albums albums">
+            <a class="albums__head head" href="#">
+                <h4 class="albums__text text">Albums</h4>  
+                <img src="assets/img/Vector.svg" alt="">
+                <img src="assets/img/evaArrowIosForwardFill2.svg" alt="">
+            </a>
+            <form class="albums__cover">
+                <label class="albums__select" for="DeepHouse">
+                    <input type="radio" name="album" value="0" id="DeepHouse" checked/>
+                    <img class="cover" src="assets/img/marcela-laskoski_unsplash.jpg" alt="">
+                </label>
+                <label class="albums__select" for="ChillOut">
+                    <input type="radio" name="album" value="1" id="ChillOut" />
+                    <img class="cover" src="assets/img/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="">
+                </label>
+                <label class="albums__select" for="SoundTrecks">
+                    <input type="radio" name="album" value="2" id="SoundTrecks" />
+                    <img class="cover" src="assets/img/bogmil-mihaylov-ekHSHvgr27k-unsplash.jpg" alt="">
+                </label>
+                <label class="albums__select" for="Pop">
+                    <input type="radio" name="album" value="3" id="Pop"/>
+                    <img class="cover" src="assets/img/c-d-x-PDX_a_82obo-unsplash.jpg" alt="">
+                </label>
+                <label class="albums__select" for="Hip-hop">
+                    <input type="radio" name="album" value="4" id="Hip-hop" />
+                    <img class="cover" src="assets/img/erik-mclean-9y1cTVKe1IY-unsplash.jpg" alt="">
+                </label>
+                <label class="albums__select" for="Instrumental">
+                    <input type="radio" name="album" value="5" id="Instrumental" />
+                    <img class="cover" src="assets/img/1.jpg" alt="">
+                </label>
+            </form>
+        </div>
+        
+      
+    <div class="tracks">
+        <!-- <div>
+            <div class="top-section__search">
+            <form action="" class="search" method="get" target="_blank">
+                <label for="search">   
+                    <input class="search-field" type="search" name="search" id="search">    
+                    <button><img src="assets/img/Group.svg" alt="" class="search-icon"></button> 
+                </label> 
+            </form>
+            </div>
+            <div class="middle-section__songs songs">
+                <a class="songs__head head" href="#">
+                    <h4 class="songs__text text">Songs</h4>  
+                    <img src="assets/img/Vector.svg" alt="">
+                </a>
+                <div class="songs__content content">
+            </div>
+        </div> -->
+        
+    </div>
+        
+        <!-- list of song will add here from 'song_list.js' file -->
+    
+        <!-- small music player -->
+        <div class="small_music_player">
+            <div class="s_player_img">
+                <div class="playing_img">
+                    <img src="" alt="">
+                </div>
+            
+               <!-- wave animation part -->
+               <div class="wave_animation">
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+               </div>
+            </div>
+    
+            <div class="song_detail">
+                <p id="song_name"></p>
+                <p id="artist_name"></p>
+            </div>
+            <div class="controlls_btns control_first">
+                <button id="backward_btn"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                <button id="play_pause_btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button id="forward_btn"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+            <i class="fa fa-chevron-up" aria-hidden="true" id="up_player"></i>
+        </div>
+    
+    
+        <!--  popup music player part -->
+        <div class="popup_music_player">
+             <div class="top">
+                <p>Now Playing</p>
+                <i class="fa fa-chevron-down" aria-hidden="true" id="down_player"></i>
+            </div>
+            
+           <div class="song_img">
+              <img src="" alt="">
+           </div>
+    
+           <div class="song_description">
+              <h3 id="current_track_name"></h3>
+              <p id="current_singer_name"></p>
+           </div>
+    
+           <div class="controlls">
+                <div class="progress_part">
+                    <input type="range" min="0" max="100" value="0" id="slider" onchange="change_duration()">
+                    <div class="durations">
+                        <p id="current_duration">0:00</p>
+                        <p id="total_duration">0:00</p>
+                    </div>
+    
+                </div>
+                <div class="controlls_btns">
+                    <button id="backward_btn2"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                    <button id="play_pause_btn2"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    <button id="forward_btn2"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    
+
+
+    <!-- song list file -->
+    <script src="data.js"></script>
+    <!-- javascript -->
+    <script src="script.js"></script>
+	
+</body>
+</html>
