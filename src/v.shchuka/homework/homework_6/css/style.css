@@ -1,0 +1,234 @@
+@font-face {
+  font-family: Showcard Gothic;
+  src: local("Showcard Gothic"), url("../fonts/SHOWG.TTF") format("opentype");
+}
+:root {
+  --height-logo: 45px;
+  --padding-top-header: 50px;
+  --padding-bottom-header: 30px;
+  --height-header: calc(
+    var(--height-logo) + var(--padding-top-header) +
+      var(--padding-bottom-header)
+  );
+  --height-header: calc(
+    var(--height-logo) + var(--padding-top-header) +
+      var(--padding-bottom-header)
+  );
+  --padding-main: 44px;
+  --height-footer: 115px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.page {
+  position: relative;
+  overflow-x: hidden;
+}
+.header {
+  height: var(--height-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-top-header) var(--padding-main)
+    var(--padding-bottom-header) var(--padding-main);
+}
+.logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+.logo__img {
+  width: var(--height-logo);
+  height: var(--height-logo);
+}
+.logo__title {
+  font-family: "Showcard Gothic", sans-serif;
+  font-size: 10px;
+  padding-bottom: 8px;
+}
+.background-filter {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #0588e8;
+  filter: blur(200px);
+}
+.background-filter--top {
+  left: -130px;
+  top: 76px;
+}
+.main {
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - var(--height-header) - var(--height-footer));
+  overflow-y: auto;
+  padding-top: 5px;
+  padding-left: var(--padding-main);
+}
+.albums {
+  margin-bottom: 40px;
+}
+.title-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.icon-arrow {
+  width: 24px;
+  height: 24px;
+}
+.covers {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  overflow-x: auto;
+}
+.img-cover {
+  width: 90px;
+  min-width: 90px;
+  height: 86px;
+  box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.item-pause-icon {
+  color: #ffffff;
+}
+.item-play-icon {
+  width: 20px;
+  height: 20px;
+}
+.item-button-play {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.active {
+  outline: 5px solid #984dff;
+}
+.search-and-songs {
+  padding-right: var(--padding-main);
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  width: 100%;
+  height: 44px;
+  background: #e7e7e7;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+.search__button {
+  position: absolute;
+  right: 20px;
+}
+.search__icon {
+  width: 20px;
+  height: 20px;
+}
+.songs {
+  margin-top: 44px;
+}
+.song {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cover {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.song-text {
+  font-size: 14px;
+  word-wrap: break-word;
+}
+.song-text--width {
+  width: 130px;
+}
+.play-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.background-filter--bottom {
+  right: -36px;
+  bottom: 62px;
+}
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--height-footer);
+  background: linear-gradient(180deg, #213852 0%, #011a2b 100%);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.player__cover {
+  display: flex;
+  gap: 24px;
+}
+.player__img {
+  width: 76px;
+  min-width: 76px;
+  height: 82px;
+}
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.author {
+  font-size: 16px;
+  font-weight: 500;
+}
+.player__play {
+  display: flex;
+  gap: 18px;
+}
+.icon-music-back {
+  width: 14px;
+  height: 16px;
+}
+.icon-pause {
+  width: 25px;
+  height: 25px;
+}
+.icon-music-next {
+  transform: rotate(180deg);
+}
+.icon-play {
+  font-size: 40px;
+  color: #d4ebfb;
+}
+.button-pause {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="background-filter background-filter--top"></div>
+      <div class="header">
+        <div class="logo">
+          <img class="logo__img" src="./images/pand_logo.png" alt="logo" />
+          <span class="logo__title">PANDA</span>
+        </div>
+        <div class="menu">
+          <img src="./images/menu.svg" alt="menu" />
+        </div>
+      </div>
+      <div class="main">
+        <div class="albums">
+          <div class="title-container">
+            <span class="title">Albums</span>
+            <img class="icon-arrow" src="./images/arrow.svg" alt="arrow icon" />
+          </div>
+          <div class="covers"></div>
+        </div>
+        <div class="search-and-songs">
+          <form onsubmit="formEvent(event)">
+            <div class="search">
+              <input class="search-input" type="search" name="search" />
+              <button class="button search__button" type="submit">
+                <img
+                  class="search__icon"
+                  src="./images/search.svg"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+          </form>
+          <div class="songs">
+            <div class="title-container">
+              <span class="title">Songs</span>
+              <img
+                class="icon-arrow"
+                src="./images/arrow.svg"
+                alt="arrow icon"
+              />
+            </div>
+            <div class="list-songs"></div>
+          </div>
+        </div>
+      </div>
+      <div class="background-filter background-filter--bottom"></div>
+      <div class="player">
+        <div class="player__cover"></div>
+        <div class="player__play">
+          <button class="button button-play-back" type="button">
+            <img
+              class="icon-music-back"
+              src="./images/music_back.svg"
+              alt="icon music back"
+            />
+          </button>
+          <button class="button button-pause" type="button">
+            <span class="material-symbols-outlined icon-play">play_arrow</span>
+          </button>
+          <button class="button button-play-next" type="button">
+            <img
+              class="icon-music-back icon-music-next"
+              src="./images/music_back.svg"
+              alt="icon music next"
+            />
+          </button>
+          <audio class="audio"></audio>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
