@@ -243,7 +243,8 @@ const elementSearch = document.querySelector(".search");
 const elementSearchInput = document.querySelector(".search-input");
 const audio = document.querySelector(".audio");
 const elementButtonPause = document.querySelector(".button-pause");
-let currentSongId = 0;
+let globalSongId = 0;
+let counter = 0;
 
 generateAlbums(ALBUMS);
 showSongsAlbum(1);
@@ -296,7 +297,7 @@ function generateSongs(songs, album) {
 </div>
 <div class="play-container">
   <div class="song-text">${song.duration}</div>
-  <button data-id="${song.id}" class="button item-button-play" type="button" onclick ="showCurrentSong(${album.id}, ${song.id}), playSong(${album.id}, ${song.id})">
+  <button data-id="${song.id}" class="button item-button-play" type="button" onclick ="showCurrentSong(${album.id}, ${song.id})">
     <img
       class="item-play-icon"
       src="./images/play_button.svg"
@@ -319,6 +320,7 @@ function showCurrentSong(albumId, songId) {
   const elementButtonPlayBack = document.querySelector(".button-play-back");
   const elementButtonPlayNext = document.querySelector(".button-play-next");
   const song = findSong(albumId, songId);
+  const currentSongId = +`${albumId}${song.id}`;
   const html = `
   <img
   class="img-cover player__img"
@@ -329,7 +331,7 @@ function showCurrentSong(albumId, songId) {
   <div class="author">${song.name}</div>
   <div class="song-text">${song.author}</div>
 </div>`;
-  if (currentSongId !== songId) {
+  if (globalSongId !== currentSongId) {
     elementPlayerCover.innerHTML = html;
     elementButtonPlayBack.setAttribute(
       "onclick",
@@ -344,12 +346,16 @@ function showCurrentSong(albumId, songId) {
       `getNextSong(${albumId}, ${song.id}, "next")`
     );
     audio.setAttribute("src", `${song.src}`);
-    currentSongId = songId;
-  } else if (currentSongId === 1) {
-    currentSongId = 1;
+    globalSongId = currentSongId;
+  } else if (currentSongId === 11) {
+    globalSongId = 11;
   } else {
-    currentSongId = 0;
+    globalSongId = 0;
   }
+  if (counter !== 0) {
+    playSong(albumId, songId);
+  }
+  counter++;
 }
 
 function showActiveAlbum(albumId) {
@@ -396,7 +402,6 @@ function getNextSong(albumId, songId, index) {
     }
   }
   showCurrentSong(albumId, newSongId);
-  playSong(albumId, newSongId);
 }
 
 function searchSongs(albumId) {
