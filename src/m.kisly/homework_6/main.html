@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/scroller.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/styles_player.css">
+    <title>Player</title>
+</head>
+
+<body>
+    <header>
+        <div class="profil">
+            <img src="svg/profilicon.svg" alt="profilicon">
+            <span>PANDA</span>
+        </div>
+        <button class="function">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <div class="block-1">
+        <div class="section-name">
+            <p>Albums</p>
+            <img src="svg/arrow.svg" alt="arrow">
+        </div>
+        <div class="scroller" id="scroller">
+            <div class="albums-wrapper" id="albums-wrapper"></div>
+        </div>
+    </div>
+    <div class="block-2">
+        <input type="text" id="searchInput" oninput="searchItems()" placeholder="Поиск...">
+    </div>
+    <div class="block-3">
+        <div class="section-name">
+            <p>Songs</p>
+            <img src="svg/arrow.svg" alt="arrow">
+        </div>
+        <div class="content-song">
+            <!-- <div class="song-wrapper"></div> -->
+        </div>
+        <footer>
+            <div class="player" id="player">
+                <audio id="myAudio"></audio>
+                <div id="player-controls">
+                    <div id="song-info">
+                        <div id="song-cover"><img src=""></div>
+                        <div id="song-description">
+                            <div id="song-title">Song Title</div>
+                            <div id="song-artist">Song Artist</div>
+                        </div>
+                    </div>
+                    <div id="track-controls">
+                        <button id="prev-song-btn" class="track-btn" onclick="prevSong()">
+                            <img src="svg/music_left.svg" alt="">
+                        </button>
+                        <div id="play-pause">
+                            <button id="play-btn" class="play-btn" onclick="play()">
+                                <img src="svg/play.svg" alt="">
+                            </button>
+                            <button id="pause-btn" class="pause-btn" onclick="pause()">
+                                <img src="svg/pause.svg" alt="">
+                            </button>
+                        </div>
+                        <button id="next-song-btn" class="track-btn" onclick="nextSong()">
+                            <img src="svg/music_right.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+<script src="data.js"></script>
+<script src="songsGenerate.js"></script>
+<script src="player.js"></script>
+<script src="search.js"></script>
+
+</html>

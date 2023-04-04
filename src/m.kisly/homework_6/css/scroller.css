@@ -1,0 +1,42 @@
+.scroller::-webkit-scrollbar {
+    /* chrome based */
+    width: 0px;
+    /* ширина scrollbar'a */
+    /* background: transparent; */
+    /* опционально */
+}
+
+.scroller {
+    padding: 0;
+    overflow-y: scroll;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    scroll-snap-type: x mandatory;
+    position: sticky;
+    z-index: 102;
+}
+
+.scroller>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+
+}
+
+/* .scroller>div:nth-child(2n) {
+    background-color: ;
+    color: ;
+} */
+
+.scroller button {
+    scroll-snap-align: center;
+}
+
+.scroller div {
+    padding-left: 40px;
+    padding-right: 40px;
+}
