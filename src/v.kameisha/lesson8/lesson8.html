@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function values(object){
+        //     const array = [];
+        //     for (const key in object) {
+        //      let value = object[key];
+        //      array.push(value)
+        //     }
+        //     return array;
+        // }
+        // console.log(values({
+        //     name: " Ivan",
+        //     age: 20,
+        // }))
+
+        // function keys(object){
+        //     const array = [];
+        //     for (const key in object) {
+        //      let keys = object[key];
+        //      array.push(keys)
+        //     }
+        //     return array;
+        //     const user = {
+        //         name: "Ivan",
+        //         age: 20,
+        //     }
+            
+        // }
+        // console.log(object.keys(user));
+
+        // function  invert(object){
+        //     const inverted = {};
+        //     for(let key in object){
+        //         inverted[Object[key]] = key;
+        //     }
+        //     return inverted;
+        //     const user = {
+        //         name: "Ivan",
+        //         age: 20,
+        //     }
+        // }
+        // console.log(invert(user));
+
+        // function isEmpty(object){
+        //     return Object.keys(object).length === 0;
+        // }
+        // console.log(isEmpty({}));
+
+        // function isEqual(object1, object2){
+        //     let keys1 = Object.keys(object1);
+        //     let keys2 = Object.keys(object2);
+        //     if(keys1.length !== keys2.length){
+        //         return false;
+        //     }
+        //     for(let i = 0; i < keys1.length;i++){
+        //         let key = keys1[i];
+        //         if(object1[key] !== object2[key]){
+        //             return false;
+        //         }
+                
+        //     }
+        //     return true;
+        // }
+        // console.log(isEqual({},{}));
+        // console.log(isEqual({name2: "Ivan"},{}));
+        // console.log(isEqual({name: "Ivan"},{ name: "Ivan"}));
+
+        // function has(object, key){
+        //     // return object[key] !== undefined;
+        //     //  return key in object;
+        //     return Object.keys(object).includes(key);
+        // }
+        // console.log(has({name:2,}, "name"));
+        // console.log(has({age:2,}, "name"));
+
+    //   function  getDeep(object, path){
+    //     let keys = path.split('.');
+    //     let result = object;
+    //     for(let i = 0; i < keys.length && result !== undefined;i++){
+    //         result = result[keys[i]]
+    //     }
+    //     return result;
+    //     }
+    //     const user = {
+    //         name: {
+    //             first: 'Ivan',
+    //             last: 'Ivanov',
+                
+    //         },
+    //         age: 10,
+    //     }
+    //     console.log(getDeep(user, 'name.first'));
+    //     console.log(getDeep(user, 'age'));
+
+    // function merge(object1, object2){
+    //     // return {
+    //     //     ...object1,
+    //     //     ...object2
+    //     // }
+
+    //     let result = {};
+    //     for(const key in object1){
+    //         result[key] = object1[key]
+    //     }
+    //     for(const key in object2){
+    //         result[key] = object2[key]
+    //     }
+    //     return result
+    // }
+    // console.log(merge({a:'a'},{b:'b'}));
+
+    function pick(object,keys) {
+        let array =[];
+        for (const key of keys) {
+         let value =  object[key];
+         array.push(value);
+        }
+        return array;
+        const user = {
+                name: 'Ivan Ivanov',
+                first: 'Ivan',
+                last: 'Ivanov',
+                 age: 10,
+        }
+    }
+console.log(pick(user,['first'],['last']))
+    </script>
+</body>
+</html>
