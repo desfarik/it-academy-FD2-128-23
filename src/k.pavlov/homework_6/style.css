@@ -1,0 +1,119 @@
+.music-player {
+    background: #000000;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
+    align-items: center;
+    height: 120px;
+
+}
+
+.player-icon {
+    font-family: 'Showcard Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
+
+.button {
+    width: 5px;
+    height: 5px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin-bottom: 1px;
+}
+
+.main {
+    overflow-y: scroll;
+    height: calc(100vh - 240px);
+}
+
+.title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-left: 45px;
+    margin-bottom: 20px;
+
+}
+
+.albums-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px 0 45px ;
+}
+
+.songBtn {
+    background: #000000;
+    border: none;
+}
+
+
+.filter {
+    display: flex;
+    justify-content: center;
+}
+
+.search-song {
+    width: 60%;
+    padding: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    border-radius: 20px;
+    border: none;
+    background: #E7E7E7;
+}
+
+.song-image, .album-image {
+   height: 87px;
+    width: 91px;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.song-item, .album-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.song-name, .song-duration, .item-title, .song-artist {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFCFC;
+}
+
+.current-song {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #213852 0%, #011A2B 100%);
+    border-radius: 30px;
+}
+
+.current-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.previous-btn, .pause-btn, .next-btn {
+    margin-right: 20px;
+}
+

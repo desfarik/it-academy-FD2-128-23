@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20pc auto;
+      background: #3D60F4;
+    }
+
+    .box.my-class {
+      background: greenyellow;
+    }
+  </style>
+</head>
+<body>
+<button onclick="addClass()">add</button>
+<button>remove</button>
+<button>toggle</button>
+
+<div class="box"></div>
+
+<script>
+  const box = document.querySelector('.box')
+
+  function addClass() {
+    box.classList.add('my-class');
+  }
+
+</script>
+</body>
+
+</html>
