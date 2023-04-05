@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body onload="changeSongOnEnd()">
+  <div class="phone-container flex br">
+    <div class="header flex">
+      <div class="logo flex mingap">
+        <img src="img/pand logo.svg" alt="">
+        <div class="logo-text">
+          <img src="img/PANDA_text.svg" alt="">
+        </div>
+      </div>
+      <img src="img/dots.svg" alt="">
+    </div>
+    <a href="#" class="link">Albums <img src="img/arrow.svg"></a>
+    <div class="album-slider flex mingap">
+      <div><button class="album-cover br active" id="alb1"></button></div>
+      <div><button class="album-cover br" id="alb2"></button></div>
+      <div><button class="album-cover br" id="alb3"></button></div>
+      <div><button class="album-cover br" id="alb4"></button></div>
+      <div><button class="album-cover br" id="alb5"></button></div>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" oninput="searchItems()">
+    </div>
+    <a href="#" class="link">Songs<img src="img/arrow.svg"></a>
+    <div class="song-list flex">
+    </div>
+    <div class="player flex br">
+      <div class="player-generated flex"></div>
+      <div class="player-buttons flex">
+        <button class="prev" onclick="prevTrack()"></button>
+        <button class="pause" onclick="play(currentMusic)"></button>
+        <button class="next" onclick="nextTrack()"></button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/music_list.js"></script>
+<script src="js/script.js"></script>
+
+</html>
