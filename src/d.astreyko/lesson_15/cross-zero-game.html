@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .game-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .game-board {
+            display: grid;
+        }
+        .cell {
+            background: #9DA8C3;
+            aspect-ratio: 1;
+            outline: 1px solid;
+            color: whitesmoke;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button onclick="start(3)">easy</button>
+    <button onclick="start(4)">medium</button>
+    <button onclick="start(5)">hard</button>
+</div>
+<div class="game-container">
+</div>
+<script src="./cross-zero-game.js"></script>
+</body>
+</html>

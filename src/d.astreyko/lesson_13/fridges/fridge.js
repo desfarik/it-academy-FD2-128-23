@@ -1,10 +1,11 @@
 const itemContainer = document.querySelector('.content');
 
+let filterFn = (fridge) => true;
 generateItems(ALL_ITEMS);
 
 function generateItems(items) {
 
-  const html = items.map(fridge => {
+  const html = items.filter(filterFn).map(fridge => {
     return `
     <div class="fridge-item">
             <img class="item-img"
@@ -30,6 +31,8 @@ function addToOrder(fridgeId) {
   console.log(fridge);
 }
 
+
+
 function changeFilter() {
   const checkBoxes = [...document.querySelectorAll('input[type="checkbox"]')];
   const brandFilters = checkBoxes
@@ -37,11 +40,11 @@ function changeFilter() {
     .map(checkBox => checkBox.value);
 
   if (brandFilters.length > 0) {
-    const items = ALL_ITEMS.filter(fridge => brandFilters.includes(fridge.brand));
-    generateItems(items);
+    filterFn = (fridge) => brandFilters.includes(fridge.brand)
   } else {
-    generateItems(ALL_ITEMS);
+    filterFn = (fridge) => true;
   }
+  generateItems(ALL_ITEMS);
 }
 
 function onSortingChange(selectElement) {
@@ -64,7 +67,6 @@ function onSortingChange(selectElement) {
         return item2.price - item1.price;
       });
     generateItems(items);
-    return;
   }
 }
 
