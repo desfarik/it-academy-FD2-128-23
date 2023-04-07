@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Panda</title>
+</head>
+<body>
+    <div class = "header">
+        <div class = "logo">
+            <img src="images/panda-logo.png" alt="panda logo"><span>Panda</span>
+        </div>
+        <div>
+            <img src="images/menu.svg" alt="menu">
+        </div>
+    </div>
+    <div class="main">
+        <div class = "albums">
+            <div class = "section-name">Albums</div>
+            <div class = "album-images">
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" id="searchInput"
+               oninput="searchItems()">
+        </div>
+        <div class = "songs">
+            <div class = "section-name">Songs</div>
+            <div class = "songs-list">
+                
+            </div>
+        </div>
+    </div>
+    <div class = "player">
+        
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+
+</html>
