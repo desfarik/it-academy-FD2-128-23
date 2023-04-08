@@ -78,15 +78,16 @@ let prevCard = null;
 let currentCard;
 
 function openCard(event) {
+  if (!event.target.classList.contains("card__face")) {
+    return;
+  }
   if(event.target.closest(".card").getAttribute("card_opened")==="true") {
     return;
   }
   if(currentCard && prevCard) {
     return;
   }
-  if (!event.target.classList.contains("card__face")) {
-    return;
-  }
+
 
   const cardsOnField = document.querySelectorAll(".card");
   currentCard = event.target.closest(".card");
