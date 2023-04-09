@@ -104,12 +104,7 @@ const flipCard = (event) => {
     counter = 0;
     turns--;
     setTimeout(() => showTextContent(elementTurns, turns), 1000);
-    if (turns === 0) {
-      setTimeout(() => flipBackAllCards(), 500);
-      turns = 3;
-      attempts++;
-      setTimeout(() => showTextContent(elementAttempts, attempts), 1000);
-    }
+    showStatistics();
   } else {
     setTimeout(() => showAnimation(firstCardId, secondCardId), 500);
     parent.classList.add("flip");
@@ -120,6 +115,18 @@ const flipCard = (event) => {
   elementTurns.classList.remove("animation-counter");
   elementAttempts.classList.remove("animation-counter");
 };
+
+function showStatistics() {
+  if (turns === 1) {
+    setTimeout(() => elementTurns.classList.add("red"), 1000);
+  } else if (turns === 0) {
+    setTimeout(() => flipBackAllCards(), 500);
+    turns = 3;
+    attempts++;
+    setTimeout(() => showTextContent(elementAttempts, attempts), 1000);
+    setTimeout(() => elementTurns.classList.remove("red"), 1000);
+  }
+}
 
 game.addEventListener("click", flipCard);
 
