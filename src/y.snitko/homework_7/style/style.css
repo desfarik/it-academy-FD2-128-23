@@ -1,0 +1,75 @@
+
+body {
+    background-color: lightcyan;
+}
+
+h3 {
+    color: lightcoral;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    font-size: 14px;
+    margin-left: 30px;
+    color: lightslategray;
+}
+
+input {
+    width: 30px;
+    margin-right: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: lightcyan;
+    color: lightcoral;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: lightblue;
+}
+
+td {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    padding: 4px;
+    border: 1px solid;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.3s  ease-in-out;;
+}
+
+.matches {
+    display: inline;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightcoral;
+}
+
+span {
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: lightcoral;
+    font-weight: 700;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-size: 16px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
