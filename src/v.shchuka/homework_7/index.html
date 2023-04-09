@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip memory card game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="menu">
+        <div>Select game difficulty:</div>
+        <ul class="list">
+          <li class="item casual">casual</li>
+          <li class="item medium">medium</li>
+          <li class="item hard">hard</li>
+        </ul>
+      </div>
+      <div class="game hide">
+        <div class="statistics">
+          <div class="text-container">
+            <div>TURNS:</div>
+            <div class="counter turns"></div>
+          </div>
+          <div class="text-container">
+            <div>ATTEMPTS:</div>
+            <div class="counter attempts"></div>
+          </div>
+        </div>
+        <table class="table"></table>
+      </div>
+      <a class="message-container hide" href="./index.html">
+        <span class="message">Victory!</span>
+      </a>
+    </div>
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
