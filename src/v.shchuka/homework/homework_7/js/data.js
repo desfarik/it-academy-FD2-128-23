@@ -24,7 +24,8 @@ const ALL_IMAGES = [
     src: "./images/flower.png",
   },
 ];
-const size = 2;
-const casual = 4;
-const medium = 5;
-const hard = 6;
+const SIZE = 2;
+const CASUAL = 4;
+const MEDIUM = 5;
+const HARD = 6;
+const DEFAULT_TURNS = 3;

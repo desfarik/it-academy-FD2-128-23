@@ -8,10 +8,10 @@ let imagesGame = [];
 let complexity;
 let flippedCardsId = [];
 let counter = 0;
-let turns = 3;
+let turns = DEFAULT_TURNS;
 let firstCardName;
 let attempts = 0;
-let quantityCell;
+let quantityCards;
 elementTurns.textContent = turns;
 elementAttempts.textContent = attempts;
 
@@ -24,7 +24,7 @@ function getImagesGame() {
   let imagesComplexity = [];
   let images = [];
   imagesComplexity = ALL_IMAGES.slice(0, complexity);
-  for (let i = 0; i < size; i++) {
+  for (let i = 0; i < SIZE; i++) {
     images.push(imagesComplexity);
   }
   imagesGame = shuffle(images.flat());
@@ -32,8 +32,8 @@ function getImagesGame() {
 
 function generateImagesGame() {
   let lengthRow = 0;
-  const max = Math.max(complexity, size);
-  const min = Math.min(complexity, size);
+  const max = Math.max(complexity, SIZE);
+  const min = Math.min(complexity, SIZE);
   for (let i = 0; i < min; i++) {
     const row = document.createElement("tr");
     table.append(row);
@@ -59,7 +59,7 @@ function generateImagesGame() {
     }
     lengthRow += max;
   }
-  quantityCell = min * max;
+  quantityCards = min * max;
 }
 
 const start = (event) => {
@@ -68,11 +68,11 @@ const start = (event) => {
     return;
   }
   if (target.classList.contains("casual")) {
-    complexity = casual;
+    complexity = CASUAL;
   } else if (target.classList.contains("medium")) {
-    complexity = medium;
+    complexity = MEDIUM;
   } else if (target.classList.contains("hard")) {
-    complexity = hard;
+    complexity = HARD;
   }
   getImagesGame();
   menu.classList.add("hide");
@@ -121,7 +121,7 @@ function showStatistics() {
     setTimeout(() => elementTurns.classList.add("red"), 1000);
   } else if (turns === 0) {
     setTimeout(() => flipBackAllCards(), 500);
-    turns = 3;
+    turns = DEFAULT_TURNS;
     attempts++;
     setTimeout(() => showTextContent(elementAttempts, attempts), 1000);
     setTimeout(() => elementTurns.classList.remove("red"), 1000);
@@ -160,7 +160,7 @@ function showVictory() {
       counter++;
     }
   });
-  if (counter === quantityCell) {
+  if (counter === quantityCards) {
     setTimeout(() => message.parentElement.classList.remove("hide"), 1500);
   }
 }
