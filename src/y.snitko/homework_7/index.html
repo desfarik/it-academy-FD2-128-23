@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <h3>Select game difficulty:</h3>
+    <button onclick="setDifficultyLevel('easy')"> Easy </button>
+    <button onclick="setDifficultyLevel('medium')"> Medium </button>
+    <button onclick="setDifficultyLevel('hardcore')"> Hardcore</button>
+    <p class="matches">Matches:</p>
+    <input  class="matches_score" type="text" value="0" disabled>
+    <p class="matches">Attemps:</p>
+    <input class="attemps_score" type="text" value="0" disabled>
+    <span></span>
+    <div class="table-container"></div>
+
+    <script src="./script/data.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
