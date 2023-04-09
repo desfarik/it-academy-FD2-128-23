@@ -80,10 +80,14 @@ body {
   color: #dbb6ab;
   font-size: 20px;
 }
+.red {
+  color: red;
+}
 .message-container {
   position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: default;
 }
