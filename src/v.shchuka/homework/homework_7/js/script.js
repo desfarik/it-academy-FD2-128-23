@@ -7,9 +7,9 @@ const message = document.querySelector(".message");
 let imagesGame = [];
 let complexity;
 let flippedCardsId = [];
-let counter = 0;
 let turns = DEFAULT_TURNS;
 let firstCardName;
+let firstCardId;
 let attempts = 0;
 let quantityCards;
 elementTurns.textContent = turns;
@@ -92,16 +92,14 @@ const flipCard = (event) => {
   const secondCardId = back.dataset.id;
   const secondCardName = back.dataset.name;
   flippedCardsId.push(secondCardId);
-  const firstCardId = flippedCardsId[counter - 1];
   if (flippedCardsId.length === 1) {
     parent.classList.add("flip");
-    counter++;
     firstCardName = secondCardName;
+    firstCardId = flippedCardsId[0];
   } else if (secondCardName !== firstCardName) {
     parent.classList.add("flip");
     setTimeout(() => flipBackCards(firstCardId, secondCardId), 500);
     flippedCardsId = [];
-    counter = 0;
     turns--;
     setTimeout(() => showTextContent(elementTurns, turns), 1000);
     showStatistics();
@@ -109,7 +107,6 @@ const flipCard = (event) => {
     setTimeout(() => showAnimation(firstCardId, secondCardId), 500);
     parent.classList.add("flip");
     flippedCardsId = [];
-    counter = 0;
   }
   showVictory();
   elementTurns.classList.remove("animation-counter");
