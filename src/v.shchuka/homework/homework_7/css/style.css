@@ -10,6 +10,7 @@ body {
   font-family: "Bubblegum Sans", cursive;
   letter-spacing: 1px;
   font-weight: 400;
+  min-width: fit-content;
 }
 .menu {
   display: flex;
