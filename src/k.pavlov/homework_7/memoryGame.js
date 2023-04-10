@@ -7,8 +7,7 @@ let attempts = 0;
 const attemptsCount = document.querySelector('.attemptsCount');
 attemptsCount.textContent = attempts;
 
-
-const getData = () => [
+const CARDS = [
     {img: 'images/citroen.png', name: 'citroen'},
     {img: 'images/daewoo.png', name: 'daewoo'},
     {img: 'images/ducati.png', name: 'ducati'},
@@ -28,10 +27,11 @@ const getData = () => [
 ];
 
 const randomize = () => {
-    const cardData = getData();
+    const cardData = CARDS;
     cardData.sort(() => Math.random() - 0.5);
     return cardData
 };
+console.log(randomize())
 
 const cardGenerator = () => {
     const cardData = randomize();
@@ -58,6 +58,10 @@ const cardGenerator = () => {
     });
 };
 
+checkLevel = () => {
+
+}
+
  checkCards = (e) => {
      console.log(e)
      const clickedCard = e.target;
@@ -70,7 +74,7 @@ const cardGenerator = () => {
              console.log('match')
              flippedCards.forEach((card) => {
                  card.classList.remove('flipped');
-                 card.style.pointerEvents = 'none';
+
              })
          } else {
              console.log('wrong')
@@ -106,6 +110,5 @@ const cardGenerator = () => {
      playerLivesCount.textContent = playerLives;
  }
 
-cardGenerator()
 
-
+ cardGenerator()
