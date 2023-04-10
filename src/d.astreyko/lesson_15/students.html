@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        tr:first-child {
+            position: sticky;
+            top: 0;
+        }
+        th {
+            background: #9DA8C3;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        th[sort-direction] {
+            background: #2DB82D;
+            padding-right: 2px;
+        }
+
+        th[sort-direction="-1"]:after {
+            content: '↑'
+        }
+
+        th[sort-direction="1"]:after {
+            content: '↓';
+        }
+    </style>
+</head>
+<body>
+<div class="student-table-container">
+
+</div>
+<script src="students_v2.js"></script>
+<script src="studentTable.js"></script>
+</body>
+</html>
