@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <header class="level">
+        <button class="easyLevel" onclick="generateGame(16)">EASY</button>
+        <button class="mediumLevel" onclick="generateGame(24)">MEDIUM</button>
+        <button class="hardLevel" onclick="generateGame(32)">HARD</button>
+    </header>
+    
+    <main>
+        <div class="end-game">
+            <!-- will be inserted by js -->
+        </div>
+
+        <div class="game" onclick="switchSide(event)">
+            <!-- will be inserted by js -->
+        </div>
+    </main>
+    
+
+  <script src="data.js"></script>
+  <script src="cfg.js"></script>
+</html>

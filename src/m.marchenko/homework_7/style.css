@@ -1,0 +1,50 @@
+body {
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.level {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.level > button {
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 80px 150px 0 150px
+}
+
+.slot {
+    margin: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    border-radius: 3px;
+}
+
+.end {
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 500px 0;
+}
