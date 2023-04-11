@@ -103,8 +103,6 @@ checkLevel = () => {
      cardData.forEach((item, index) => {
          cards[index].classList.remove('toggleCard');
 
-         cards[index].style.pointerEvents = 'all';
-
      });
      playerLives = 6;
      playerLivesCount.textContent = playerLives;
