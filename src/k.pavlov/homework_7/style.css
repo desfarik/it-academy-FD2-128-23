@@ -5,13 +5,12 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: gainsboro;
-    margin-top: 100px;
 }
 
 section {
     display: grid;
     grid-template-columns: repeat(4, 180px);
-    grid-template-rows: repeat(8, 100px);
+    grid-template-rows: repeat(4, 100px);
     grid-gap: 20px;
     perspective: 800px;
 }
@@ -20,10 +19,10 @@ section {
     position: relative;
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
 }
 
-.face, .back {
+.face,
+.back {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -33,7 +32,6 @@ section {
 .back {
     background-color: white;
     backface-visibility: hidden;
-
 }
 
 .toggleCard {

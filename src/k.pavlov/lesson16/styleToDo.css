@@ -1,0 +1,10 @@
+.complete-btn, .trash-btn {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    background: #fda085;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
