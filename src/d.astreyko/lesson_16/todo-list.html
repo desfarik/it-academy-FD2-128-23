@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .task-done span {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<form action="" onsubmit="addItem(event)">
+    <input type="text" id="input" required>
+    <button>add</button>
+</form>
+<ol id="list">
+
+</ol>
+
+
+<script>
+
+  const list = document.querySelector('#list');
+
+  function deleteTask(taskElement) {
+    taskElement.remove();
+  }
+
+  function doneTask(taskElement) {
+    taskElement.classList.toggle('task-done')
+  }
+
+  function onListContainerClick(event) {
+    console.log(event);
+    if (event.target.classList.contains('delete-button')) {
+      deleteTask(event.target.parentElement);
+    }
+    if (event.target.classList.contains('done-button')) {
+      doneTask(event.target.parentElement);
+    }
+  }
+
+  list.addEventListener('click', onListContainerClick);
+
+  function addItem(event) {
+    event.preventDefault();
+    const input = document.querySelector('#input');
+
+    const item = document.createElement('li');
+    item.innerHTML = `
+        <span>${input.value}</span>
+        <button class="done-button">done</button>
+        <button class="delete-button">delete</button>`;
+    list.append(item);
+    input.value = '';
+  }
+</script>
+
+
+</body>
+</html>
