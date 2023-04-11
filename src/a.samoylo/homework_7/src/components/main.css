@@ -1,0 +1,69 @@
+.MainPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+.MainPage div{
+    display: flex;
+    color: white;
+    gap: 10px;
+}
+.GamePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 50px;
+    padding: 20px 0px 30px;
+}
+.GameHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: default;
+}
+.CardList{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    gap: 20px;
+}
+
+.animation {
+    transition: all 0.3s ease;
+}
+.card {
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+.card .cardFront{
+    display: none;
+}
+.card.flipped .cardFront{
+    display: block;
+}
+.card.flipped .cardBack{
+    display: none;
+}
+img.cardFront, img.cardBack{
+    width: 125px;
+    height: 200px;
+}
