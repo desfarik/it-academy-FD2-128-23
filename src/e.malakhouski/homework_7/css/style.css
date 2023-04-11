@@ -1,0 +1,102 @@
+body {
+		margin: 0; 
+		font-family: sans-serif;
+		font-size: 20px;
+		box-sizing: border-box;
+		overflow: hidden;
+		background: black;
+	}
+
+.start_Game {
+	color: white;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 15%;
+}	
+
+.start_Game button {
+	text-transform: uppercase;
+	width: 200px;
+	height: 50px;
+	background: gray;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.main {
+	display: none;
+}
+
+.turns_and_attemps {
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.text {
+	color: white;
+	text-transform: uppercase;
+}
+
+#turns,
+#attemps {
+	color: rgb(194, 137, 62);
+}
+
+.turns {
+	display: inline-block;
+	margin-right: 50px;
+}
+
+.container {
+	height: calc(100vh - 50px);
+	display: flex;
+	align-content: center;
+}
+
+#game_field {
+	margin: 0 auto;
+	gap: 10px;
+	width: 62.5%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	perspective: 500px;
+	flex-wrap: wrap;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10.8%;
+	height: 16.7%;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: 1s;
+	border-radius: 5px;
+}
+
+.card.is-flipped {
+	transform: translateX(-100%) rotateY(-180deg);
+  }
+
+.card__face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	backface-visibility: hidden;
+  }
+  
+.front {
+	transform: rotateY(180deg);
+  }
+  
