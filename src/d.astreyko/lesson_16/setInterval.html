@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="cancelInterval()">clear interval</button>
+
+<script>
+
+  const intervalId = setInterval(showMessage, 1000)
+
+  function cancelInterval() {
+    clearInterval(intervalId);
+  }
+
+  function showMessage() {
+    console.log('message timout');
+  }
+
+</script>
+
+</body>
+</html>
