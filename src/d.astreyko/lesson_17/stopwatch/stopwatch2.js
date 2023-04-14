@@ -1,4 +1,4 @@
-class StopwatchWithMilliseconds extends StopWatch {
+class Stopwatch2 extends StopWatch {
   time = 0;
 
   constructor(element) {
