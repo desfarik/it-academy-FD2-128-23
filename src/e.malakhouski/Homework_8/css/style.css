@@ -1,0 +1,77 @@
+body {
+		margin: 0; 
+		font-family: sans-serif;
+		font-size: 16px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+.main {
+	width: 500px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(224, 224, 224);
+}
+
+.add_time {
+	display: flex;
+	padding: 20px 0 10px;
+	gap: 10px;
+}
+
+.btn {
+	padding: 10px;
+	border-radius: 30px;
+	border: solid 1px rgb(189, 188, 188);
+	background-color: rgb(224, 224, 224);
+}
+
+.time {
+	background-color: white;
+	padding: 30px 15px;
+	font-size: 80px;
+	color: rgb(59, 58, 58);
+	overflow: clip;
+	width: 85%;
+}
+
+.set_time {
+	display: flex;
+	padding: 10px 0 10px;
+	gap: 10px;
+}
+
+.control_buttons {
+	display: flex;
+	gap: 20px;
+	padding-bottom: 20px;
+}
+
+.control_buttons button {
+	width: 60px;
+	height: 60px;
+	border-radius: 15px;
+	border: none;
+}
+
+.btn_start {
+	background: url(../images/start.svg) no-repeat 50% 50% rgb(79, 209, 79);
+	background-size: 50% 50%;
+}
+
+.btn_stop {
+	background: url(../images/stop.svg) no-repeat 50% 50% red;
+	background-size: 50% 50%;
+}
+
+.btn_reset {
+	background: url(../images/reset.svg) no-repeat 50% 50% blue;
+	background-size: 50% 50%;
+}
+
+button:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(2px);
+}
