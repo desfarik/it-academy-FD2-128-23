@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Timer</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="buttons mb">
+				<button class="btn round-btn" onclick="stopWatch.addTime(1)">+1m</button>
+				<button class="btn round-btn" onclick="stopWatch.addTime(5)">+5m</button>
+				<button class="btn round-btn" onclick="stopWatch.addTime(10)">+10m</button>
+				<button class="btn round-btn" onclick="stopWatch.addTime(15)">+15m</button>
+			</div>
+			<div class="timer-container">
+				<div class="timer">0</div>
+			</div>
+			<div class="buttons">
+				<button class="btn" onclick="stopWatch.setTime(1)">1 минута</button>
+				<button class="btn" onclick="stopWatch.setTime(5)">5 минут</button>
+				<button class="btn" onclick="stopWatch.setTime(10)">10 минут</button>
+				<button class="btn" onclick="stopWatch.setTime(15)">15 минут</button>
+			</div>
+			<div class="buttons">
+				<button class="btn ctrl-btn" id="reset" onclick="stopWatch.reset()">reset</button>
+				<button class="btn ctrl-btn" id="start" onclick="stopWatch.start()">start</button>
+				<button class="btn ctrl-btn" id="stop" onclick="stopWatch.stop()">stop</button>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script>
+			const stopWatch = new StopWatch(document.querySelector('.timer'));
+		</script>
+	
+	</body>
+
+</html>
