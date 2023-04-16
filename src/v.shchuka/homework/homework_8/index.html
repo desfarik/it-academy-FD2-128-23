@@ -21,36 +21,27 @@
     <div class="page">
       <div class="timer-container">
         <div class="buttons">
-          <button class="button" onclick="timer.addTime(1)">+1m</button>
-          <button class="button" onclick="timer.addTime(5)">+5m</button>
-          <button class="button" onclick="timer.addTime(10)">+10m</button>
-          <button class="button" onclick="timer.addTime(15)">+15m</button>
+          <button class="button" data-add-time="1">+1m</button>
+          <button class="button" data-add-time="5">+5m</button>
+          <button class="button" data-add-time="10">+10m</button>
+          <button class="button" data-add-time="15">+15m</button>
         </div>
         <div class="timer">0</div>
         <div class="buttons">
-          <button class="button" onclick="timer.set(1)">1 minutes</button>
-          <button class="button" onclick="timer.set(2)">2 minutes</button>
-          <button class="button" onclick="timer.set(5)">5 minutes</button>
-          <button class="button" onclick="timer.set(10)">10 minutes</button>
-          <button class="button" onclick="timer.set(15)">15 minutes</button>
+          <button class="button" data-set="1">1 minutes</button>
+          <button class="button" data-set="2">2 minutes</button>
+          <button class="button" data-set="5">5 minutes</button>
+          <button class="button" data-set="10">10 minutes</button>
+          <button class="button" data-set="15">15 minutes</button>
         </div>
         <div class="control-buttons">
-          <button
-            class="material-symbols-outlined control-button button-play"
-            onclick="timer.start()"
-          >
+          <button class="material-symbols-outlined control-button button-play">
             play_arrow
           </button>
-          <button
-            class="material-symbols-outlined control-button button-stop"
-            onclick="timer.stop()"
-          >
+          <button class="material-symbols-outlined control-button button-stop">
             stop
           </button>
-          <button
-            class="material-symbols-outlined control-button button-reset"
-            onclick="timer.reset()"
-          >
+          <button class="material-symbols-outlined control-button button-reset">
             restart_alt
           </button>
         </div>

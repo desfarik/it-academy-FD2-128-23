@@ -45,7 +45,6 @@ body {
   border: none;
   border-radius: 8px;
   padding: 0;
-  cursor: pointer;
   color: white;
   font-size: 65px;
 }
@@ -57,4 +56,24 @@ body {
 }
 .button-reset {
   background-color: #369ad8;
+  cursor: pointer;
+}
+.button-reset:hover {
+  background-color: #217dbb;
+}
+.play-active .button-play:hover {
+  background-color: #128f76;
+  cursor: pointer;
+}
+.stop-active .button-play {
+  background-color: #128f76;
+  cursor: default;
+}
+.stop-active .button-stop {
+  background-color: #d62c1a;
+  cursor: pointer;
+}
+.stop-active .button-stop:hover {
+  background-color: #e97d75;
+  cursor: pointer;
 }
