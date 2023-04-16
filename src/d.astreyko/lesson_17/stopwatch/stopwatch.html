@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="timer">0</div>
+<button onclick="stopWatch.reset()">reset</button>
+<button onclick="stopWatch.start()">start</button>
+<button onclick="stopWatch.stop()">stop</button>
+
+<div class="timer2">0</div>
+<button onclick="stopWatch2.reset()">reset</button>
+<button onclick="stopWatch2.start()">start</button>
+<button onclick="stopWatch2.stop()">stop</button>
+
+<div class="timer3">0</div>
+<button onclick="stopWatch3.reset()">reset</button>
+<button onclick="stopWatch3.start()">start</button>
+<button onclick="stopWatch3.stop()">stop</button>
+
+<br>
+<button onclick="startAll()">
+    start all
+</button>
+<button onclick="stopAll()">
+    stop all
+</button>
+<script src="stopwatch.js"></script>
+<script src="stopwatch2.js"></script>
+<script src="stopwatch3.js"></script>
+<script>
+  const stopWatch = new StopWatch(document.querySelector('.timer'));
+  const stopWatch2 = new Stopwatch2(document.querySelector('.timer2'));
+  const stopWatch3 = new Stopwatch3(document.querySelector('.timer3'));
+
+  function startAll() {
+    stopWatch.start();
+    stopWatch2.start();
+    stopWatch3.start();
+  }
+  function stopAll() {
+    stopWatch.stop();
+    stopWatch2.stop();
+    stopWatch3.stop();
+  }
+</script>
+</body>
+</html>
