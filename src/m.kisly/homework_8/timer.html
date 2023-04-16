@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TIMER</title>
+</head>
+<body>
+    <div class="timer-container">
+        <div class="add-time-buttons time-buttons">
+            <button class="time-btn" id="addTimeBtn1" onclick="timer.addTime(60)">+1m</button>
+            <button class="time-btn" id="addTimeBtn5" onclick="timer.addTime(300)">+5m</button>
+            <button class="time-btn" id="addTimeBtn10" onclick="timer.addTime(600)">+10m</button>
+            <button class="time-btn" id="addTimeBtn15" onclick="timer.addTime(900)">+15m</button>
+            <button class="time-btn" id="addTimeBtn30" onclick="timer.addTime(1800)">+30m</button>
+            <button class="time-btn" id="addTimeBtn60" onclick="timer.addTime(3600)">+1ч</button>
+        </div>
+        <div class="timer">
+            <span class="hours"></span>
+            <span>:</span>
+            <span class="minutes"></span>
+            <span>:</span>
+            <span class="seconds"></span>
+            <span>.</span>
+            <span class="milliseconds"></span>
+        </div>
+        <div class="set-time-buttons time-buttons">
+            <button class="time-btn" id="setTimeBtn1" onclick="timer.set(60)">1 минута</button>
+            <button class="time-btn" id="setTimeBtn2" onclick="timer.set(120)">2 минуты</button>
+            <button class="time-btn" id="setTimeBtn5" onclick="timer.set(300)">5 минут</button>
+            <button class="time-btn" id="setTimeBtn10" onclick="timer.set(600)">10 минут</button>
+            <button class="time-btn" id="setTimeBtn15" onclick="timer.set(900)">15 минут</button>
+            <button class="time-btn" id="setTimeBtn30" onclick="timer.set(1800)">30 минут</button>
+        </div>
+        <div class="timer-controls time-buttons">
+            <button class="pause" id="startBtn" onclick="timer.isRunning ? timer.pause() : timer.start()"></button>
+            <button class="" id="stopBtn" onclick="timer.stop()"></button>
+            <button class="" id="resetBtn" onclick="timer.reset()"></button>
+        </div>
+    </div>
+    <script src="timer.js"></script>
+</body>
+
+</html>
