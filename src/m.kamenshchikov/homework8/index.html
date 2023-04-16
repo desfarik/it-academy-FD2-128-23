@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="add-time-buttons">
+        <button
+          type="button"
+          class="btn"
+          data-action="addTime"
+          data-time_add="1"
+        >
+          +1м
+        </button>
+        <button
+          type="button"
+          class="btn"
+          data-action="addTime"
+          data-time_add="5"
+        >
+          +5м
+        </button>
+        <button
+          type="button"
+          class="btn"
+          data-action="addTime"
+          data-time_add="10"
+        >
+          +10м
+        </button>
+        <button
+          type="button"
+          class="btn"
+          data-action="addTime"
+          data-time_add="15"
+        >
+          +15м
+        </button>
+      </div>
+      <div class="timer-display"></div>
+      <div class="set-time-buttons">
+        <button type="button" class="btn" data-action="set" data-time_set="1">
+          1 минута
+        </button>
+        <button type="button" class="btn" data-action="set" data-time_set="2">
+          2 минуты
+        </button>
+        <button type="button" class="btn" data-action="set" data-time_set="5">
+          5 минут
+        </button>
+        <button type="button" class="btn" data-action="set" data-time_set="10">
+          10 минут
+        </button>
+        <button type="button" class="btn" data-action="set" data-time_set="15">
+          15 минут
+        </button>
+      </div>
+      <div class="control-buttons">
+        <button type="button" class="btn btn-start" data-action="start">
+          <span class="material-symbols-outlined"> play_arrow </span>
+        </button>
+        <button type="button" class="btn btn-stop" data-action="stop">
+          <span class="material-symbols-outlined"> stop </span>
+        </button>
+        <button type="button" class="btn btn-reset" data-action="reset">
+          <span class="material-symbols-outlined"> restart_alt </span>
+        </button>
+      </div>
+    </div>
+
+    <script src="./timer.js"></script>
+  </body>
+</html>
