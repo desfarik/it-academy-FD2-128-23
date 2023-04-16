@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="timer-continer">
+        <div class="add-time">
+           <button onclick="timer.addTime(1)">+1</button>
+           <button onclick="timer.addTime(5)">+5</button>
+           <button onclick="timer.addTime(10)">+10</button>
+           <button onclick="timer.addTime(15)">+15</button>
+        </div>
+        <div class="time"></div>
+        <div class="set-time">
+            <button onclick="timer.setTime(1)">1</button>
+            <button onclick="timer.setTime(2)">2</button>
+            <button onclick="timer.setTime(5)">5</button>
+            <button onclick="timer.setTime(10)">10</button>
+            <button onclick="timer.setTime(15)">15</button>
+        </div>
+        <div class="control-buttons">
+            <button class="start-btn" onclick="timer.start()">start</button>
+            <button class="stop-btn" onclick="timer.stop()">stop</button>
+            <button class="reset-btn" onclick="timer.reset()">reset</button>
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>
