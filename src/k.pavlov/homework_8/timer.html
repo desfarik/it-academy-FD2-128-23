@@ -4,27 +4,65 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-
-        .timer {
-            font-size: 30px;
+        .timer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .btn-start {
-            padding: 10px;
-            background: #4CAF50;
-            border: none;
+        .timer-window {
+            font-size: 4rem;
+            margin: 2rem 0;
         }
-        .btn-stop {
-            padding: 10px;
-            background: yellow;
+
+        .timer-buttons button, .timer-add-buttons button {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin: 0 15px 15px;
             border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .timer-buttons button:hover, .timer-add-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .timer-add-buttons button, .timer-set-buttons button {
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-<span class="minutes"></span><span class="seconds"></span>
-<button class="btn-stop" onclick="stop()">stop</button>
-<button class="btn-start" onclick="start()">start</button>
+<div class="timer-container">
+    <div class="timer-add-buttons">
+        <button onclick="timer.addTime(1)">+1m</button>
+        <button onclick="timer.addTime(5)">+5m</button>
+        <button onclick="timer.addTime(10)">+10m</button>
+        <button onclick="timer.addTime(15)">+15m</button>
+    </div>
+    <div class="timer-window">
+        <div class="timer">0</div>
+    </div>
+    <div class="timer-add-buttons">
+        <button onclick="timer.setTime(1)">1m</button>
+        <button onclick="timer.setTime(2)">2m</button>
+        <button onclick="timer.setTime(5)">5m</button>
+        <button onclick="timer.setTime(10)">10m</button>
+        <button onclick="timer.setTime(15)">15m</button>
+    </div>
+    <div class="timer-buttons">
+        <button onclick="timer.start()">Start</button>
+        <button onclick="timer.stop()">Stop</button>
+        <button onclick="timer.reset()">Reset</button>
+    </div>
+
+</div>
 </body>
 <script src="time.js"></script>
+<script>
+    const timer = new Time(document.querySelector(".timer"))
+</script>
 </html>
