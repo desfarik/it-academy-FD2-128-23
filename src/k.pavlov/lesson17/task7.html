@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1></h1>
+<p id="time"></p>
+</body>
+<script src="task7.js"></script>
+<script>
+  setInterval(() => {
+    const timeElement = document.querySelector('#time');
+    timeElement.textContent = getSecondsTillEnd();
+  }, 50)
+</script>
+</html>

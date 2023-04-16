@@ -5,26 +5,58 @@
     <title>Title</title>
     <style>
 
-        .timer {
-            font-size: 30px;
+        .stopwatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .btn-start {
-            padding: 10px;
-            background: #4CAF50;
+        .timer-add-buttons button, .btn {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin: 0 1rem;
             border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: navajowhite;
+            cursor: pointer;
         }
-        .btn-stop {
-            padding: 10px;
-            background: yellow;
-            border: none;
+
+        .time{
+            font-size: 4rem;
+            margin: 2rem 0;
+        }
+
+        .start {
+            background: darkseagreen;
+        }
+
+        .stop {
+            background: lightgoldenrodyellow;
+        }
+
+        .reset {
+            background: cadetblue;
         }
     </style>
 </head>
 <body>
-<span class="minutes"></span><span class="seconds"></span>
-<button class="btn-stop" onclick="stop()">stop</button>
-<button class="btn-start" onclick="start()">start</button>
+<div class="stopwatch">
+    <div class="timer-add-buttons">
+        <button onclick="addMinutes(1)">+1m</button>
+        <button onclick="addMinutes(5)">+5m</button>
+        <button onclick="addMinutes(10)">+10m</button>
+        <button onclick="addMinutes(15)">+15m</button>
+    </div>
+    <div class="time">
+        00:00:00
+    </div>
+    <div class="buttons">
+    <button class="btn stop" onclick="stop()">stop</button>
+    <button class="btn start" onclick="start()">start</button>
+    <button class="btn reset" onclick="reset()">reset</button>
+    </div>
+</div>
 </body>
 <script src="timer.js"></script>
 </html>

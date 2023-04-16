@@ -1,25 +1,59 @@
 let intervalId;
 let sec = 0;
 let min = 0;
+const fullTime = document.querySelector('.time');
 
 function stop() {
     clearInterval(intervalId);
 }
 
-function start() {
-     intervalId = setInterval(showMessage, 1000)
+function reset() {
+    stop();
+    sec = 0;
+    fullTime.innerText = '00:00:00';
 
 }
 
-function showMessage() {
-    const timeSec = document.querySelector('.seconds');
-    sec++;
-    timeSec.textContent = sec;
-    const timeMin = document.querySelector('.minutes');
+function start() {
+    intervalId = setInterval(timer, 1000)
 
-    if (sec >= 60) {
-        sec = 0;
-        min++;
+}
+
+function timer() {
+    sec++;
+    let secs = sec % 60;
+    let mins = Math.floor(sec / 60);
+    let hrs = Math.floor(sec / 3600);
+
+    if (secs < 10) {
+        secs = "0" + secs;
     }
-    timeMin.textContent = min;
+    if (mins < 10) {
+        mins = "0" + mins;
+    }
+    if (hrs < 10) {
+        hrs = "0" + hrs;
+    }
+
+    fullTime.textContent = `${hrs}:${mins}:${secs}`;
+}
+
+function addMinutes(minutes) {
+    sec += minutes * 60;
+    const newMinutes = Math.floor(sec / 60);
+    const newSeconds = sec % 60;
+
+    if (newSeconds < 10) {
+        fullTime.textContent = "0" + newSeconds
+    } else {
+        newSeconds
+    }
+
+    if (newMinutes < 10) {
+        fullTime.textContent = "0" + newMinutes;
+    } else {
+        newMinutes
+    }
+
+
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+  .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer-window {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .timer-buttons button, .timer-add-buttons button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .timer-buttons button:hover, .timer-add-buttons button:hover {
+    background-color: #0056b3;
+  }
+
+  .timer-add-buttons button {
+    margin-top: 1rem;
+  }
+
+</style>
+<body>
+
+<div class="timer">
+  <div class="timer-window">
+    <span id="timer-minutes">00</span>:<span id="timer-seconds">00</span>
+  </div>
+  <div class="timer-buttons">
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+    <button id="reset-btn">Reset</button>
+  </div>
+  <div class="timer-add-buttons">
+    <button id="add-1m">+1m</button>
+    <button id="add-5m">+5m</button>
+    <button id="add-10m">+10m</button>
+    <button id="add-15m">+15m</button>
+  </div>
+</div>
+
+
+</body>
+
+<script>
+
+  const timerMinutes = document.getElementById("timer-minutes");
+  const timerSeconds = document.getElementById("timer-seconds");
+  const startBtn = document.getElementById("start-btn");
+  const stopBtn = document.getElementById("stop-btn");
+  const resetBtn = document.getElementById("reset-btn");
+  const add1mBtn = document.getElementById("add-1m");
+  const add5mBtn = document.getElementById("add-5m");
+  const add10mBtn = document.getElementById("add-10m");
+  const add15mBtn = document.getElementById("add-15m");
+
+  let timerInterval;
+  let totalSeconds = 0;
+
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      totalSeconds++;
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      timerMinutes.textContent = minutes < 10 ? "0" + minutes : minutes;
+      timerSeconds.textContent = seconds < 10 ? "0" + seconds : seconds;
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+  function resetTimer() {
+    stopTimer();
+    totalSeconds = 0;
+    timerMinutes.textContent = "00";
+    timerSeconds.textContent = "00";
+  }
+
+  function addMinutes(minutes) {
+    totalSeconds += minutes * 60;
+    const newMinutes = Math.floor(totalSeconds / 60);
+    const newSeconds = totalSeconds % 60;
+    timerMinutes.textContent = newMinutes < 10 ? "0" + newMinutes : newMinutes;
+    timerSeconds.textContent = newSeconds < 10 ? "0" + newSeconds : newSeconds;
+  }
+
+  startBtn.addEventListener("click", startTimer);
+  stopBtn.addEventListener("click", stopTimer);
+  resetBtn.addEventListener("click", resetTimer);
+  add1mBtn.addEventListener("click", () => addMinutes(1));
+  add5mBtn.addEventListener("click", () => addMinutes(5));
+  add10mBtn.addEventListener("click", () => addMinutes(10));
+  add15mBtn.addEventListener("click", () => addMinutes(15));
+
+</script>
+</html>
