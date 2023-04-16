@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class = "timer_wrapper">
+        <div class = "add_time_buttons">
+            <button onclick = "timer.add(1)" class = "add_time">+1м</button>
+            <button onclick = "timer.add(5)" class = "add_time">+5м</button>
+            <button onclick = "timer.add(10)" class = "add_time">+10м</button>
+            <button onclick = "timer.add(15)" class = "add_time">+15м</button>
+        </div>
+        <div class = "timer"></div>
+        <div class = "set_time_buttons">
+            <button onclick = "timer.set(1)" class = "set_time">1 минута</button>
+            <button onclick = "timer.set(2)" class = "set_time">2 минуты</button>
+            <button onclick = "timer.set(5)" class = "set_time">5 минут</button>
+            <button onclick = "timer.set(10)" class = "set_time">10 минут</button>
+            <button onclick = "timer.set(15)" class = "set_time">15 минут</button>
+        </div>
+        <button onclick = "timer.start()" class = "act_button"><img src="img/start.svg" alt="" class = "button_img"></button>
+        <button onclick = "timer.stop()" class = "act_button"><img src="img/stop.svg" alt="" class = "button_img"></button>
+        <button onclick = "timer.reset()" class = "act_button"><img src="img/reset.svg" alt="" class = "button_img"></button>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
