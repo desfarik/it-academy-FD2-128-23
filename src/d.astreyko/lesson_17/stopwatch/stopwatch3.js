@@ -19,7 +19,7 @@ class Stopwatch3 extends StopWatch {
     }
     this.prevTime = Date.now();
     this.intervalId = setInterval(() => {
-      this.time += Date.now() - this.prevTime;
+      this.time = Date.now() - this.prevTime;
       this.prevTime = Date.now();
       this.render();
     }, 5);
