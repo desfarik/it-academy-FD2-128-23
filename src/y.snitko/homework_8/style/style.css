@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Digital-7";
+    src: url('../font/FontsFree-Net-digital-7-italic.ttf');
+}
+
+.timer {
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Digital-7', sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+li {
+    padding: 5px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    font-family: 'Roboto',  sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-start {
+    background: url(../img/play.svg) no-repeat center lightgreen;
+}
+
+.btn-stop {
+    background: url(../img/stop.svg) no-repeat center  lightcoral;
+}
+
+.btn-reset {
+    background: url(../img/reset.svg) no-repeat center  cornflowerblue;
+}
