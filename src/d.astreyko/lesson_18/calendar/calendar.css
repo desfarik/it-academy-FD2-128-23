@@ -37,3 +37,17 @@
     text-align: center;
 }
 
+.days-container .day.prev-month-day,
+.days-container .day.next-month-day {
+    color: grey;
+}
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 160px;
+}
+.calendar {
+    width: 100%;
+    align-self: flex-start;
+}
+
