@@ -1,0 +1,56 @@
+body {
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 5px;
+}
+
+.buttons > button {
+    border: 1px solid darkgray;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.timer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.control {
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.start {
+    background-color: mediumspringgreen;
+}
+
+.stop {
+    background-color: lightcoral;
+}
+
+.reset {
+    background-color: royalblue;
+}

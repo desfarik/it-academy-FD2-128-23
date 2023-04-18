@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="buttons">
+        <button onclick="timer.add(1)">+1m</button>
+        <button onclick="timer.add(5)">+5m</button>
+        <button onclick="timer.add(10)">+10m</button>
+        <button onclick="timer.add(15)">+15m</button>
+      </div>
+
+      <div class="timer">00:00:00.0</div>
+
+      <div class="buttons">
+        <button onclick="timer.set(1)">1 min</button>
+        <button onclick="timer.set(2)">2 min</button>
+        <button onclick="timer.set(5)">5 min</button>
+        <button onclick="timer.set(10)">10 min</button>
+        <button onclick="timer.set(15)">15 min</button>
+      </div>
+
+      <div class="controls">
+        <button class="start control" onclick="timer.start()">▶</button>
+        <button class="stop control" onclick="timer.stop()">■</button>
+        <button class="reset control" onclick="timer.reset()">⟲</button>
+      </div>
+
+      <div class="golosovanie"></div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+  <script>
+    const timer = new Timer(document.querySelector(".timer"));
+  </script>
+</html>
