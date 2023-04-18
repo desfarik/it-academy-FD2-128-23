@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.add-time-buttons {
+  display: flex;
+  padding: 20px 0 10px;
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 30px;
+  border: solid 1px grey;
+}
+
+.timer-display {
+  background-color: white;
+  padding: 30px 15px;
+  font-size: 70px;
+  width: 80%;
+  text-align: center;
+}
+
+.set-time-buttons {
+  display: flex;
+  padding: 10px 0 10px;
+  gap: 10px;
+}
+
+.btn-start {
+  background: #8bc34a;
+  color: white;
+  font-variation-settings: "FILL" 1;
+}
+
+.btn-stop {
+  background: #ff8a65;
+  color: white;
+  font-variation-settings: "FILL" 1;
+}
+
+.btn-reset {
+  background: #81d4fa;
+  color: white;
+}
+
+button:active {
+  border: 1px solid;
+}
+.control-buttons {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.control-buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  border: none;
+}
