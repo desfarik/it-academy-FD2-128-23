@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .calendar {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        background-color: #222;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .calendar-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .date-number {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .date-day {
+        font-size: 24px;
+    }
+
+    .calendar-body {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .calendar-month {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .calendar-days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+    }
+
+    .calendar-day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        font-size: 16px;
+        color: #222;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .calendar-day:hover {
+        background-color: #eee;
+    }
+
+    .calendar-day.active {
+        background-color: #222;
+        color: #fff;
+    }
+</style>
+<body>
+<div class="calendar">
+    <div class="calendar-header">
+        <div class="calendar-date">
+            <span class="date-number">18</span>
+            <span class="date-day">Воскресенье</span>
+        </div>
+    </div>
+    <div class="calendar-body">
+        <div class="calendar-month">Апрель</div>
+        <div class="calendar-days">
+            <div class="calendar-day">Пн</div>
+            <div class="calendar-day">Вт</div>
+            <div class="calendar-day">Ср</div>
+            <div class="calendar-day">Чт</div>
+            <div class="calendar-day">Пт</div>
+            <div class="calendar-day">Сб</div>
+            <div class="calendar-day">Вс</div>
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day">13</div>
+            <div class="calendar-day">14</div>
+            <div class="calendar-day">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day active">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+            <div class="calendar-day">22</div>
+            <div class="calendar-day">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day">25</div>
+            <div class="calendar-day">26</div>
+            <div class="calendar-day">27</div>
+            <div class="calendar-day">28</div>
+            <div class="calendar-day">29</div>
+            <div class="calendar-day">30</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
