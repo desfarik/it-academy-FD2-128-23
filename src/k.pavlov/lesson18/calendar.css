@@ -1,0 +1,48 @@
+.calendar-container {
+    width: 300px;
+    margin: 50px auto 0;
+}
+
+.current-date {
+    padding: 30px 0;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.current-date .date {
+    font-size: 48px;
+}
+.current-date .weekday {
+    font-weight: bold;
+}
+
+.currentMonth {
+    font-weight: bold;
+    text-align: center;
+    font-size: 28px;
+    color: dimgrey;
+    padding: 8px 0;
+}
+
+.weekdays-container {
+    display: flex;
+    justify-content: space-between;
+    color: darkolivegreen;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.calendar {
+    width: 100%;
+}
