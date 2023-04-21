@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<button class="button" onclick="stopWatch1.start()">start</button>
+<button class="button" onclick="stopWatch1.stop()">stop</button>
+<button class="button" onclick="stopWatch1.makeLap()">make lap</button>
+<div class="timer-1">
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+<script src="stop-watch.js"></script>
+<script>
+
+  const stopWatch1 = new StopWatch(document.querySelector('.timer-1'), 1);
+
+</script>
+</body>
+</html>
