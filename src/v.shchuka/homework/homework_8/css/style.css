@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+}
+.page {
+  display: flex;
+  height: 100vb;
+  align-items: center;
+  justify-content: center;
+}
+.timer-container {
+  font-family: "Roboto Slab", serif;
+  width: 550px;
+  background-color: #f2f2f2;
+  padding: 20px 16px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.timer {
+  font-size: 90px;
+  padding: 10px 10px;
+  margin: 10px 0;
+  background-color: white;
+}
+.button {
+  padding: 12px 10px;
+  border-radius: 30px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  color: white;
+  font-size: 65px;
+}
+.control-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  color: white;
+  font-size: 65px;
+}
+.button-play {
+  background-color: #24bc9d;
+}
+.button-stop {
+  background-color: #e97d75;
+}
+.button-reset {
+  background-color: #369ad8;
+  cursor: pointer;
+}
+.button-reset:hover {
+  background-color: #217dbb;
+}
+.play-active .button-play:hover {
+  background-color: #128f76;
+  cursor: pointer;
+}
+.stop-active .button-play {
+  background-color: #128f76;
+  cursor: default;
+}
+.stop-active .button-stop {
+  background-color: #d62c1a;
+  cursor: pointer;
+}
+.stop-active .button-stop:hover {
+  background-color: #e97d75;
+  cursor: pointer;
+}
