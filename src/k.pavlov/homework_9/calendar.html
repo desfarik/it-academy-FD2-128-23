@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="calendar.css" rel="stylesheet">
+</head>
+<body>
+<div class="calendar-container">
+    <div class="calendar-header">
+        <span class="today"><img src="" alt="">Today</span>
+        <button class="calendar-control" onclick="goToNext()"> ↑ </button>
+        <button class="calendar-control" onclick="goToPrev()"> ↓ </button>
+        <span class="choose-month"></span>
+        <button class="calendar-open-years"> ▼ </button>
+    </div>
+    <div class="calendar"></div>
+</div>
+<script src="constants.js"></script>
+<script src="current_date.js"></script>
+<script src="date.utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

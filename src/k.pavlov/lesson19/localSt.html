@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="stopwatch"></div>
+<button id="buttonClick">START</button>
+
+<script>
+    let buttonClick = document.getElementById('buttonClick');
+
+    let h4 = document.getElementById('stopwatch');
+    let ticks = 0;
+    let ticker = false;
+
+    function formatTime(time) {
+        if (time < 10) {
+            return "0" + time
+        } else {
+            return time
+        }
+    }
+
+    function getReady() {
+        let  hours = Math.floor(ticks / 3600)
+        let  minutes = Math.floor((ticks - hours * 3600) / 60)
+        let  seconds = ticks - hours * 3600 - minutes * 60
+
+        h4.innerHTML = formatTime(hours) + " : " + formatTime(minutes) + " : " + formatTime(seconds)
+    }
+
+    buttonClick.addEventListener('click', function(){
+        if (buttonClick.innerHTML === "START") {
+            buttonClick.innerHTML = "STOP";
+            ticker = setInterval(() => {
+                getReady()
+                ticks += 1
+                localStorage.setItem('time', ticks)
+            }, 1000);
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+        } else {
+            buttonClick.innerHTML = "START";
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            clearInterval(ticker);
+        }
+        localStorage.setItem('time', ticks)
+    })
+    if (localStorage.getItem('time') !== null) {
+        let clockTimer = localStorage.getItem('time');
+        h4.innerHTML = clockTimer;
+    }
+
+    getReady();
+</script>
+</body>
+</html>

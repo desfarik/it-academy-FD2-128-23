@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 class="time"></h1>
+<button onclick="changeLocal('en')">en</button>
+<button onclick="changeLocal('ru')">ru</button>
+<button onclick="changeLocal('be')">by</button>
+<button onclick="changeLocal('zh-cn')">cn</button>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+<script>
+  const Local_Key = 'local'
+
+  const time = document.querySelector('.time');
+  const storedLocal = localStorage.getItem('Local_Key', )
+
+
+  setInterval(()=>{
+    time.textContent = moment().format('Do MMMM HH:mm:SS')
+  },5)
+
+  function changeLocal(local) {
+    moment.locale(local);
+    localStorage.setItem('Local_Key', local)
+  }
+</script>
+</body>
+</html>

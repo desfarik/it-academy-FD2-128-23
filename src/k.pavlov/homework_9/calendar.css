@@ -1,0 +1,37 @@
+.calendar-header {
+    display: flex;
+}
+
+.choose-month {
+
+}
+
+.weekdays-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 100px);
+
+}
+
+.day {
+    border: 1px black solid;
+}
+
+.days-container .day.prev-month-day,
+.days-container .day.next-month-day {
+    background-color: lightgrey;
+}
+
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 160px;
+}
+
