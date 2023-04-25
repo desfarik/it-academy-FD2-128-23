@@ -1,0 +1,31 @@
+.timer_wrapper {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.add_time_buttons,
+.set_time_buttons {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.add_time,
+.set_time {
+    border-radius: 20px;
+    padding: 10px;
+}
+.timer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: white;
+    font-size: 100px;
+}
+.button_img {
+    width: 50px;
+    height: 50px;
+}
+.act_button {
+    border: none;
+}
