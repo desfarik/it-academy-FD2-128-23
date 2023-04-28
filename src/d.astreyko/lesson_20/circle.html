@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+  async function run() {
+    await showCircle(200, 200, 100);
+    alert('Круг создан');
+  }
+
+  run();
+
+  function showCircle(cx, cy, radius) {
+    const circle = document.createElement('div');
+    circle.style.borderRadius = '50%';
+    circle.style.width = `${radius * 2}px`;
+    circle.style.height = `${radius * 2}px`;
+    circle.style.background = 'red';
+
+    circle.style.position = 'absolute';
+    circle.style.left = `${cx}px`;
+    circle.style.top = `${cy}px`;
+    circle.style.transition = 'transform 1s';
+    circle.style.transform = 'scale(0)';
+
+    document.body.append(circle);
+
+    setTimeout(() => {
+      circle.style.transform = 'scale(1)';
+    });
+
+    return new Promise((resolve) => {
+      circle.ontransitionend = () => {
+        resolve();
+      };
+    });
+  }
+
+
+</script>
+</body>
+</html>

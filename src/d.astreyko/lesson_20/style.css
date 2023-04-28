@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dialog_container {
+    background-color: rgba(128, 128, 128, 0.4);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog_container.shown{
+    display: block;
+}
+
+.are_you_sure {
+    margin: 0 auto;
+    background-color: white;
+    width: 60%;
+    min-width: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    font-size: 150px;
+    color: red;
+    text-align: center;
+    width: 70px;
+    height: 100px;
+}
+
+.large_text {
+    font-size: 60px;
+}
+
+.buttons {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.buttons button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons p {
+
+    font-weight: bold;
+    color: white;
+}
+
+.gray_button {
+    background-color: lightblue;
+}
+
+.confirm-button {
+    background-color: violet;
+}
+
+.x_button {
+    border: none;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: white;
+    align-self: end;
+    padding-top: 10px;
+    padding-right: 20px;
+    border-radius: 10px;
+}

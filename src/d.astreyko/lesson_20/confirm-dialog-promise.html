@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button onclick="removeItem()">remove</button>
+<script>
+
+  async function removeItem() {
+    // const promise = openDialog('Ты хочешь удалить меня?');
+    // promise.then((answer) => {
+    //   alert(answer);
+    // });
+
+    const answer = await openDialog('Ты хочешь удалить меня?');
+    if(answer) {
+      // delete
+    }
+    alert(answer);
+
+  }
+
+  const DEFAULT_TEXT = 'Do you really want to delete this item? This process can\'t be undone.';
+
+  function openDialog(text = DEFAULT_TEXT) {
+    return new Promise((resolve, reject) => {
+      let dialog = document.createElement('div');
+      document.body.append(dialog);
+      dialog.innerHTML = `
+  <div class="dialog_container">
+<div class="are_you_sure">
+  <button class="x_button close-button">x</button>
+  <span class="img">x</span>
+  <p class="large_text">Are you sure?</p>
+  <p class="small_text">${text}</p>
+  <div class="buttons">
+    <button class="gray_button close-button"">Cancel</button>
+    <button class="confirm-button">Confirm</button>
+  </div>
+</div>
+</div>
+  `;
+      dialog.addEventListener('click', function (event) {
+        if (event.target.classList.contains('confirm-button')) {
+          dialog.remove();
+          setTimeout(() => resolve(true));
+        }
+        if (event.target.classList.contains('close-button')) {
+          dialog.remove();
+          setTimeout(() => resolve(false));
+        }
+      });
+    });
+  }
+
+</script>
+</body>
+</html>

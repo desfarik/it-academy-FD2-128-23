@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick="doAction()">add</button>
+
+<script>
+
+  async function doAction() {
+    /*    loadScript('./promise.js', () => {
+          run();
+        });*/
+
+    await loadScript2('./promise.js');
+    run();
+  }
+
+  function loadScript(src, loadCallback, errorCallback) {
+    const script = document.createElement('script');
+    script.src = src;
+    document.body.append(script);
+
+    script.onload = () => {
+      console.log('loaded');
+      loadCallback();
+    };
+    script.onerror = () => {
+      console.log('error');
+      errorCallback();
+    };
+  }
+
+  function loadScript2(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      document.body.append(script);
+
+      script.onload = () => {
+        console.log('loaded');
+        resolve();
+      };
+      script.onerror = () => {
+        console.log('error');
+        reject();
+      };
+    });
+  }
+</script>
+</body>
+</html>
+
+
