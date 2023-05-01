@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="calendar/calendar.css" />
+  </head>
+  <body>
+    <header>
+      <p class="credit">m.marchenko/homework_9 - calendar</p>
+    </header>
+
+    <main>
+      <div class="calendar-container">
+        <div class="controls">
+          <button class="today-button" onclick="goToCurr()">
+            <img class="controls-pic" src=img/calendar.svg>
+            <p class="controls-text">TODAY</p>
+          </button>
+          <button class="switch-months" onclick="goToPrev()">
+            <img class="controls-pic" src=img/arrow.svg>
+          </button>
+          <button class="switch-months" onclick="goToNext()">
+            <img class="controls-pic rotate-controls-pic" src=img/arrow.svg>
+          </button>
+          <button class="switch-months">
+            <input
+              class="input-date"
+              type="month"
+              onchange="userChoiceDate(value)"
+              value=""
+            />
+          </button>
+        </div>
+
+        <div class="calendar-wrapper">
+          <div class="calendar"></div>
+        </div>
+      </div>
+
+      <div class="todolist-container">
+        
+      </div>
+    </main>
+
+    <script src="calendar/constants.js"></script>
+    <script src="calendar/date.utils.js"></script>
+    <script src="calendar/script.js"></script>
+  </body>
+</html>
