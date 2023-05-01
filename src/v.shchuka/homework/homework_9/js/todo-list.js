@@ -161,7 +161,7 @@ function toggleButtonClear() {
   const elementSelected = document.querySelector(".selected");
   const idElement = elementSelected.dataset.date;
   const itemsDay = getItemsDay(idElement);
-  if (itemsDay.length !== 0) {
+  if (itemsDay.length) {
     buttonClear.classList.remove("hidden");
   } else {
     buttonClear.classList.add("hidden");

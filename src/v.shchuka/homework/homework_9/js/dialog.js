@@ -5,7 +5,6 @@ function openDialog(action, title, text) {
   dialog.classList.add("dialog-container");
   page.append(dialog);
   dialog.innerHTML = `
-  <div class="dialog-container">
           <div class="dialog">
           <button
             class="button button-close above material-symbols-outlined"
@@ -14,7 +13,7 @@ function openDialog(action, title, text) {
             close
           </button>
           <div class="dialog-title">${title}</div>
-          <form class="form">
+          <form>
             <div class="form-container">
               <span class="form-title">Время:</span>
               <label>
@@ -35,7 +34,6 @@ function openDialog(action, title, text) {
             </div>
           </form>
         </div>
-      </div>
   `;
   dialog.addEventListener("submit", (event) => {
     action(event);
@@ -47,4 +45,3 @@ function closeDialog() {
   const dialogContainer = document.querySelector(".dialog-container");
   dialogContainer.remove();
 }
-
