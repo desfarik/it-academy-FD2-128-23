@@ -6,6 +6,7 @@
     <link href="calendar.css" rel="stylesheet">
 </head>
 <body>
+<div class="app">
 <div class="calendar-container">
     <div class="calendar-header">
         <span class="today"><img src="" alt="">Today</span>
@@ -15,6 +16,13 @@
         <button class="calendar-open-years"> ▼ </button>
     </div>
     <div class="calendar"></div>
+</div>
+<div class="toDo-container">
+    <form action="" onsubmit="addItem(event)">
+    <input type="text" id="input" required>
+    <button>add</button>
+</form>
+</div>
 </div>
 <script src="constants.js"></script>
 <script src="current_date.js"></script>

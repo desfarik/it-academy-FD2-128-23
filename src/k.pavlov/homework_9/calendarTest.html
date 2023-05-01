@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        #todayBtn {
+            display: block;
+            margin: 0 auto 1rem;
+        }
+
+        #taskList {
+            margin-bottom: 1rem;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            margin-bottom: 0.5rem;
+        }
+
+        .task.is-today {
+            background-color: #f0f0f0;
+        }
+
+        .task.is-selected {
+            border-color: #007bff;
+        }
+
+        .task-date {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .task-date.weekend {
+            color: red;
+        }
+
+        .task-title {
+            flex: 1;
+            margin: 0 0.5rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Планировщик задач</h1>
+    <button id="todayBtn">Сегодня</button>
+    <div id="taskList"></div>
+    <button id="addTaskBtn">Добавить задачу</button>
+</div>
+
+<script>
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const taskList = document.getElementById('taskList');
+    const todayBtn = document.getElementById('todayBtn');
+
+    function renderTasks() {
+        taskList.innerHTML = '';
+
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        tasks.forEach((task, index) => {
+            const taskEl = document.createElement('div');
+            taskEl.classList.add('task');
+            taskEl.dataset.index = index;
+
+            const dateEl = document.createElement('span');
+            dateEl.classList.add('task-date');
+            dateEl.textContent = task.date;
+            if (task.isWeekend) {
+                dateEl.classList.add('weekend');
+            }
+
+            const titleEl = document.createElement('span');
+            titleEl.classList.add('task-title');
+            titleEl.textContent = task.title;
+
+            taskEl.appendChild(dateEl);
+            taskEl.appendChild(titleEl);
+
+            taskList.appendChild(taskEl);
+        });
+
+        updateTodayAndSelected();
+    }
+
+    function updateTodayAndSelected() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const today = new Date().toLocaleDateString();
+
+        const taskElements = document.querySelectorAll('.task');
+        taskElements.forEach((taskEl, index) => {
+            const task = tasks[index];
+
+            if (task.date === today) {
+                taskEl.classList.add('is-today');
+            } else {
+                taskEl.classList.remove('is-today');
+            }
+
+            if (task.isSelected) {
+                taskEl.classList.add('is-selected');
+            } else {
+                taskEl.classList.remove('is-selected');
+            }
+        });
+    }
+
+    taskList.addEventListener('click', (event) => {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const taskEl = event.target.closest('.task');
+        const index = taskEl.dataset.index;
+
+        tasks.forEach((task, i) => {
+            task.isSelected = i === parseInt(index);
+        });
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        updateTodayAndSelected();
+    });
+
+    todayBtn.addEventListener('click', () => {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const today = new Date().toLocaleDateString();
+
+        tasks.forEach((task) => {
+            task.isSelected = task.date === today;
+        });
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        updateTodayAndSelected();
+    });
+
+    addTaskBtn.addEventListener('click', () => {
+        const title = prompt('Введите название задачи:');
+        if (title === null || title.trim() === '') {
+            return;
+
+        }
+
+        const dateString = prompt('Введите дату задачи (формат: ДД.ММ.ГГГГ):');
+        const date = new Date(dateString.split('.').reverse().join('-'));
+
+        if (isNaN(date)) {
+            alert('Некорректная дата! Пожалуйста, введите дату в формате ДД.ММ.ГГГГ.');
+            return;
+        }
+
+        const isWeekend = date.getDay() === 6 || date.getDay() === 0;
+
+        const task = {
+            title: title.trim(),
+            date: date.toLocaleDateString(),
+            isWeekend: isWeekend,
+            isSelected: false,
+        };
+
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.push(task);
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        renderTasks();
+    });
+
+    renderTasks();
+
+</script>
+</body>
+</html>
