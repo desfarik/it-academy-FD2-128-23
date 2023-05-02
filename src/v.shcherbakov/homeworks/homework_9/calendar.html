@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link
+            rel="stylesheet"
+            href="calendar.css">
+</head>
+<body>
+<div class="calendar-container">
+
+    <div class="calendar-wrapper">
+        <div class="calendar-control">
+            <button
+                    type="button"
+                    class="btn_today"
+                    onclick="showCurrentMonth()"><img
+                    src="./images/calendar_month.png"
+                    alt="">
+                <span>Today</span>
+            </button>
+            <button
+                    class="calendar-control"
+                    onclick="goToPrev()"><img
+                src="./images/arrow_up.png"
+                alt="" >
+            </button>
+            <button
+                    class="calendar-control"
+                    onclick="goToNext()"><img
+                    src="./images/arrow_downward.png"
+                    alt="" >
+            </button>
+            <input type="month" id="bdaymonth" name="bdaymonth" onchange="changeMonth(event)">
+        </div>
+        <div class="calendar"></div>
+
+    </div>
+    <div class="task_list"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+<script src="constants.js"></script>
+<script src="date.utils.js"></script>
+<script src="current_date.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
