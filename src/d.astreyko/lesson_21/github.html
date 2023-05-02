@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  const searchParams = new URLSearchParams(location.search);
+  let username = searchParams.get('username') || 'misharere';
+  renderUser(username)
+
+  async function fetchUser(username = 'desfarik') {
+    const response = await fetch(`https://api.github.com/users/${username}`)
+    const user = await response.json()
+    console.log(user);
+    return user;
+  }
+
+  async function renderUser(username) {
+    let user = await fetchUser(username);
+    document.body.innerHTML = `
+      <img src="${user.avatar_url}">
+      <p>login: ${user.login}</p>
+      <p>followers: ${user.followers}</p>
+      <p>following: ${user.following}</p>
+    `
+  }
+
+  async function fetchUserQuery(username) {
+    const response = await fetch(`https://api.github.com/users/${username}?user=desfarik&age=22`)
+    const user = await response.json()
+    console.log(user);
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body,.user {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .user {
+        min-height: 250px;
+      }
+      .user img {
+        height: 200px;
+      }
+    </style>
+</head>
+<body>
+<div>
+  <label><input type="radio" checked name="gender" onchange="changeGender('male')">male</label>
+  <label><input type="radio" name="gender" onchange="changeGender('female')">female</label>
+</div>
+
+<div class="user"></div>
+
+<div>
+  <button onclick="nextUser()">next</button>
+  <button onclick="likeUser()">like</button>
+</div>
+
+</body>
+
+<script>
+
+  let selectedGender = 'male';
+  nextUser()
+  async function changeGender(gender) {
+    selectedGender = gender;
+    let user = await fetchUser(gender);
+    renderUser(user);
+  }
+
+  async function fetchUser(gender) {
+    let response = await fetch(`https://randomuser.me/api/?gender=${gender}`);
+    let data = await response.json();
+    return data.results[0];
+  }
+
+  function renderUser(user) {
+    console.log(user);
+    let target = document.querySelector('.user')
+    let html = `
+      <img src="${user.picture.large}">
+      <p>${user.name.first} ${user.name.last}</p>
+    `
+    target.innerHTML = html;
+  }
+
+  async function likeUser() {
+    let user = await fetchUser(selectedGender);
+    renderUser(user);
+  }
+
+  async function nextUser() {
+    let user = await fetchUser(selectedGender);
+    renderUser(user);
+  }
+
+</script>
+</html>
