@@ -1,0 +1,77 @@
+.window_wrapper {
+	position: absolute;
+    top: 0;
+    width: 100%;
+	background-color: gray;
+	height: calc(100vh - 50px);
+	padding-top: 50px;
+	z-index: 100;
+}
+
+.window_wrapper .window {
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 70%;
+	height: 70%;
+	background-color: white;
+	padding-bottom: 50px;
+	border-radius: 15px;
+}
+
+.window_wrapper .dialog_btn_cross {
+	background: url(../images/close_cross_icon_128690.svg) no-repeat 50% 50%;
+	width: 50px;
+	height: 50px;
+	align-self: flex-end;
+	margin: 20px 20px 0 0;
+}
+
+.window_wrapper img {
+	width: 40%;
+	height: 40%;
+}
+
+.window_wrapper h1{
+	font-size: 48px;
+}
+
+.window_wrapper form {
+	margin-bottom: 50px;
+	width: 80%;
+}
+
+.window_wrapper #input{
+	width: 100%; 
+	height: 50px;
+	border-radius: 15px;
+	border-color: greenyellow;
+}
+
+.window_wrapper input{
+	font-size: 24px;
+}
+
+.window_wrapper .control_buttons {
+	display: flex;
+	gap: 20px;
+}
+
+.window_wrapper button {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.window_wrapper .dialog_btn_cancel {
+	background-color: rgb(192, 180, 180);
+}
+
+.window_wrapper .dialog_btn_add {
+	background-color: greenyellow;
+}

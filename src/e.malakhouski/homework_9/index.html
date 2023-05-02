@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cleartype" content="on"/>
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<meta name="x-rim-auto-match" content="none" forua="true">
+	<title>Calendar</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/dialog_window_style.css">
+</head>
+<body>
+	<main class="main">
+		<div class="calendar_wrapper">
+			<div class="calendar_control">
+				<button type="button" class="btn_today" onclick="showCurrentMonth()"><img src="images/calendar-icon.png" alt=""><span>Today</span></button>
+				<button type="button" class="btn_prev_month" onclick="showPrevMonth()"><img src="images/arrow-up.svg" alt=""></button>
+				<button type="button" class="btn_next_month" onclick="showNextMonth()"><img src="images/arrow-down.svg" alt=""></button>
+				<input type="month" id="bdaymonth" name="bdaymonth" onchange="changeMonth(event)">
+			</div>
+			<div class="calendar"></div>
+		</div>
+		<div class="task_list"></div>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+	<script src="js/constants.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/dialog_window.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
