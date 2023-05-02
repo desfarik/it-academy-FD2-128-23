@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="calendar-wrapper">
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <div class="calendar-header-container">
+              <div class="calendar-today-container above" onclick="goToToday()">
+                <span class="calendar-icon material-symbols-outlined">
+                  today
+                </span>
+                <span>Сегодня</span>
+              </div>
+              <div class="calendar-header-date">
+                <button
+                  class="button above material-symbols-outlined"
+                  onclick="goToPrevMonth()"
+                >
+                  arrow_upward
+                </button>
+                <button
+                  class="button above material-symbols-outlined"
+                  onclick="goToNextMonth()"
+                >
+                  arrow_downward
+                </button>
+                <div class="small-calendar-wrapper">
+                  <div class="small-calendar-container">
+                    <div class="small-calendar-header">
+                      <div class="current-year"></div>
+                      <div>
+                        <button
+                          class="button above small-calendar-button material-symbols-outlined"
+                          onclick="goToPrevYear()"
+                        >
+                          arrow_upward
+                        </button>
+                        <button
+                          class="button above small-calendar-button material-symbols-outlined"
+                          onclick="goToNextYear()"
+                        >
+                          arrow_downward
+                        </button>
+                      </div>
+                    </div>
+                    <div class="small-calendar"></div>
+                  </div>
+                </div>
+                <div class="calendar-date above">
+                  <div
+                    class="calendar-date-wrapper"
+                    onclick="showSmallCalendar()"
+                  ></div>
+                  <span class="current-month"></span>
+                  <span class="calendar-month-icon material-symbols-outlined">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="calendar-header-view above hidden"
+              onclick="openSidebar()"
+            >
+              <span class="material-symbols-outlined"> event_note </span>
+              <span>Просмотр задач</span>
+            </div>
+          </div>
+          <div class="calendar"></div>
+        </div>
+        <div class="tasks">
+          <div>
+            <div class="tasks-header">
+              <span class="tasks-date"></span>
+              <span
+                class="button above tasks-icon material-symbols-outlined"
+                onclick="closeSidebar()"
+              >
+                exit_to_app
+              </span>
+            </div>
+            <div class="task-container"></div>
+          </div>
+          <button class="above button-clear hidden" onclick="clearList()">
+            Очистить всё
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="./js/constants.js"></script>
+    <script src="./js/todo-list.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/dialog.js"></script>
+    <script src="./js/small-calendar.js"></script>
+  </body>
+</html>
