@@ -1,0 +1,195 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.freeze {
+    overflow: hidden;
+    padding-right: 17px;
+}
+header {
+    background-color: pink;
+}
+.credit {
+    margin: 0;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+main {
+    display: flex;
+}
+.controls button {
+    background: none;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+    gap: 5px
+}
+.today-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    font-size: 20px;
+    border: 0;
+}
+.input-date {
+    font-size: 20px;
+}
+.controls {
+    display: flex;
+    gap: 40px
+}
+.input-date {
+    border: none;
+    width: 170px;
+}
+input[type=month]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(../img/arrow_wo_stick.svg) no-repeat center;
+    background-size: 15px;
+}
+.calendar-container {
+    margin-left: 15px;
+    width: 70%;
+}
+.weekdays-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 14px;
+    font-weight: bold;
+}
+.week-day {
+    height: 30px;
+    padding: 5px;
+}
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+}
+.days-container div:nth-child(7n),
+.days-container div:nth-child(7n-6) {
+    background-color: rgba(255, 192, 203, 0.158);
+}
+.day {
+    padding-left: 5px;
+    height: 80px;
+    border: solid rgba(207, 207, 207, 0.363);
+    border-width: 1px 0 1px 1px;
+    border-collapse: collapse;
+}
+.past-day {
+    background-color: rgba(207, 207, 207, 0.363);
+}
+.current-day {
+    border: 1px solid pink;
+    text-shadow: 1px;
+    font-weight: bold;
+}
+.days-container .day.past-day,
+.days-container .day.future-day {
+    color: grey;
+}
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 160px;
+}
+.calendar {
+    width: 100%;
+    align-self: flex-start;
+}
+.controls-pic {
+    height: 20px;
+}
+.rotate-controls-pic {
+    rotate: 180deg;
+}
+.choosen {
+    outline-offset: -3px;
+    outline: 3px solid pink;
+    background-color: rgba(207, 207, 207, 0.123);
+}
+.weeknd {
+    background-color: rgba(255, 192, 203, 0.363);
+}
+.past-month div {
+    background-color: rgba(207, 207, 207, 0.363);
+}
+.future-month div {
+    background-color: white;
+}
+.todolist-container {
+    border-left: 1px solid rgba(207, 207, 207, 0.363);
+    width: 30%;
+}
+.todolist-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.todolist-header-bttn {
+    background: none;
+    border: 0;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.todolist-task {
+    border-top: 1px solid rgba(207, 207, 207, 0.363);
+    margin: 15px;
+}
+.task-body {
+    background-color: rgba(207, 207, 207, 0.034);
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid pink;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.dialog-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+	background-color: rgba(211, 211, 211, 0.301);
+	height: calc(100vh - 50px);
+	padding-top: 50px;
+	z-index: 5;
+}
+.add-task-dialog {
+    justify-content: center;
+    background-color: pink;
+    margin: 200px 30% 0 30%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.dialog-task-text {
+    color: white;
+    font-weight: bold;
+}
+.dialog-inputs input {
+    border: 0;
+    border-radius: 3px;
+    height: 30px;
+}
+.buttons button {
+    margin-top: 20px;
+    border: 0;
+    border-radius: 3px;
+    height: 30px;
+}
+.accept-button {
+    background-color: rgb(201, 250, 201);
+}
+.decline-button {
+    background-color: rgb(251, 255, 193);
+}
