@@ -1,0 +1,221 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+   gap: 10px;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.days-container{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: left;
+  border: 0.1px solid lightslategray;
+  border-bottom: 0;
+}
+
+.weekdays-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.day {
+  min-height: 100px;
+  padding: 10px;
+  border-right: 1px solid lightslategray;
+  border-bottom: 1px solid lightslategray;
+  color:lightslategray;
+}
+
+.day:nth-child(7n) {
+  border-right: 0
+}
+
+.current-day {
+  background-color: rgb(241, 232, 239);
+  color: rgb(129, 3, 97);
+}
+
+.next-month-day {
+  background-color: rgba(233, 230, 225, 0.3);
+}
+
+.prev-month-day {
+  background-color: rgba(233, 230, 225, 0.3);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+}
+
+.today {
+  display: flex;
+  align-items: center;
+}
+
+.today::before {
+  content: url(../img/today.svg);
+  margin-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#bdayMonth {
+  border: none;
+}
+
+#list {
+  padding: 0px;
+}
+
+#list li {
+  padding: 15px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  background-color: lightblue;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.task-container {
+  width: 30%;
+}
+
+.selected-day {
+    background-color: rgb(243, 216, 236);
+}
+
+.add-task {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 50%;
+  color: lightslategray;
+  background-color: rgb(232, 180, 219);
+}
+
+.weekend-day {
+  color: darkred;
+}
+
+.day-task {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  background-color: lightblue;
+  color: lightslategray
+}
+
+.show-day {
+  font-size: 20px;
+  color: lightslategray
+}
+
+.selected-date {
+  margin-top: 35px;
+}
+
+.day-tasklist {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* dialog */
+
+.dialog_container {
+  display: flex;
+  width: 20%;
+  position: absolute;
+  flex-direction: column;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  gap: 20px;
+  background-color: rgb(235, 233, 233); 
+}
+
+img {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+}
+
+.dialog-text {
+  font-size: 18px;
+  color: lightslategray;
+}
+
+p {
+  text-align: center;
+}
+
+.btn-container button {
+  width: 30%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cancel-btn {
+  margin-right: 10px;
+  background-color: lightgrey;
+}
+
+.confirm-btn {
+  background-color: rgb(232, 180, 219);
+}
+
+#dialogInput {
+  width: 70%;
+  margin: 0 auto;
+  padding: 8px;
+  outline: none;
+  font-size: 14px;
+  color: lightslategray;
+}
+
+.task-text {
+  margin-right: 40px;
+  font-size: 14px;
+  color: lightslategray;
+}
+
+ol {
+  font-size: 14px;
+  color: lightslategray;
+}
+
+.hidden {
+  display: none;
+}
