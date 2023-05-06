@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Appointments</h3>
+        <div class="header-container">
+            <div class="user-name">Name</div>
+            <div class="age">Age</div>
+            <div class="email">E-mail</div>
+            <div class="address">Address</div>
+            <div class="phone">phone</div>
+        </div>
+        <div class="load-section">
+            <ol id="listingTable">
+            </ol>
+            <div class="lds-ring spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>  
+        </div>
+        <div class="btn-block">
+            <div class="pagination">
+                <button id="first-page" onclick="goToFirst()"></button>
+                <button onclick="prevPage()" id="btn_prev"></button>
+                <span id="page"></span><span>of 10 pages</span>
+            <button onclick="nextPage()" id="btn_next"></button>
+            </div>
+            <div class="rows-count">
+                <span>Show:</span>
+                <select name="show-items-count" id="select-value" onChange="ChooseRowsCount()">
+                    <option value="1">5 rows</option>
+                    <option value="2">10 rows</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="./script/fetch.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
