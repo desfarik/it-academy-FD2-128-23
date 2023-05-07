@@ -1,0 +1,118 @@
+body {
+    background: radial-gradient(circle, rgba(207,206,209,1) 0%, rgba(98,98,149,1) 78%);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .database {
+    margin: 80px 200px 0 200px;
+  }
+  .topic {
+    font-size: 38px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  .dataname {
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+  }
+  .dataname img {
+    height: 50px;
+    width: 50px;
+  }
+  .data-container {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 7px;
+  }
+  .data-container img {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+  .data-container p {
+    margin: 0;
+  }
+  .data-block {
+    width: 25%;
+    padding-left: 20px;
+  }
+  .main {
+    min-height: 600px;
+  }
+  .important-text {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .other-text {
+    font-size: 12px;
+    color: gray;
+  }
+  .personal-info {
+    display: flex;
+    align-items: center;
+    gap: 20px
+  }
+  .email,
+  .phone {
+    text-decoration: none;
+    color: rgb(120, 151, 207);
+  }
+  .phone {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20px;
+  }
+  .adress p {
+    display: flex;
+    justify-content: end;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  .page-button {
+    width: 50px;
+    height: 30px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .page-button:hover, .page-number:hover {
+    background-color: rgb(120, 151, 207);
+    color: whitesmoke;
+  }
+  .page-container {
+    width: 50px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+  }
+  .active {
+    background-color: rgb(120, 151, 207);
+    color: whitesmoke;
+  }
+  .متن {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+    color: whitesmoke;
+  }
+  .متن img {
+    width: 25px;
+    height: 12,5px;
+  }
