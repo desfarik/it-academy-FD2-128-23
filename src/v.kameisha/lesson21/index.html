@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            File upload
+        </div>
+        <hr>
+        <div class="body">
+            <div class="column">
+                <div class="file-drop-area">
+                    Drag files to upload
+                </div>
+                <button onclick="chooseFile()">Choose file</button>
+                <input type="file" id="fileUploader" 
+                onchange="onInputChange()"
+                hidden >
+            </div>
+            <div class="column"></div>
+
+        </div>
+    </div>
+
+
+    <script>
+        let files = [];
+       const fileUploader = document.querySelector('#fileUploader');
+       function chooseFile() {
+        fileUploader.click()
+       }
+       
+       function onInputChange() {
+        let file =  fileUploader.files[0];
+        files.push(file);
+        const fileElement = document.querySelector('div');
+        let html = `
+            
+        `
+       }
+    </script>
+</body>
+</html>

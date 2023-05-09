@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button class="to-day" onclick="toDay()">Today</button>
+            <button class="calendar-control" onclick="goToPrev()">&#10595;</button>
+            <button class="calendar-control" onclick="goToNext()">&#10597;</button>
+            <input type="month" id="bdaymonth" name="bdaymonth" onchange="changeMonth(event)">  
+        </div>        
+        <div class="calendar"></div>
+    </div>
+    <div class="to-do-list-container">
+        <div class="to-do-list">
+          
+           
+        </div>
+    </div>
+    <script src="constants.js"></script>
+    <script src="date-utils.js"></script>
+    <script src="calendar.js"></script>
+    <script src="to-do-list.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <form action="" onsubmit="addItem(event)">
+    <input type="text" id="input" required>
+    <button>add</button>
+    </form>
+    <ol id="list">
+
+    </ol> -->
