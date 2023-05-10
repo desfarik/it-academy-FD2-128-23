@@ -11,7 +11,7 @@ async function fetchUser() {
   return await response.json();
 }
 
-async function renderUser(i) {
+async function generateUser(i) {
   const response = await fetchUser();
   const user = response.results[i];
   return `
@@ -31,12 +31,12 @@ async function renderUser(i) {
         `;
 }
 
-async function loadMore() {
+async function renderUsers() {
   const table = document.querySelector(".table");
   const spinner = document.querySelector(".spinner");
   let promises = [];
   for (let i = 0; i < quantityRows; i++) {
-    promises.push(renderUser(i));
+    promises.push(generateUser(i));
   }
   spinner.classList.add("show");
   const users = await Promise.all(promises);
@@ -72,7 +72,7 @@ function prevPage(event) {
 
 async function renderPage(event, element, quantity) {
   const target = event.target;
-  await loadMore();
+  await renderUsers();
   renderNumbersPage();
   element.classList.remove("disable");
   if (numberPage === quantity) {
@@ -83,14 +83,14 @@ async function renderPage(event, element, quantity) {
 async function showRows(event) {
   event.preventDefault();
   quantityRows = +event.target.lastElementChild.value;
-  await loadMore();
+  await renderUsers();
   renderNumbersPage();
 }
 
 async function start() {
   const pagination = document.querySelector(".pagination");
   const input = document.querySelector(".input");
-  await loadMore();
+  await renderUsers();
   pagination.classList.add("show");
   renderNumbersPage();
   input.value = quantityRows;
