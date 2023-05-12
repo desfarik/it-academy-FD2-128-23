@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #imagePlaceholder {
+            min-height: 120px;
+            width: 100px;
+            background: #9DA8C3;
+            border-radius: 5px;
+        }
+
+        #imagePlaceholder img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+<div id="imagePlaceholder"
+     ondrop="onDropFile(event)"
+     ondragover="event.preventDefault()"
+></div>
+<button onclick="openFileDialog()">Дай файл</button>
+<button onclick="removeFile()">Удалить</button>
+<input id="fileUploader"
+       type="file"
+       hidden
+       onchange="onInputChange(event)">
+<br>
+<br>
+<button onclick="fileUploader2.click()">Дай файл</button>
+<input id="fileUploader2" type="file">
+
+<label>
+    text
+    <input type="checkbox">
+</label>
+
+<script>
+
+  function openFileDialog() {
+    const input = document.querySelector('#fileUploader');
+    input.click();
+  }
+
+
+
+  function chooseFile(image) {
+    const imagePlaceholder = document.querySelector('#imagePlaceholder');
+
+    const imageUrl = URL.createObjectURL(image);
+    imagePlaceholder.innerHTML = `
+        <p>
+            <img src="${imageUrl}" alt="">
+            ${image.name}
+        </p>
+      `;
+
+    console.log(event);
+  }
+
+  function removeFile() {
+    const input = document.querySelector('#fileUploader');
+    const imagePlaceholder = document.querySelector('#imagePlaceholder');
+
+    input.value = '';
+    imagePlaceholder.innerHTML = '';
+  }
+
+  function onInputChange(event) {
+    const input = document.querySelector('#fileUploader');
+    const imageFile = input.files[0];
+    chooseFile(imageFile);
+  }
+
+  function onDropFile(event) {
+    event.preventDefault()
+    const file = event.dataTransfer.files[0];
+    chooseFile(file)
+    console.log(event);
+  }
+
+</script>
+
+</body>
+</html>
