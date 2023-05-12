@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        :root {
+            --background-color: #ffffff;
+            --primary-color: #297045;
+            --text-color: black;
+        }
+
+        body.dark-theme {
+            --background-color: black;
+            --primary-color: #345E5A;
+            --text-color: white;
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .header {
+            background: var(--primary-color);
+            padding: 20px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Header
+    <div class="flex-grow"></div>
+    <button onclick="changeTheme('light')">light</button>
+    <button onclick="changeTheme('dark')">dark</button>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eaque error laborum minus nam ratione
+    rerum voluptate! A delectus eius eligendi eos ipsum laboriosam quae quaerat, quis rem sit.</p>
+<p>Accusamus aut corporis harum libero nobis praesentium quas vitae! A at cupiditate deleniti distinctio earum enim
+    eos
+    ipsam optio similique sint, suscipit, tempora ut veniam! Aperiam inventore nam obcaecati officia.</p>
+
+
+<script>
+  let a = 2;
+
+  function changeTheme(theme) {
+    document.body.className = `${theme}-theme`;
+  }
+</script>
+</body>
+</html>

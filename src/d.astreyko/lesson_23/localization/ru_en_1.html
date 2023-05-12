@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p data-lang-key="hello">hello</p>
+<p data-lang-key="home">home</p>
+
+
+<button onclick="changeLang('ru')">ru</button>
+<button onclick="changeLang('en')">en</button>
+<button onclick="changeLang('by')">by</button>
+<script src="ru.js"></script>
+<script src="en.js"></script>
+<script src="by.js"></script>
+<script>
+  const DICTIONARIES = {
+    'ru': RU,
+    'en': EN,
+    'by': BY,
+  }
+
+  const currentLang = localStorage.getItem('lang') || 'en';
+  changeLang(currentLang);
+    function changeLang(lang) {
+      const dictionary = DICTIONARIES[lang];
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-lang-key]')
+        .forEach(element => {
+          const translateKey = element.dataset.langKey;
+          element.textContent = dictionary[translateKey];
+        })
+    }
+</script>
+</body>
+</html>
