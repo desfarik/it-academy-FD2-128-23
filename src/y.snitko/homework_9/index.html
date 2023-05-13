@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Calendar events</title>
+</head>
+<body>
+    <div class="calendar-header">
+        <button class="today" onclick="onClickToday()">Today</button>
+        <button class="prev-month" onclick="onPrev()">↓</button>
+        <button class="next-month" onclick="onNext()">↑</button>
+        <input type="month" id="bdayMonth" name="bdayMonth" onchange="change(event)" >
+    </div>
+    <div class="container">
+        <div class="calendar">
+        </div>
+        <div class="task-container">
+            <div class="selected-date"><span class="show-day"></span></div>
+              <button class="add-task" onclick="openAddItemDialog()">+</button>
+                <ol id="list">
+              </ol>
+        </div>
+    </div>
+    <script src="./script/data.js"></script>
+    <script src="./script/utils.js"></script>
+    <script src="./script/dialog.js"></script>
+    <script src="./script/script.js"></script> 
+</body>
+</html>

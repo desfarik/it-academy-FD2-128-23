@@ -28,4 +28,14 @@ function closeDialog() {
   dialog.remove();
 }
 
+/* <div class="container">
+    
+<img src="close.svg" alt="">
 
+<p class="question">Are you sure?</p>
+<p class="question_two">Do you really want to delete this records? This process cannot be undone</p>
+<div class="btn-container">
+    <button class="cancel-btn">Cancel</button>
+    <button class="delete-btn">Delete</button>
+</div>
+</div> */
