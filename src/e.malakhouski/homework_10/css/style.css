@@ -1,0 +1,117 @@
+body {
+	margin: 0; 
+	font-family: sans-serif;
+	font-size: 16px;
+	box-sizing: border-box;
+	background-color: rgb(240, 234, 234, 0.5);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.25fr;
+	min-width: 80%;
+	justify-content: space-between;
+	padding-inline-start: 0;
+	list-style-type: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+.users_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.user {
+	min-height: 80px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.25fr;
+	grid-gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.user div {
+	text-align: center;
+}
+
+.user .avatar {
+	justify-self: center;
+	border-radius: 50%;
+}
+
+.user .first_name,
+.user .last_name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.user .age,
+.user .phone span {
+	font-size: 14px;
+	color: rgb(167, 163, 163);
+}
+
+.user .email,
+.user .location {
+	font-size: 18px;
+	font-style: italic;
+}
+
+.user .phone {
+	font-weight: bold;
+}
+
+.pagination_wrapper {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.pagination_wrapper button {
+	padding: 10px;
+	text-transform: uppercase;
+	color: red;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background-color: white;
+	align-self: center;
+	cursor: pointer;
+}
+
+.pagination_list {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	padding-inline-start: 0px;
+	margin: 0 20px;
+}
+
+.pagination_item {
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	padding: 10px 5px 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+.pagination_item.active {
+	background-color: blueviolet;
+	border-radius: 50%;
+	color: white;
+}
