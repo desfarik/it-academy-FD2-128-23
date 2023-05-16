@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: rgb(192 175 175 / 82%);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.25fr;
+    min-width: 80%;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.user {
+    min-height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.25fr;
+    grid-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255 255 255);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.user div {
+    text-align: center;
+}
+
+.user .avatar {
+    justify-self: center;
+    border-radius: 50%;
+}
+
+.user .name,
+.user .surname,
+.user .email,
+.user .address {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.user .age {
+    font-size: 14px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.pagination-container button {
+    padding: 10px;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    align-self: center;
+    cursor: pointer;
+}
+
+.pagination-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding-inline-start: 0;
+    margin: 0 20px;
+}
+
+.pagination-number {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 10px 5px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pagination-number.active {
+    background-color: #8f48d0;
+    border-radius: 50%;
+    color: white;
+}
