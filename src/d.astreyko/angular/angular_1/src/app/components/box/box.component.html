@@ -1,0 +1,10 @@
+<p [style.background]="_color"
+   [style.border-style]="type"
+   class="box">
+  <span class="box-content"
+        [style.color]="_color">
+  box {{_color}}
+  </span>
+
+  <input type="checkbox" (change)="toggle()">
+</p>
