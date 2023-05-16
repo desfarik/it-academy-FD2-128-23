@@ -1,0 +1,11 @@
+.counter {
+  color: green;
+}
+
+.counter.warning {
+  color: yellow;
+}
+
+.counter.error {
+  color: indianred;
+}

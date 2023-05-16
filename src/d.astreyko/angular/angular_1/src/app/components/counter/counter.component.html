@@ -1,0 +1,6 @@
+<p [class.error]="value > 10"
+   [class.warning]="value > 5"
+   [style.min-width.px]="value * 10"
+   class="counter">Counter: {{value}}</p>
+<button (click)="plus()">Plus</button>
+<button (click)="minus()">Minus</button>
