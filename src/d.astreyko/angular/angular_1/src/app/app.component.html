@@ -1,1 +1,21 @@
-<counter></counter>
+<!--<counter class="counter-blue"></counter>-->
+<stopwatch [started]="timerStarted"></stopwatch>
+<br>
+<input type="checkbox" [(ngModel)]="timerStarted">
+<button (click)="resetTimer()">reset from parent</button>
+<child>
+  <button (click)="boxColor = 'white'">white</button>
+  <button class="start-button" (click)="boxType = 'solid'">solid</button>
+</child>
+<child>
+  <button (click)="boxColor = 'black'">black</button>
+  <button (click)="boxType = 'dashed'">dashed</button>
+</child>
+
+<box [color]="boxColor"
+     [type]="boxType"></box>
+<box [color]="'white'"
+     (onToggle)="toggleBoxColor()"></box>
+<box [color]="'red'"></box>
+
+<button (click)="toggleBoxColor()">change box color</button>
