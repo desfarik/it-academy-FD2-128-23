@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>до конца занятия осталось:</h1>
+    <p id="time"></p>
+
+
+
+
+    <script>
+        const date = new Date("2012-02-20T03:12:00");
+        console.log(date);
+
+        function getWeekDay(date){
+            const weekDay = date.getDay();
+            switch(weekDay)
+            {
+            case 0: return 'вс';
+            case 1: return 'пн';
+            case 2: return 'вт';
+            case 3: return 'ср';
+            case 4: return 'чт';
+            case 5: return 'пт';
+            case 6: return 'сб';
+            }
+        }
+        console.log(getWeekDay(new Date()));
+
+        function getDateAgo(date,days){
+            const timeStamp = date.getTime();
+            const daysMs = days *24 * 3600 * 1000;
+            const dayAgo = timeStamp - daysMs;
+            return new Date(dayAgo)
+        }
+        console.log(getDateAgo(new Date, 41));
+
+        function getLastDayOfMonth(year,month){
+            const monthDate =  new Date(year,month);
+            const nextMonth = new Date(year,month + 1);
+            const diff = nextMonth - monthDate;
+            return diff /(24 * 3600 * 1000);
+        }
+        console.log(getLastDayOfMonth(2023,3));
+        console.log(getLastDayOfMonth(2023,1));
+
+        function getSecondsToday(){
+            const currentTime = Date.now();
+            const currentDay = new Date();
+            const startDate = new Date(currentDay.getFullYear(),currentDay.getMonth(),currentDay.getDate());
+            const diff = currentTime - startDate;
+            return diff / 1000;
+        }
+        console.log(getSecondsToday());
+
+        function getSecondsToFinish(){
+            const currentTime = new Date();
+            const dataFinish = new Date(currentTime);
+            dataFinish.setHours(21,20,0,0);
+            return (dataFinish - currentTime) / 1000;
+        }
+        console.log(getSecondsToFinish());
+        setInterval(() => {
+            const timeElement = document.querySelector("#time");
+            timeElement.textContent = getSecondsToFinish();
+        },50)
+
+
+        function formatDate(date) {
+            const diff = new Date() - date;
+            if(diff < 1000){
+                return 'прямо сейчас'
+            } 
+            if(diff < 60_000){
+                const sec = Math.floor(diff / 1000);
+                return `${sec}s.ago`
+            }
+            if(diff < 3600_000){
+                const min = Math.floor(diff / 60_000);
+                return `${min}s.ago`
+            }
+            return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+        }
+        console.log(formatDate(new Date()));
+        console.log(formatDate(new Date(Date.now() - 500)));
+        console.log(formatDate(new Date(Date.now() - 30_000)));
+        console.log(formatDate(new Date(Date.now() - 300_000)));
+        console.log(formatDate(new Date(Date.now() - 5_000_000)));
+    </script>
+</body>
+</html>

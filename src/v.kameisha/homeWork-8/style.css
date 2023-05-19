@@ -1,0 +1,45 @@
+body{
+    background-color: #d3cece;
+}
+.timer-continer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.add-time, .set-time, .control-buttons{
+    align-self: center;
+    margin-bottom: 20px;
+}
+.time{
+    width: 90%;
+    height: 140px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.add-time button{
+    padding: 15px;
+    border-radius: 40px;
+}
+.set-time button{
+    padding: 25px;
+    border-radius: 20px;
+}
+.control-buttons button{
+    padding: 30px;
+    border-radius: 30px;
+}
+.start-btn{
+    background-color: #06c706;
+}
+.stop-btn{
+    background-color: #ff3c3c;
+}
+.reset-btn{
+    background-color: #5858e6;
+}
+
