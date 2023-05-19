@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <input type="checkbox">
+    <button>click</button>
+</div>
+
+<a target="_blank"
+   href="https://developer.mozilla.org/ru/docs/Web/API/Web_Workers_API/Using_web_workers#%D0%B2%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_workers">link</a>
+
+<script>
+
+  const div = document.querySelector('div');
+  const button = document.querySelector('button');
+  const checkbox = document.querySelector('input');
+  const link = document.querySelector('a');
+
+  link.addEventListener('click', (event) => {
+    console.log('link');
+    if (checkbox.checked) {
+      event.preventDefault();
+    }
+  });
+
+  button.addEventListener('click', (event) => {
+    console.log('button1');
+    if (checkbox.checked) {
+      event.stopPropagation();
+      event.stopImmediatePropagation()
+    }
+  });
+  button.addEventListener('click', (event) => {
+    console.log('button2');
+  });
+  div.addEventListener('click', (event) => {
+    console.log('div');
+  });
+</script>
+
+</body>
+</html>
