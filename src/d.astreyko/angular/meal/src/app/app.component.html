@@ -1,0 +1,12 @@
+<div class="row text-center">
+  <h3>
+    Feeling hungry?
+  </h3>
+  <h5>Get a random meal by clicking below</h5>
+  <button class="button-primary"
+          id="get_meal"
+          (click)="fetchNextMeal()">Get Meal 🍔
+  </button>
+</div>
+<meal-info *ngIf="!!meal"
+           [meal]="meal"></meal-info>

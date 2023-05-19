@@ -1,0 +1,26 @@
+<div class="rows">
+  <div class="col">
+    <img [src]="sanitizer.bypassSecurityTrustUrl(meal.strMealThumb)" alt="">
+    <br>
+    <p>
+      <b>Category:</b>
+      <span>{{meal.strCategory}}</span>
+    </p>
+    <p>
+      <b>Area:</b>
+      <span>{{meal.strArea}}</span>
+    </p>
+    <h2>Ingredients</h2>
+    <ul>
+      <li *ngFor="let ingredient of ingredients">
+        {{ingredient}}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <h2>{{meal.strMeal}}</h2>
+    <p>{{meal.strInstructions}}</p>
+  </div>
+</div>
+<h2>Video Recipe</h2>
+<iframe [src]="youtubeUrl"></iframe>

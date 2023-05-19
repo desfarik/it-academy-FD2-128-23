@@ -1,0 +1,17 @@
+.rows {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.col:first-child {
+  width: 40%;
+  min-width: 200px;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
