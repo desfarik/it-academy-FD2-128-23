@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="database">
+      <div class="header">
+        <p class="topic">حذف اطلاعات شخصی کارکنان آکادمی فناوری اطلاعات</p>
+        <div class="dataname">
+          <p>کارمند</p>
+          <p>پست الکترونیکی</p>
+          <p>نشانی</p>
+          <p>تلفن</p>
+        </div>
+      </div>
+      <div class="main"></div>
+      <div class="footer">
+        <div class="pagination">
+          <button class="page-button navigation" id="button_prev" onclick="prevPage()">قبلی</button>
+          <button class="page-button navigation" id="button_start" onclick="startPage()">اولین 1</button>
+          <button class="page-container" disabled>1</button>
+          <button class="page-button navigation" id="button_end" onclick="endPage()">ده هز</button>
+          <button class="page-button navigation" id="button_next" onclick="nextPage()">بعد</button>
+        </div>
+        <div class="متن">
+          <p>این متن نیازی به خواندن ندارد، فقط به صفحه علاقه نشان می دهد</p>
+          <img src="./پرچم ایران.png" />
+          <p>2023</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
