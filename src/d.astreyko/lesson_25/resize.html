@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            background: #2DB82D;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="range" onchange="changeSize()">
+<div></div>
+
+<script>
+  const div = document.querySelector('div');
+  const slider = document.querySelector('input');
+
+  changeSize();
+
+  function changeSize() {
+    console.log(slider.valueAsNumber);
+    div.style.width = slider.valueAsNumber + 'px';
+  }
+
+  const resizeObserver = new ResizeObserver((entries) => {
+    console.log('resize', entries);
+  });
+
+  resizeObserver.observe(div);
+
+
+  new IntersectionObserver();
+
+
+  new MutationObserver();
+
+  new PerformanceObserver()
+
+
+</script>
+</body>
+</html>

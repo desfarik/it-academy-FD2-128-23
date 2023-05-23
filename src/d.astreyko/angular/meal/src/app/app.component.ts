@@ -14,4 +14,5 @@ export class AppComponent {
     const data = await response.json();
     this.meal = data.meals[0];
   }
+
 }
