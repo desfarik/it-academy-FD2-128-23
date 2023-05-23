@@ -1,0 +1,114 @@
+body {
+  background-color: ghostwhite;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.patient, .labels, .personality, .doc-actions-adr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.labels {
+  margin: 0 -20px 0 100px;
+  justify-content: space-around;
+}
+
+.patient {
+  height: 60px;
+  background: white;
+  padding: 0 40px;
+  margin-bottom: 10px;
+}
+
+.mr {
+  margin-right: 100px;
+}
+
+.min-w {
+  min-width: 100px;
+}
+
+.doc-actions-adr {
+  min-width: 350px;
+}
+
+.patient-adress {
+  text-align: center;
+  min-width: 185px;
+}
+
+.patient-status button {
+  background-color: lightgreen;
+  color: black;
+  padding: 5px;
+}
+
+.patient-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.patient-name, .patient-phone-and-mail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.patient-pic img {
+  width: 100%;
+}
+
+.paginator {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  color: rgb(209, 43, 43);
+  justify-content: center;
+}
+
+.paginator button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.personality {
+  min-width: 190px;
+}
+
+.patient-phone-and-mail {
+  min-width: 240px;
+}
+
+@media only all and (max-width: 1000px) {
+  body {
+    font-size: 12px;
+  }
+
+  .patient, .labels {
+    margin: 0;
+    padding: 0;
+  }
+
+  .mr {
+    margin-right: 20px;
+  }
+
+  .min-w, .doc-actions-adr, .patient-adress, 
+  .personality, .patient-phone-and-mail {
+    min-width: 0;
+  }
+
+}
