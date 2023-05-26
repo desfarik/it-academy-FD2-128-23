@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        li {
+            padding: 10px;
+        }
+
+        li.active-item {
+            background: #0e85fc;
+        }
+
+        .todo {
+            display: flex;
+            gap: 50px;
+        }
+
+        .todo > div {
+            min-width: 200px;
+            flex-grow: 1;
+        }
+
+        .todo > div > ul {
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="" onsubmit="addItem(event)">
+    <input type="text" id="input" required>
+    <button>add</button>
+</form>
+
+<div class="todo">
+    <div>
+        <h2>TODO</h2>
+        <ul id="todo">
+        </ul>
+    </div>
+    <div>
+        <h2>PROGRESS</h2>
+        <ul id="progress">
+        </ul>
+    </div>
+    <div>
+        <h2>DONE</h2>
+        <ul id="done">
+        </ul>
+    </div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+<script>
+
+  const todo = document.querySelector('#todo');
+  const progress = document.querySelector('#progress');
+  const done = document.querySelector('#done');
+  let fromTodo = JSON.parse(localStorage.getItem('arrayTodo'));
+  let fromProgress = JSON.parse(localStorage.getItem('arrayProgress'));
+  let arrayTodo = fromTodo || [];
+  let arrayProgress = fromProgress || [];
+  let arrayDone = [];
+
+  function deleteTask(taskElement) {
+    taskElement.remove();
+    let id = +taskElement.id;
+    arrayTodo = arrayTodo.filter((item) => {
+      return item.id !== id;
+    });
+    storeTodo();
+  }
+
+  function onListContainerClick(event) {
+    console.log(event);
+    if (event.target.classList.contains('delete-button')) {
+      deleteTask(event.target.parentElement);
+    }
+  }
+
+  todo.addEventListener('click', onListContainerClick);
+
+  function addItem(event) {
+    event.preventDefault();
+    const input = document.querySelector('#input');
+    const item = document.createElement('li');
+    let id = Date.now();
+    item.id = id;
+    item.innerHTML = `
+        <span>${input.value}</span>
+        <button class="delete-button">delete</button>`;
+    todo.append(item);
+    arrayTodo.push({
+      value: input.value,
+      id: id
+    });
+    input.value = '';
+    storeTodo();
+  }
+
+  todo.innerHTML = arrayTodo.map(item => `<li id="${item.id}">
+        <span>${item.value}</span>
+        <button class="delete-button">delete</button>
+</li>
+`)
+    .join('');
+
+  progress.innerHTML = arrayProgress.map(item => `<li id="${item.id}">
+        <span>${item.value}</span>
+        <button class="delete-button">delete</button>
+</li>
+`)
+    .join('');
+  new Sortable(todo, {
+    group: 'list',
+    animation: 150,
+    ghostClass: 'active-item',
+    onAdd: (event) => {
+      moveItemFromList(event, arrayTodo);
+    },
+    onSort: (event) => {
+      const {
+        newIndex,
+        oldIndex
+      } = event;
+      arrayTodo = moveItemInArray(arrayTodo, oldIndex, newIndex);
+      storeTodo();
+    }
+  });
+
+  function moveItemFromList(event, list) {
+    const {
+      from,
+      item
+    } = event;
+
+    const externalList = from === todo ? arrayTodo :
+      from === done ? arrayDone : arrayProgress;
+
+    let index = externalList.findIndex((elem) => elem.id === +item.id);
+    let original = externalList[index];
+    externalList.splice(index, 1);
+    list.push(original);
+    storeProgress();
+    storeTodo();
+  }
+
+  new Sortable(progress, {
+    group: 'list',
+    animation: 150,
+    ghostClass: 'active-item',
+    onAdd: (event) => {
+      moveItemFromList(event, arrayProgress);
+    },
+
+    onSort: (event) => {
+      const {
+        newIndex,
+        oldIndex
+      } = event;
+      arrayProgress = moveItemInArray(arrayProgress, oldIndex, newIndex);
+      storeProgress();
+    }
+  });
+
+  function moveItemInArray(array, from, to) {
+    if (from > to) {
+      const head = array.slice(0, to);
+      const element = array[from];
+      const middle = array.slice(to, from);
+      const tail = array.slice(from + 1);
+      return [...head, element, ...middle, ...tail];
+    }
+    const head = array.slice(0, from);
+    const element = array[from];
+    const middle = array.slice(from + 1, to + 1);
+    const tail = array.slice(to + 1);
+    return [...head, ...middle, element, ...tail];
+  }
+
+  function storeTodo() {
+    localStorage.setItem('arrayTodo', JSON.stringify(arrayTodo));
+  }
+
+  function storeProgress() {
+    localStorage.setItem('arrayProgress', JSON.stringify(arrayProgress));
+  }
+</script>
+</body>
+</html>
