@@ -35,7 +35,11 @@ class LinkedList {
   }
 
   find(value) {
-
+    let node = this.head;
+    while (node && node.value !== value) {
+      node = node.next;
+    }
+    return node;
   }
 
   insertBefore(node, value) {
@@ -43,7 +47,7 @@ class LinkedList {
   }
 
   insertAfter(node, value) {
-
+    node.next = new LinkedListNode(value, node.next);
   }
 
   addToTail(value) {

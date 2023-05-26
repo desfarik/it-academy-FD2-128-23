@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        li {
+            padding: 10px;
+        }
+
+        li.active-item {
+            background: #0e85fc;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="items">
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+<script>
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const list = document.getElementById('items');
+
+  list.innerHTML = array.map(item => `<li>item-${item}</li>`)
+    .join('');
+  const sortable = new Sortable(list, {
+    animation: 150,
+    ghostClass: 'active-item',
+    onSort: (event) => {
+      const {
+        newIndex,
+        oldIndex
+      } = event;
+      console.log(newIndex, oldIndex);
+
+      array = moveItemInArray(array, oldIndex, newIndex);
+      console.log(array);
+    }
+  });
+
+  function moveItemInArray(array, from, to) {
+    if (from > to) {
+      const head = array.slice(0, to);
+      const element = array[from];
+      const middle = array.slice(to, from);
+      const tail = array.slice(from + 1);
+      return [...head, element, ...middle, ...tail];
+    }
+    const head = array.slice(0, from);
+    const element = array[from];
+    const middle = array.slice(from + 1, to + 1);
+    const tail = array.slice(to + 1);
+    return [...head, ...middle, element, ...tail];
+  }
+
+  console.log(sortable);
+</script>
+</body>
+</html>
