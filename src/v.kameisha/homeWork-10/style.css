@@ -1,0 +1,93 @@
+.header{
+    display: grid;
+	grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.5fr;
+	min-width: 80%;
+	justify-content: space-between;
+	padding-inline-start: 0;
+	list-style-type: none;
+	text-align: center;
+	font-weight: bold;
+}
+.pagination-conteiner{
+    display: flex;
+    justify-content: center;
+}
+.users-container{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 80vh;
+}
+.user {
+	min-height: 80px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 0.5fr) 1.5fr 1.5fr 1.5fr;
+	grid-gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.user div {
+	text-align: center;
+}
+
+.user .avatar {
+	justify-self: center;
+	border-radius: 50%;
+}
+
+.user .first_name,
+.user .last_name,
+.user .age,
+.user .phone span,
+.user .email,
+.user .location,
+.user .phone {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.pagination-conteiner {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.pagination-conteiner button {
+	padding: 10px;
+	text-transform: uppercase;
+	color: black;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background-color: white;
+	align-self: center;
+	cursor: pointer;
+}
+
+.pagination-list {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	padding-inline-start: 0px;
+	margin: 0 20px;
+}
+
+.pagination-item {
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	padding: 10px 5px 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+.pagination-item.active {
+	background-color: black;
+	border-radius: 25%;
+	color: #fff;
+}

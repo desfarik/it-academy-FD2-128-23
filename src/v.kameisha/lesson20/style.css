@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+body{
+    background-color: grey;
+}
+.dialog-window{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.close{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.logo img{
+    margin-top: 20px;
+    margin-left: 168px;
+}
+.text{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.dialog-window p{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(200, 196, 196);
+}
+.btn{
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+}
+.cansel{
+    margin-right: 10px;
+}
+.cansel button{
+    padding: 10px;
+    background-color: rgb(200, 196, 196);
+    color: #fff;
+    border-radius: 10px;
+}
+.delete button{
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 10px;
+}

@@ -1,0 +1,18 @@
+.header{
+    text-align: center;
+    font-size: 24px;
+    padding: 10px 0;
+}
+.body{
+    display: flex;
+}
+.file-drop-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border: 1px dashed #777;
+    background-color: rgb(182, 180, 180);
+    border-radius: 4px;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+.calendar-container {
+    width: 300px;
+    margin: 50px auto 0;
+}
+.current-date {
+    padding: 40px 0;
+    background: black;
+    color: white;
+    text-align: center;
+}
+.current-date .date {
+    font-size: 48px;
+}
+.current-date .weekday {
+    font-weight: bold;
+}
+.current-month{
+    text-align: center;
+    font-weight: bold;
+    color: gray;
+    padding: 8px 0;
+}
+
+.weekdays-container {
+    display: flex;
+    flex-direction: row;
+    color: limegreen;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-around;
+}
+.days-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.days-container .day{
+    text-align: center;
+}
+
+.days-container .day.prev-month-day,
+.days-container .day.next-month-day {
+    color: grey;
+}
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 160px;
+}
+.calendar {
+    width: 100%;
+    align-self: flex-start;
+}
